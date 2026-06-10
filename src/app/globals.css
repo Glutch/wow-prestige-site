@@ -211,6 +211,9 @@ body::before {
 .wow-tooltip .t-green { color: #1eff00; }
 .wow-tooltip .t-yellow { color: #ffd100; }
 .wow-tooltip .t-grey { color: #9d9d9d; }
+/* path flavor appended below the authentic tooltip — the addon's voice,
+   visually set apart so it never reads as in-game text */
+.wow-tooltip .t-lore { color: #c8b878; }
 
 .item-link {
   cursor: pointer;

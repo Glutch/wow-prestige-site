@@ -1,4 +1,5 @@
 import type { WowItem } from "@/data/items";
+import { itemLore } from "@/data/item-lore";
 import { WowIcon } from "@/components/wow-icon";
 
 /** The tooltip box itself, faithful to the classic in-game layout.
@@ -43,6 +44,11 @@ export function ItemTooltip({ item }: { item: WowItem }) {
         </span>
       ))}
       {item.flavor && <span className="t-yellow block italic">&quot;{item.flavor}&quot;</span>}
+      {itemLore[item.name] && (
+        <span className="t-lore mt-1.5 block border-t border-[#5a4d28]/60 pt-1.5 italic">
+          {itemLore[item.name]}
+        </span>
+      )}
     </span>
   );
 }

@@ -22,7 +22,7 @@ export const suggestedByClass: Record<string, SuggestedItem[]> = {
     },
     {
       name: "Fiery Plate Gauntlets",
-      note: "Blacksmithing 290 — plans earned in the Depths",
+      note: "Blacksmithing 290 — found unfired in Blackrock Spire, finished in Everlook",
     },
     {
       name: "Dwarven Hand Cannon",

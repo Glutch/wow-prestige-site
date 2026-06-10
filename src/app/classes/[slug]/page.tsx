@@ -8,6 +8,7 @@ import { Journey } from "@/components/journey";
 import { EpitaphCard } from "@/components/epitaph-card";
 import { ItemInventory } from "@/components/item-inventory";
 import { SuggestedItems } from "@/components/suggested-items";
+import { LoreSection } from "@/components/lore-section";
 
 type Params = Promise<{ slug: string }>;
 
@@ -108,6 +109,9 @@ export default async function ClassPage({ params }: { params: Params }) {
       </section>
 
       <div className="mx-auto max-w-6xl space-y-20 px-4 py-16 sm:px-6">
+        {/* ---- the legend ---- */}
+        <LoreSection c={c} />
+
         {/* ---- the code ---- */}
         <section>
           <h2 className="mb-6 font-display text-2xl font-bold text-foreground">The Code</h2>
