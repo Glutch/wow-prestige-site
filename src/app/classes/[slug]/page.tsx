@@ -7,6 +7,7 @@ import { CodeSection } from "@/components/code-section";
 import { Journey } from "@/components/journey";
 import { EpitaphCard } from "@/components/epitaph-card";
 import { ItemInventory } from "@/components/item-inventory";
+import { SuggestedItems } from "@/components/suggested-items";
 
 type Params = Promise<{ slug: string }>;
 
@@ -43,7 +44,9 @@ export default async function ClassPage({ params }: { params: Params }) {
   return (
     <div>
       {/* ---- hero ---- */}
-      <section className="relative overflow-hidden border-b border-border/60">
+      {/* no overflow-hidden here — item tooltips at the hero's edge must
+          escape; the bg layers are inset-0 and cannot overflow anyway */}
+      <section className="relative border-b border-border/60">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{ backgroundImage: `url(${HERO_BG[c.id] ?? DEFAULT_BG})` }}
@@ -89,9 +92,16 @@ export default async function ClassPage({ params }: { params: Params }) {
               </span>
             </div>
           )}
+          {/* the rise animation makes each wrapper a stacking context, so a
+              hovered panel must out-rank its siblings for tooltips to show */}
           {hasJourney && (
-            <div className="rise mt-8" style={{ animationDelay: "400ms" }}>
+            <div className="rise relative mt-8 hover:z-[70] focus-within:z-[70]" style={{ animationDelay: "400ms" }}>
               <ItemInventory c={c} />
+            </div>
+          )}
+          {hasJourney && (
+            <div className="rise relative mt-4 hover:z-[70] focus-within:z-[70]" style={{ animationDelay: "520ms" }}>
+              <SuggestedItems c={c} />
             </div>
           )}
         </div>
