@@ -6,6 +6,7 @@ import { WowIcon } from "@/components/wow-icon";
 import { CodeSection } from "@/components/code-section";
 import { Journey } from "@/components/journey";
 import { EpitaphCard } from "@/components/epitaph-card";
+import { ItemInventory } from "@/components/item-inventory";
 
 type Params = Promise<{ slug: string }>;
 
@@ -86,6 +87,11 @@ export default async function ClassPage({ params }: { params: Params }) {
               <span className="self-center text-xs text-muted-foreground">
                 — each rank earned by level <em>and</em> deed
               </span>
+            </div>
+          )}
+          {hasJourney && (
+            <div className="rise mt-8" style={{ animationDelay: "400ms" }}>
+              <ItemInventory c={c} />
             </div>
           )}
         </div>
