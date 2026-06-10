@@ -7,7 +7,7 @@ export function ItemLink({ name }: { name: string }) {
   const item = itemByName.get(name);
   if (!item) return <>{name}</>;
   return (
-    <span className="group/item relative inline-block" tabIndex={0}>
+    <span className="group/item relative inline-block hover:z-[9999] focus-within:z-[9999]" tabIndex={0}>
       <a
         href={`https://classic.wowhead.com/item=${item.id}`}
         target="_blank"
@@ -16,7 +16,7 @@ export function ItemLink({ name }: { name: string }) {
       >
         [{item.name}]
       </a>
-      <span className="pointer-events-none invisible absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 opacity-0 transition-opacity duration-150 group-hover/item:visible group-hover/item:opacity-100 group-focus-within/item:visible group-focus-within/item:opacity-100">
+      <span className="pointer-events-none invisible absolute bottom-full left-1/2 z-[9999] mb-2 -translate-x-1/2 opacity-0 transition-opacity duration-150 group-hover/item:visible group-hover/item:opacity-100 group-focus-within/item:visible group-focus-within/item:opacity-100">
         <ItemTooltip item={item} />
       </span>
     </span>

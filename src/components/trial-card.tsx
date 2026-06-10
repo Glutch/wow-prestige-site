@@ -42,7 +42,7 @@ function Chip({ children, tone = "default" }: { children: React.ReactNode; tone?
 
 export function TrialCard({ trial }: { trial: Trial }) {
   return (
-    <div className="wow-panel relative rounded-sm p-4 transition-transform duration-200 hover:-translate-y-0.5 sm:p-5">
+    <div className="wow-panel relative rounded-sm p-4 transition-transform duration-200 hover:-translate-y-0.5 hover:z-40 sm:p-5">
       <div className="flex items-start gap-4">
         <div className="relative shrink-0">
           <WowIcon token={KIND_ICON[trial.kind]} size={44} alt={KIND_LABEL[trial.kind]} />

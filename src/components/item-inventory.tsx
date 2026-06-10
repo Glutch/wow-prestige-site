@@ -43,7 +43,7 @@ export function ItemInventory({ c }: { c: PrestigeClass }) {
       </p>
       <ul className="flex flex-wrap gap-2">
         {loot.map((item) => (
-          <li key={item.id} className="group/slot relative" tabIndex={0}>
+          <li key={item.id} className="group/slot relative hover:z-[9999] focus-within:z-[9999]" tabIndex={0}>
             <a
               href={`https://classic.wowhead.com/item=${item.id}`}
               target="_blank"
@@ -57,7 +57,7 @@ export function ItemInventory({ c }: { c: PrestigeClass }) {
                 <WowIcon token={item.icon} size={44} alt={item.name} />
               </span>
             </a>
-            <span className="pointer-events-none invisible absolute left-1/2 top-full z-50 mt-2 -translate-x-1/2 opacity-0 transition-opacity duration-150 group-hover/slot:visible group-hover/slot:opacity-100 group-focus-within/slot:visible group-focus-within/slot:opacity-100">
+            <span className="pointer-events-none invisible absolute left-1/2 top-full z-[9999] mt-2 -translate-x-1/2 opacity-0 transition-opacity duration-150 group-hover/slot:visible group-hover/slot:opacity-100 group-focus-within/slot:visible group-focus-within/slot:opacity-100">
               <ItemTooltip item={item} />
             </span>
           </li>
