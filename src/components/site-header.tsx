@@ -18,7 +18,7 @@ export function SiteHeader() {
             Mountain King
           </Link>
           <a
-            href="https://github.com"
+            href="https://github.com/Glutch/wow-prestige-classes"
             className="rounded border border-border px-3 py-1.5 font-display text-xs font-semibold text-gold transition-colors hover:bg-secondary"
           >
             Get the addon
