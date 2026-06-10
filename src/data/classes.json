@@ -1,0 +1,1081 @@
+[
+  {
+    "breakCry": "The blade is dishonored! A true Blademaster carries nothing but the sword.",
+    "classes": [
+      "WARRIOR"
+    ],
+    "faction": "Horde",
+    "fantasy": "A master of the blade who scorns heavy armor, trusting reflexes and a single great sword. Disciplined, deadly, and never weighed down.",
+    "forbidSlots": [
+      "HeadSlot",
+      "ChestSlot"
+    ],
+    "honorRules": [
+      "Wield only the two-handed blade — never a shield, never dual-wield.",
+      "Bare your head and chest; let skill be your armor.",
+      "When death looms, Wind Walk away (disengage, escape) before you fall."
+    ],
+    "icon": "ability_warrior_savageblow",
+    "id": "blademaster",
+    "name": "Blademaster",
+    "profession": [
+      "Blacksmithing"
+    ],
+    "races": [
+      "Orc"
+    ],
+    "restoreCry": "The blade sings again. Walk lightly, strike once.",
+    "source": "Warcraft III / Orcish tradition",
+    "weaponTypes": [
+      "Two-Handed Swords"
+    ]
+  },
+  {
+    "breakCry": "The mountain crumbles! Take up the hammer, son of Khaz Modan.",
+    "chapters": [
+      {
+        "index": 0,
+        "title": "The Book of Grudges"
+      },
+      {
+        "index": 1,
+        "title": "Chapter I — Sons of the Mountain"
+      },
+      {
+        "index": 2,
+        "title": "Chapter II — Thunder at the Span"
+      },
+      {
+        "index": 3,
+        "title": "Chapter III — Into the Fire"
+      },
+      {
+        "index": 4,
+        "title": "Chapter IV — The Mountain Eternal"
+      }
+    ],
+    "classes": [
+      "WARRIOR"
+    ],
+    "faction": "Alliance",
+    "fantasy": "A legendary dwarven warrior wreathed in plate, swinging a massive hammer and hurling thunder. Immovable and proud.",
+    "honorRules": [
+      "Carry a two-handed hammer (mace) — the Storm Bolt is thrown, never sheathed.",
+      "Keep a gun on your back to mimic the King's ranged thunder.",
+      "Stand and fight as a dwarf should — never flee a winnable brawl."
+    ],
+    "icon": "inv_hammer_05",
+    "id": "mountainking",
+    "name": "Mountain King",
+    "profession": [
+      "Mining",
+      "Blacksmithing"
+    ],
+    "races": [
+      "Dwarf"
+    ],
+    "rangedTypes": [
+      "Guns"
+    ],
+    "restoreCry": "Stone and storm! The Mountain King stands again.",
+    "source": "Alliance Player's Guide",
+    "trials": [
+      {
+        "chapter": 0,
+        "epitaph": "The grudge counted %d Dark Iron dead.",
+        "id": "mk_grudge",
+        "kind": "counter",
+        "milestones": [
+          {
+            "count": 10,
+            "honorific": "Grudgebearer"
+          },
+          {
+            "count": 50,
+            "honorific": "Grudgekeeper"
+          },
+          {
+            "count": 200,
+            "honorific": "Avenger of the Three Hammers"
+          }
+        ],
+        "name": "The Grudge of Khaz Modan",
+        "objective": "Slay Dark Iron dwarves — and their Anvilrage, Shadowforge and Doomforge kin — wherever they scheme",
+        "pattern": [
+          "Dark Iron",
+          "Anvilrage",
+          "Shadowforge",
+          "Doomforge"
+        ],
+        "text": "Two hundred and thirty years since Thaurissan's treachery split the clans. Every Dark Iron you put in the ground is a line written in the book of grudges. The book is never full."
+      },
+      {
+        "chapter": 1,
+        "id": "mk_coldark",
+        "kind": "kill",
+        "level": 5,
+        "name": "The Cold Dark",
+        "objective": "Slay Grik'nir the Cold in Coldridge Valley",
+        "targets": [
+          "Grik'nir the Cold"
+        ],
+        "text": "Frostmane trolls skulk in the cave below Coldridge while we guard the wrong doors. Their chieftain Grik'nir squats in the dark. Carry the mountain's answer to him."
+      },
+      {
+        "chapter": 1,
+        "emote": "KNEEL",
+        "id": "mk_oath",
+        "kind": "emote",
+        "level": 8,
+        "name": "The Oath at the High Seat",
+        "objective": "/kneel at the High Seat of Ironforge",
+        "subzone": "The High Seat",
+        "text": "Words spoken in a tavern are wind. Climb to the High Seat, kneel before the throne of Magni Bronzebeard, and swear the old oath where the mountain can hear it.",
+        "zone": "Ironforge"
+      },
+      {
+        "chapter": 1,
+        "id": "mk_forge",
+        "kind": "cast",
+        "level": 10,
+        "name": "Forged at the Great Forge",
+        "objective": "Craft a Heavy Copper Maul at the Great Forge in Ironforge",
+        "spell": "Heavy Copper Maul",
+        "subzone": "The Great Forge",
+        "text": "A bought weapon is a stranger in your hands. Smelt the copper yourself and hammer it out at the Great Forge — no lesser anvil will do.",
+        "zone": "Ironforge"
+      },
+      {
+        "chapter": 1,
+        "emote": "SALUTE",
+        "id": "mk_dam",
+        "kind": "emote",
+        "level": 12,
+        "name": "The Stonewrought Dam",
+        "objective": "/salute atop the Stonewrought Dam in Loch Modan",
+        "subzone": "Stonewrought Dam",
+        "text": "Before you break stone, learn what stone can hold. Stand atop the Stonewrought Dam and salute the masons who dammed a lake with their two hands.",
+        "zone": "Loch Modan"
+      },
+      {
+        "chapter": 1,
+        "cleanOnly": true,
+        "id": "mk_wendigo",
+        "kind": "kill",
+        "level": 15,
+        "name": "The Wendigo",
+        "objective": "Slay Vagash above Amberstill Ranch — alone, vows clean",
+        "solo": true,
+        "targets": [
+          "Vagash"
+        ],
+        "text": "Vagash has been bleeding the Amberstill flock white. Go up the mountain alone, hammer in hand, vows clean, and come down with frost in your beard."
+      },
+      {
+        "chapter": 1,
+        "cleanOnly": true,
+        "id": "mk_ogre",
+        "kind": "kill",
+        "level": 22,
+        "name": "The Ogre Problem",
+        "objective": "Slay Chok'sul at the Mo'grosh Stronghold, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Chok'sul"
+        ],
+        "text": "The Mo'grosh ogres squat in our quarry, and their chief Chok'sul grows fat on stolen stone. Put him down with your vows clean, and the Loch will know a Disciple walks its shore."
+      },
+      {
+        "chapter": 2,
+        "id": "mk_smite",
+        "items": [
+          "Smite's Mighty Hammer"
+        ],
+        "kind": "equip",
+        "level": 20,
+        "name": "The First Mate's Due",
+        "objective": "Claim and wield Smite's Mighty Hammer from the Deadmines",
+        "text": "A first mate aboard the Defias ship in the Deadmines swings a hammer worth more than his whole crew. Relieve Mr. Smite of it and let it serve an honest dwarf."
+      },
+      {
+        "chapter": 2,
+        "emote": "MOURN",
+        "id": "mk_span",
+        "kind": "emote",
+        "level": 24,
+        "name": "The Span of the Fallen",
+        "objective": "/mourn on the Thandol Span",
+        "subzone": "Thandol Span",
+        "text": "Dark Iron sappers dropped the central span and good dwarves with it — some still lie beneath the water. Walk the Thandol Span and mourn them where they fell.",
+        "zone": "Wetlands"
+      },
+      {
+        "aura": "Mace Stun Effect",
+        "chapter": 2,
+        "count": 50,
+        "honorific": "Stormhammer",
+        "id": "mk_stormhammer",
+        "kind": "proc",
+        "level": 25,
+        "name": "Trial of the Storm",
+        "objective": "Stun 50 foes with your mace's storm (Mace Specialization)",
+        "text": "The old kings threw hammers of lightning. Yours answers in its own way — let the storm in your mace speak until the whole road has heard it."
+      },
+      {
+        "chapter": 2,
+        "count": 10,
+        "hits": 3,
+        "id": "mk_thunder",
+        "kind": "multihit",
+        "level": 25,
+        "name": "Trial of the Thunder",
+        "objective": "Strike 3 or more foes with a single Thunder Clap, 10 times",
+        "spell": "Thunder Clap",
+        "text": "One clap, three foes staggered — that is the King's thunder. Do it ten times and the sky itself will take notes."
+      },
+      {
+        "chapter": 2,
+        "count": 25,
+        "id": "mk_dragonmaw",
+        "kind": "kill",
+        "level": 26,
+        "name": "The Chains of the Dragonmaw",
+        "objective": "Slay 25 Dragonmaw orcs in the Wetlands",
+        "pattern": "Dragonmaw",
+        "text": "The Dragonmaw clan put chains on Alexstrasza at Grim Batol. Their grandsons camp at Angerfang as if the debt were paid. It is not. Collect."
+      },
+      {
+        "chapter": 2,
+        "id": "mk_grimbatol",
+        "kind": "visit",
+        "level": 30,
+        "name": "The Gates of Grim Batol",
+        "objective": "Stand before the gates of Grim Batol",
+        "subzone": "Grim Batol",
+        "text": "Grim Batol was ours once, before the Dragonmaw chained the Dragonqueen in its halls. Stand before its gates and remember what was lost. Mind the red drakes — they remember too.",
+        "zone": "Wetlands"
+      },
+      {
+        "chapter": 2,
+        "cleanOnly": true,
+        "id": "mk_titans",
+        "kind": "kill",
+        "level": 45,
+        "name": "The Titans' Judgment",
+        "objective": "Defeat Archaedas in Uldaman, vows clean (a level 47 elite — a deed for the mid-40s)",
+        "rankTrial": true,
+        "targets": [
+          "Archaedas"
+        ],
+        "text": "Beneath the Badlands the titans left Uldaman, and a keeper of stone who suffers no unworthy hand. Stand before Archaedas with your vows clean and let the makers judge you."
+      },
+      {
+        "chapter": 3,
+        "id": "mk_relic3",
+        "items": [
+          "Mograine's Might",
+          "The Rockpounder"
+        ],
+        "kind": "equip",
+        "level": 42,
+        "name": "A Hammer with History",
+        "objective": "Wield Mograine's Might or The Rockpounder",
+        "text": "A hammer with history hits harder. Scarlet Commander Mograine carries one in his Cathedral; Archaedas guards another in Uldaman's vaults. Bring either to hand."
+      },
+      {
+        "chapter": 3,
+        "id": "mk_avatar",
+        "kind": "kill",
+        "level": 45,
+        "name": "Rite of the Avatar",
+        "objective": "Slay an elite enemy while Stoneform is active",
+        "requireBuff": "Stoneform",
+        "requireElite": true,
+        "text": "When the old kings called on the mountain, their skin turned to living stone. You carry that gift in your blood. Become the Avatar — fell an elite foe while you stand as stone."
+      },
+      {
+        "chapter": 3,
+        "count": 10,
+        "id": "mk_veins",
+        "item": "Dark Iron Ore",
+        "kind": "loot",
+        "level": 50,
+        "name": "Veins of the Enemy",
+        "objective": "Mine 10 Dark Iron Ore",
+        "text": "Dark Iron ore in Dark Iron country, under Dark Iron crossbows. Ten loads, dug with your own pick. The mountain gives nothing for free."
+      },
+      {
+        "chapter": 3,
+        "id": "mk_margol",
+        "kind": "kill",
+        "level": 52,
+        "name": "The Thunder Below",
+        "objective": "Slay Margol the Rager in Searing Gorge — alone",
+        "solo": true,
+        "targets": [
+          "Margol the Rager"
+        ],
+        "text": "Margol the Rager shakes the Searing Gorge with every step. Thunder belongs to the Mountain King — go take it back from her. Alone."
+      },
+      {
+        "chapter": 3,
+        "id": "mk_angerforge",
+        "kind": "kill",
+        "level": 56,
+        "name": "The General",
+        "objective": "Slay General Angerforge in Blackrock Depths",
+        "targets": [
+          "General Angerforge"
+        ],
+        "text": "General Angerforge drills the Emperor's army below Blackrock. An army needs a general; see that theirs is buried with full honors."
+      },
+      {
+        "chapter": 3,
+        "id": "mk_blackanvil",
+        "kind": "cast",
+        "level": 56,
+        "name": "Secrets of the Black Forge",
+        "objective": "Smelt Dark Iron at the Black Forge in Blackrock Depths",
+        "spell": "Smelt Dark Iron",
+        "text": "Gloom'rel's ghost guards the secret of Dark Iron smelting, and only the Black Forge will work it. Pay his tribute, learn the rite, and smelt the enemy's own iron in the heart of his city.",
+        "zone": "Blackrock Depths"
+      },
+      {
+        "chapter": 3,
+        "cleanOnly": true,
+        "completionNote": "He carried Ironfoe — a one-handed mace. A lesser dwarf's weapon. Leave it.",
+        "id": "mk_usurper",
+        "kind": "kill",
+        "level": 58,
+        "name": "The Usurper",
+        "objective": "Slay Emperor Dagran Thaurissan, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Emperor Dagran Thaurissan"
+        ],
+        "text": "Dagran Thaurissan calls himself Emperor in a mountain his fathers stole. Walk into the Imperial Seat with your vows clean and end the family business."
+      },
+      {
+        "chapter": 4,
+        "honorific": "Avenger of Khaz Modan",
+        "id": "mk_ragnaros",
+        "kind": "kill",
+        "level": 60,
+        "name": "The Final Line",
+        "objective": "Slay Ragnaros in the Molten Core",
+        "targets": [
+          "Ragnaros"
+        ],
+        "text": "It was Thaurissan who screamed the Firelord into our world. The grudge has one final line, and it is written in fire. Descend to the Molten Core and close the book."
+      },
+      {
+        "chapter": 4,
+        "id": "mk_tuf",
+        "items": [
+          "The Unstoppable Force"
+        ],
+        "kind": "equip",
+        "level": 60,
+        "name": "The Unstoppable Force",
+        "objective": "Earn and wield The Unstoppable Force (Stormpike exalted)",
+        "text": "The Stormpike fight our war in Alterac. Stand with them until they call you brother, and carry The Unstoppable Force into the field."
+      },
+      {
+        "chapter": 4,
+        "id": "mk_sulfuras",
+        "items": [
+          "Sulfuras, Hand of Ragnaros"
+        ],
+        "kind": "equip",
+        "level": 60,
+        "name": "The Hammer Above All Hammers",
+        "objective": "Forge and wield Sulfuras, Hand of Ragnaros",
+        "text": "There is one hammer above all hammers, and you must make it yourself: Sulfuron's plans, the Firelord's eye, and three hundred skill at the forge. Few will ever hold it. Be few."
+      },
+      {
+        "chapter": 4,
+        "emote": "DRINK",
+        "id": "mk_lastcall",
+        "kind": "emote",
+        "level": 60,
+        "name": "Last Call",
+        "objective": "/drink at the Thunderbrew Distillery in Kharanos",
+        "subzone": "Thunderbrew",
+        "text": "You knelt before a throne; now raise a mug where it all began. One drink at the Thunderbrew Distillery — for the road, the dead, and the mountain.",
+        "zone": "Dun Morogh"
+      }
+    ],
+    "weaponTypes": [
+      "Two-Handed Maces"
+    ]
+  },
+  {
+    "breakCry": "The fury fades — you hide like prey! Cast off the shell and rage.",
+    "classes": [
+      "WARRIOR"
+    ],
+    "faction": "Horde",
+    "fantasy": "A frenzied tribal warrior who throws caution — and armor — to the wind, striking with reckless fury and no shield to hide behind.",
+    "forbidShield": true,
+    "honorRules": [
+      "Never raise a shield — only fury answers the call.",
+      "Wear no plate; the berserker disdains the turtle's shell.",
+      "Fight in Berserker Stance whenever it is yours."
+    ],
+    "icon": "racial_troll_berserk",
+    "id": "berserker",
+    "maxArmor": "Mail",
+    "name": "Berserker",
+    "profession": [
+      "Skinning",
+      "Leatherworking"
+    ],
+    "races": [
+      "Troll",
+      "Orc"
+    ],
+    "restoreCry": "The blood boils once more. RAAAGH!",
+    "source": "WoW RPG"
+  },
+  {
+    "breakCry": "Your beast is gone — a Beastmaster never walks alone!",
+    "classes": [
+      "HUNTER"
+    ],
+    "faction": "Both",
+    "fantasy": "A wilds-born hunter bonded to a single great beast. The pet is not a tool — it is family, and it never fights alone.",
+    "honorRules": [
+      "Always have your beast at your side — never quest without it.",
+      "Name your companion and never abandon or let it die.",
+      "Tame the rarest beast you can find and keep it for life."
+    ],
+    "icon": "ability_hunter_beastcall",
+    "id": "beastmaster",
+    "name": "Beastmaster",
+    "profession": [
+      "Skinning",
+      "Leatherworking"
+    ],
+    "requirePet": true,
+    "restoreCry": "The pack is whole again.",
+    "source": "Warcraft RPG"
+  },
+  {
+    "breakCry": "The shot is fouled! The Marksman works alone, gun in hand.",
+    "classes": [
+      "HUNTER"
+    ],
+    "faction": "Both",
+    "fantasy": "A cold-eyed sharpshooter who trusts the rifle over any beast. One shot, one kill — no companion to share the glory.",
+    "forbidPet": true,
+    "honorRules": [
+      "Fight with a gun or crossbow — never a bow.",
+      "Dismiss your pet; the shot is yours alone.",
+      "Open every fight at maximum range."
+    ],
+    "icon": "ability_marksmanship",
+    "id": "marksman",
+    "name": "Marksman",
+    "profession": [
+      "Engineering"
+    ],
+    "rangedTypes": [
+      "Guns",
+      "Crossbows"
+    ],
+    "restoreCry": "Sights aligned. One shot, one kill.",
+    "source": "Alliance & Horde Compendium"
+  },
+  {
+    "breakCry": "The contract is void! Only daggers, only shadow.",
+    "classes": [
+      "ROGUE"
+    ],
+    "faction": "Both",
+    "fantasy": "A shadow with a blade. Strikes from stealth with twin daggers slick with poison, and is gone before the body falls.",
+    "honorRules": [
+      "Wield only daggers — the assassin's signature.",
+      "Keep poisons applied at all times.",
+      "Open every fight from Stealth, never head-on."
+    ],
+    "icon": "ability_rogue_eviscerate",
+    "id": "assassin",
+    "maxArmor": "Leather",
+    "name": "Assassin",
+    "profession": [
+      "Skinning",
+      "Leatherworking"
+    ],
+    "restoreCry": "The shadows welcome you back.",
+    "source": "WoW RPG",
+    "weaponTypes": [
+      "Daggers"
+    ]
+  },
+  {
+    "breakCry": "Dishonor! A Duelist needs one sword and nothing else.",
+    "classes": [
+      "ROGUE",
+      "WARRIOR"
+    ],
+    "faction": "Both",
+    "fantasy": "An honorable blademaster of single combat. One sword, no shield, no tricks — just skill against skill.",
+    "forbidShield": true,
+    "honorRules": [
+      "Fight with a single one-handed sword — no shield, no off-hand.",
+      "Face foes one at a time when you can.",
+      "Never strike a fleeing, helpless enemy."
+    ],
+    "icon": "ability_parry",
+    "id": "duelist",
+    "name": "Duelist",
+    "profession": [
+      "Blacksmithing"
+    ],
+    "restoreCry": "En garde. Your honor is restored.",
+    "source": "WoW RPG",
+    "weaponTypes": [
+      "One-Handed Swords"
+    ]
+  },
+  {
+    "breakCry": "The hunt falters! The Warden's glaive must always be ready.",
+    "classes": [
+      "ROGUE"
+    ],
+    "faction": "Alliance",
+    "fantasy": "A relentless night elf jailer who hunts the guilty across the world, striking with thrown glaives and vanishing into shadow.",
+    "honorRules": [
+      "Keep a thrown weapon ready — the Warden's glaive flies true.",
+      "Use Shadowmeld and Stealth to stalk your prey.",
+      "Pursue your target relentlessly; never let the guilty escape."
+    ],
+    "icon": "ability_ambush",
+    "id": "warden",
+    "maxArmor": "Leather",
+    "name": "Warden",
+    "profession": [
+      "Skinning",
+      "Leatherworking"
+    ],
+    "races": [
+      "NightElf"
+    ],
+    "rangedTypes": [
+      "Thrown"
+    ],
+    "restoreCry": "The watch resumes. None escape.",
+    "source": "Alliance Player's Guide"
+  },
+  {
+    "breakCry": "The wild rejects you! Shed the trappings of civilization.",
+    "classes": [
+      "DRUID"
+    ],
+    "faction": "Both",
+    "fantasy": "A shapeshifter who has all but forsaken their humanoid shell, living as bear and cat. The wild is the only true form.",
+    "honorRules": [
+      "Fight only in Bear or Cat form — your caster shape is for travel and healing, not war.",
+      "Wear nothing heavier than leather.",
+      "Walk the wilds; favor nature over civilization."
+    ],
+    "icon": "ability_druid_catform",
+    "id": "druidwild",
+    "maxArmor": "Leather",
+    "name": "Druid of the Wild",
+    "profession": [
+      "Herbalism",
+      "Alchemy"
+    ],
+    "restoreCry": "Tooth and claw. The wild knows its own.",
+    "source": "Warcraft RPG"
+  },
+  {
+    "breakCry": "The Light dims! Take up the hammer of judgment.",
+    "classes": [
+      "PALADIN"
+    ],
+    "faction": "Alliance",
+    "fantasy": "A holy crusader clad head to toe in plate, hammer in hand and the Light at their back, shielding the weak from darkness.",
+    "honorRules": [
+      "Wield a mace or hammer — the Light's blunt judgment.",
+      "Wear full plate as soon as you are able.",
+      "Protect allies before yourself; never abandon a party member."
+    ],
+    "icon": "spell_holy_holybolt",
+    "id": "vindicator",
+    "name": "Vindicator",
+    "profession": [
+      "Blacksmithing",
+      "Mining"
+    ],
+    "races": [
+      "Dwarf",
+      "Human"
+    ],
+    "restoreCry": "The Light shines upon you once more.",
+    "source": "Dark Factions",
+    "weaponTypes": [
+      "One-Handed Maces",
+      "Two-Handed Maces"
+    ]
+  },
+  {
+    "breakCry": "The crowd jeers! A Gladiator wins with steel, face to face.",
+    "classes": [
+      "WARRIOR"
+    ],
+    "faction": "Both",
+    "fantasy": "An arena-forged warrior who lives for the melee. Sword in hand, face to face, no ranged crutch and no retreat.",
+    "forbidSlots": [
+      "RangedSlot"
+    ],
+    "honorRules": [
+      "Fight with swords only — the gladiator's chosen steel.",
+      "Carry no bow, gun or thrown weapon; close the distance and win it in melee.",
+      "Never flee a fight you started."
+    ],
+    "icon": "inv_sword_27",
+    "id": "gladiator",
+    "name": "Gladiator",
+    "profession": [
+      "Blacksmithing"
+    ],
+    "restoreCry": "The crowd roars your name!",
+    "source": "Warcraft RPG",
+    "weaponTypes": [
+      "One-Handed Swords",
+      "Two-Handed Swords"
+    ]
+  },
+  {
+    "breakCry": "The ancestors turn away! Walk gently between the worlds.",
+    "classes": [
+      "SHAMAN"
+    ],
+    "faction": "Horde",
+    "fantasy": "A tauren mystic who walks between the living and the ancestors, mending allies and calling the elements through totems.",
+    "honorRules": [
+      "Drop totems in every meaningful fight — the elements fight beside you.",
+      "Heal and shield your group; the Spirit Walker serves the living and the dead.",
+      "Carry a mace or staff, never a blade."
+    ],
+    "icon": "spell_nature_healingwavegreater",
+    "id": "spiritwalker",
+    "maxArmor": "Mail",
+    "name": "Spirit Walker",
+    "profession": [
+      "Herbalism",
+      "Alchemy"
+    ],
+    "races": [
+      "Tauren"
+    ],
+    "restoreCry": "The ancestors smile upon you.",
+    "source": "Horde Player's Guide",
+    "weaponTypes": [
+      "One-Handed Maces",
+      "Staves"
+    ]
+  },
+  {
+    "breakCry": "Da mojo be broken, mon! Cloth and cunning only.",
+    "classes": [
+      "MAGE"
+    ],
+    "faction": "Horde",
+    "fantasy": "A troll voodoo caster who curses, hexes and freezes foes solid. Cloth and cunning over steel and muscle.",
+    "honorRules": [
+      "Wear only cloth — the Hexer needs no armor.",
+      "Hex (Polymorph) a dangerous foe in every multi-enemy fight.",
+      "Lead with curses and crowd control before raw damage."
+    ],
+    "icon": "spell_nature_polymorph",
+    "id": "hexer",
+    "maxArmor": "Cloth",
+    "name": "Hexer",
+    "profession": [
+      "Tailoring",
+      "Enchanting"
+    ],
+    "races": [
+      "Troll"
+    ],
+    "restoreCry": "Da spirits be pleased. Da mojo flows.",
+    "source": "Horde Player's Guide",
+    "weaponTypes": [
+      "Staves",
+      "Daggers",
+      "One-Handed Swords"
+    ]
+  },
+  {
+    "breakCry": "The grave grows silent! Raise your servant, deathweaver.",
+    "classes": [
+      "WARLOCK"
+    ],
+    "faction": "Horde",
+    "fantasy": "A Forsaken death-mage who is never truly alone — a servant from beyond the grave always stands at their side, fed on stolen life.",
+    "honorRules": [
+      "Always keep a summoned minion at your side — the dead never rest.",
+      "Drain the life from your enemies to sustain yourself.",
+      "Wear only the robes of a deathweaver."
+    ],
+    "icon": "spell_shadow_animatedead",
+    "id": "necromancer",
+    "maxArmor": "Cloth",
+    "name": "Necromancer",
+    "profession": [
+      "Tailoring"
+    ],
+    "races": [
+      "Scourge"
+    ],
+    "requirePet": true,
+    "restoreCry": "The dead march with you once more.",
+    "source": "Alliance & Horde Compendium"
+  },
+  {
+    "breakCry": "The Kirin Tor disavows you! Staff and robes, archmage — nothing less.",
+    "classes": [
+      "MAGE"
+    ],
+    "faction": "Alliance",
+    "fantasy": "A Dalaran arcanist of the highest order. Robes, a staff, and unmatched mastery of the arcane — no blade ever sullies their hands.",
+    "honorRules": [
+      "Carry only a staff — the symbol of an archmage.",
+      "Wear nothing but cloth robes.",
+      "Master the arcane; let intellect, not muscle, win your battles."
+    ],
+    "icon": "spell_holy_magicalsentry",
+    "id": "archmage",
+    "maxArmor": "Cloth",
+    "minLevel": 20,
+    "name": "Archmage of the Kirin Tor",
+    "profession": [
+      "Enchanting",
+      "Tailoring"
+    ],
+    "races": [
+      "Human",
+      "Gnome"
+    ],
+    "restoreCry": "Dalaran acknowledges your mastery once more.",
+    "source": "WoW RPG",
+    "weaponTypes": [
+      "Staves"
+    ]
+  },
+  {
+    "breakCry": "Nothing left to crush with! Take up the great hammer.",
+    "classes": [
+      "WARRIOR"
+    ],
+    "faction": "Horde",
+    "fantasy": "A brutal frontline smasher who answers everything with a two-handed hammer and refuses to take a single step back.",
+    "honorRules": [
+      "Crush with a two-handed mace — nothing else will do.",
+      "Wade into the thickest of the fight; you are the front line.",
+      "Never retreat while you can still swing."
+    ],
+    "icon": "inv_hammer_16",
+    "id": "bonecrusher",
+    "name": "Bone Crusher",
+    "profession": [
+      "Mining",
+      "Blacksmithing"
+    ],
+    "races": [
+      "Orc",
+      "Tauren"
+    ],
+    "restoreCry": "Bones will break again. Forward!",
+    "source": "Horde Player's Guide",
+    "weaponTypes": [
+      "Two-Handed Maces"
+    ]
+  },
+  {
+    "breakCry": "Da loa be angry, mon! Walk da way of shadow and spirit.",
+    "classes": [
+      "PRIEST"
+    ],
+    "faction": "Horde",
+    "fantasy": "A troll spiritualist blending healing voodoo with savage hexes — equal parts healer and headhunter.",
+    "honorRules": [
+      "Heal your allies — the Shadow Hunter shepherds the tribe.",
+      "Use Shadow magic to curse and torment your foes.",
+      "Honor the loa; favor troll tradition over outsider ways."
+    ],
+    "icon": "spell_shadow_curseoftounges",
+    "id": "shadowhunter",
+    "maxArmor": "Cloth",
+    "name": "Shadow Hunter",
+    "profession": [
+      "Herbalism",
+      "Alchemy"
+    ],
+    "races": [
+      "Troll"
+    ],
+    "restoreCry": "Da loa watch over ya again.",
+    "source": "Magic & Mayhem",
+    "weaponTypes": [
+      "Daggers",
+      "One-Handed Maces",
+      "Staves"
+    ]
+  },
+  {
+    "breakCry": "The experiment is ruined! The Society demands your craft.",
+    "classes": [
+      "WARLOCK",
+      "MAGE",
+      "PRIEST"
+    ],
+    "faction": "Horde",
+    "fantasy": "A Forsaken plague-chemist who weaponizes disease and decay. The laboratory is the true battlefield.",
+    "honorRules": [
+      "Brew and carry potions, oils and concoctions at all times.",
+      "Spread blight: favor damage-over-time and afflictions.",
+      "Test your latest brew before every dangerous fight."
+    ],
+    "icon": "inv_potion_19",
+    "id": "darkapothecary",
+    "maxArmor": "Cloth",
+    "name": "Dark Apothecary",
+    "profession": [
+      "Herbalism"
+    ],
+    "races": [
+      "Scourge"
+    ],
+    "requireProfession": [
+      "Alchemy"
+    ],
+    "restoreCry": "The cauldron bubbles anew. For the Dark Lady.",
+    "source": "Lands of Conflict"
+  },
+  {
+    "breakCry": "You are not prepared! Twin blades, bare skin, nothing more.",
+    "classes": [
+      "ROGUE",
+      "WARRIOR"
+    ],
+    "faction": "Alliance",
+    "fantasy": "An outcast who sacrificed everything to fight fire with fire. Blindfolded, bare-chested, a blade in each hand — feared by friend and foe alike.",
+    "forbidSlots": [
+      "HeadSlot",
+      "ChestSlot"
+    ],
+    "honorRules": [
+      "Fight with a warglaive in each hand (one-handed swords or fists).",
+      "Wear no helm and no chest — your scars are your armor.",
+      "Embrace the dark: use every dirty trick, show no mercy to evil."
+    ],
+    "icon": "ability_dualwield",
+    "id": "demonhunter",
+    "maxArmor": "Leather",
+    "minLevel": 10,
+    "name": "Demon Hunter",
+    "profession": [
+      "Enchanting"
+    ],
+    "races": [
+      "NightElf"
+    ],
+    "requireDualWield": true,
+    "restoreCry": "The sacrifice is honored. Hunt the demon within.",
+    "source": "WoW RPG / The Illidari",
+    "weaponTypes": [
+      "One-Handed Swords",
+      "Fist Weapons"
+    ]
+  },
+  {
+    "breakCry": "Elune's light wavers! Bear the sister's staff with grace.",
+    "classes": [
+      "PRIEST"
+    ],
+    "faction": "Alliance",
+    "fantasy": "A chosen sister of Elune who fights bathed in moonlight, staff in hand, calling down the goddess's silver wrath.",
+    "honorRules": [
+      "Carry a staff or moon-blessed mace, and a wand for Elune's distant wrath.",
+      "Use Starshards and holy starlight — you are Elune's arrow.",
+      "Fight under the open sky when you can; the moon must see your deeds."
+    ],
+    "icon": "spell_holy_elunesgrace",
+    "id": "priestessmoon",
+    "maxArmor": "Cloth",
+    "name": "Priestess of the Moon",
+    "profession": [
+      "Tailoring",
+      "Enchanting"
+    ],
+    "races": [
+      "NightElf"
+    ],
+    "rangedTypes": [
+      "Wands"
+    ],
+    "restoreCry": "Elune-adore. The goddess smiles upon you.",
+    "source": "Warcraft III / Sisterhood of Elune",
+    "weaponTypes": [
+      "Staves",
+      "One-Handed Maces"
+    ]
+  },
+  {
+    "breakCry": "The forest falls silent! A ranger trusts only the bow.",
+    "classes": [
+      "HUNTER"
+    ],
+    "faction": "Alliance",
+    "fantasy": "A silent sentinel of the deep forests. The bow is an extension of the arm; every arrow lands where the eye rests.",
+    "honorRules": [
+      "Fight with a bow — never a gun's crude thunder.",
+      "Wear nothing heavier than leather; move like wind through leaves.",
+      "Track and skin your kills; waste nothing the forest gives."
+    ],
+    "icon": "inv_weapon_bow_07",
+    "id": "elvenranger",
+    "maxArmor": "Leather",
+    "name": "Elven Ranger",
+    "profession": [
+      "Skinning",
+      "Leatherworking"
+    ],
+    "races": [
+      "NightElf"
+    ],
+    "rangedTypes": [
+      "Bows"
+    ],
+    "restoreCry": "The forest breathes again. Loose your arrows.",
+    "source": "Warcraft RPG"
+  },
+  {
+    "breakCry": "The vision clouds! The elements demand a worthy vessel.",
+    "classes": [
+      "SHAMAN"
+    ],
+    "faction": "Horde",
+    "fantasy": "An ancient orc shaman whose eyes see across mountains and years. The elements speak, and the Far Seer listens.",
+    "honorRules": [
+      "Walk with a staff or mace; the Far Seer is a guide, not a butcher.",
+      "Scout ahead with Far Sight before entering dangerous lands.",
+      "Counsel your group; share what the spirits show you."
+    ],
+    "icon": "spell_nature_farsight",
+    "id": "farseer",
+    "maxArmor": "Mail",
+    "name": "Far Seer",
+    "profession": [
+      "Herbalism",
+      "Alchemy"
+    ],
+    "races": [
+      "Orc"
+    ],
+    "restoreCry": "The sight returns. The elements speak through you.",
+    "source": "Warcraft III / Horde tradition",
+    "weaponTypes": [
+      "Staves",
+      "One-Handed Maces"
+    ]
+  },
+  {
+    "breakCry": "Da voodoo be weak, mon! Brew, bones and spirit.",
+    "classes": [
+      "SHAMAN"
+    ],
+    "faction": "Horde",
+    "fantasy": "A Darkspear mystic of wards and brews, rattling bone charms and flinging foul concoctions. Da voodoo provides.",
+    "honorRules": [
+      "Brew your own potions and drink them proudly — Alchemy is your craft.",
+      "Drop totems like wards in every fight.",
+      "Collect trophies from worthy kills (keep a bone or skull in your bags)."
+    ],
+    "icon": "inv_misc_bone_humanskull_01",
+    "id": "witchdoctor",
+    "maxArmor": "Leather",
+    "name": "Witch Doctor",
+    "profession": [
+      "Herbalism"
+    ],
+    "races": [
+      "Troll"
+    ],
+    "requireProfession": [
+      "Alchemy"
+    ],
+    "restoreCry": "Da voodoo be strong again, mon!",
+    "source": "Warcraft III / Darkspear tradition",
+    "weaponTypes": [
+      "Daggers",
+      "Staves",
+      "One-Handed Maces"
+    ]
+  },
+  {
+    "breakCry": "Mutiny! A buccaneer fights with cutlass and pistol or not at all.",
+    "classes": [
+      "ROGUE"
+    ],
+    "faction": "Both",
+    "fantasy": "A swaggering corsair with a cutlass on the hip and a pistol in the belt. Gold, grog and glory — in that order.",
+    "honorRules": [
+      "Cutlass in hand, pistol in the belt — sword or dagger, plus a gun.",
+      "Loot every kill; never leave gold on a body.",
+      "Eat, drink and be merry before every voyage (buff food and drink)."
+    ],
+    "icon": "inv_misc_coin_02",
+    "id": "buccaneer",
+    "maxArmor": "Leather",
+    "name": "Buccaneer",
+    "profession": [
+      "Fishing",
+      "Cooking"
+    ],
+    "rangedTypes": [
+      "Guns"
+    ],
+    "restoreCry": "Back aboard, captain. The horizon is yours.",
+    "source": "Warcraft RPG / Pirates of the South Seas",
+    "weaponTypes": [
+      "One-Handed Swords",
+      "Daggers"
+    ]
+  },
+  {
+    "breakCry": "Catastrophic malfunction! A Tinker without gadgets is just short.",
+    "classes": [
+      "WARRIOR",
+      "ROGUE"
+    ],
+    "faction": "Alliance",
+    "fantasy": "A gnomish genius who solves every problem with a bigger gadget. The gun is self-built, the bombs are homemade, and the warranty is void.",
+    "honorRules": [
+      "Keep a gun on your back — preferably one you built yourself.",
+      "Use an engineering gadget (bomb, dynamite, trinket) in every hard fight.",
+      "Craft your own gear when Engineering allows it."
+    ],
+    "icon": "inv_misc_gear_01",
+    "id": "tinker",
+    "name": "Tinker",
+    "profession": [
+      "Mining"
+    ],
+    "races": [
+      "Gnome"
+    ],
+    "rangedTypes": [
+      "Guns"
+    ],
+    "requireProfession": [
+      "Engineering"
+    ],
+    "restoreCry": "All systems nominal. For Gnomeregan!",
+    "source": "Warcraft RPG / Gnomeregan"
+  }
+]

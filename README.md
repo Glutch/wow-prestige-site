@@ -34,3 +34,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Built with Lovely Stack
+
+This project uses the Lovely Stack — an opinionated full-stack recipe:
+Next.js (App Router) + TypeScript + Tailwind + shadcn/ui + Lucide, deployed on
+Vercel. Package manager: Bun.
+
+When working on this codebase with an AI coding agent (Claude Code, Cursor,
+Codex CLI, etc), load the `building-lovely-stack` skill first. See `CLAUDE.md`
+for the agent-facing brief.
+
+## Data pipeline
+
+`src/data/classes.json` is generated from the PrestigeClasses addon repo
+(`../wow-prestige-classes`) — run `bun run data` after addon changes.
+Item tooltip stats in `src/data/items.ts` are verified Classic Era values.
