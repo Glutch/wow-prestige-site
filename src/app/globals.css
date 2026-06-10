@@ -94,6 +94,12 @@
   html {
     @apply font-sans;
   }
+  /* hidden-but-laid-out tooltips (visibility:hidden keeps the box) would
+     otherwise widen the page on small screens — clip, never h-scroll.
+     clip (not hidden) so no scroll container is created and sticky works */
+  html, body {
+    overflow-x: clip;
+  }
 }
 /* ===================== WoW chronicle layer ===================== */
 
@@ -184,7 +190,7 @@ body::before {
 
 /* in-game item tooltip */
 .wow-tooltip {
-  width: 19rem;
+  width: min(19rem, calc(100vw - 2rem));
   background: linear-gradient(#0a0f1add, #060a12ee);
   border: 1px solid #8a8a8a99;
   border-radius: 5px;
@@ -209,7 +215,6 @@ body::before {
 .item-link {
   cursor: pointer;
   font-weight: 600;
-  white-space: nowrap;
 }
 .item-link.q-rare { color: #2c8ae0; }
 .item-link.q-epic { color: #b048f8; }
