@@ -50,6 +50,29 @@ export const identityLoreByClass: Record<string, IdentityLore> = {
     },
   },
 
+  spiritwalker: {
+    races: {
+      Tauren:
+        "“The only culture in Azeroth's history known to have brought forth the spirit walkers are the formerly nomadic tauren tribes,” says the Horde Player's Guide. The gift runs in Shu'halo blood — and the weight of it turns a walker's pelt snow-white over the years.",
+    },
+    professions: {
+      Herbalism:
+        "The Rite of Vision begins with gathering: well stones and ambercorn for Zarlman Two-Moons's brew. A walker who knows every root and bloom of the land gathers the Earthmother's gifts the way the seers always have.",
+      Alchemy:
+        "The Water of the Seers is a brew — drunk at the tribal fire, it opens the eyes to the wolf-spirit no one else can see. Alchemy is that craft carried on: waters and draughts that let the body keep pace with the spirit.",
+    },
+    trees: {
+      "SHAMAN:Restoration":
+        "The RPG calls spirit walkers “conduits from the realm of the dead to the world of the living” — and Restoration is the conduit made discipline. Thirty-one points sworn to mending, not fury: the walker is not a fighter who heals, but a place the weary stand beside.",
+    },
+    talents: {
+      "Totemic Focus":
+        "“Reduces the Mana cost of your totems by 5%” per rank — five points sworn by 17. The elements answer a gentler call for one who walks between worlds; the totems are kin, not tools.",
+      "Mana Tide Totem":
+        "“Summons a Mana Tide Totem… that restores mana every 3 seconds to group members.” The 31-point oath of the tree, planted by 42 — the well of spirit your kin drink from mid-battle, the Tide of Spirit the journey counts as its own rite.",
+    },
+  },
+
   mountainking: {
     races: {
       Dwarf:

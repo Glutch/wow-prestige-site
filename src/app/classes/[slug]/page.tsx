@@ -34,6 +34,8 @@ const HERO_BG: Record<string, string> = {
   blademaster:
     "https://wow.zamimg.com/uploads/screenshots/normal/1024918-durotar-tiragarde-keep-view.jpg",
   beastmaster: "https://wow.zamimg.com/uploads/screenshots/normal/70250.jpg",
+  // Sunset in Mulgore — the hour between An'she and Mu'sha.
+  spiritwalker: "https://wow.zamimg.com/uploads/screenshots/normal/9349.jpg",
 };
 const DEFAULT_BG = "https://wow.zamimg.com/uploads/screenshots/normal/84153.jpg";
 
@@ -113,6 +115,7 @@ export default async function ClassPage({ params }: { params: Params }) {
               style={{ animationDelay: "400ms" }}
             >
               <div className="min-w-0 space-y-4">
+                <CodeSection c={c} />
                 <div className="relative hover:z-[70] focus-within:z-[70]">
                   <ItemInventory c={c} />
                 </div>
@@ -123,7 +126,8 @@ export default async function ClassPage({ params }: { params: Params }) {
               <PathIdentity c={c} stacked />
             </div>
           ) : (
-            <div className="rise mt-8" style={{ animationDelay: "340ms" }}>
+            <div className="rise mt-8 space-y-4" style={{ animationDelay: "340ms" }}>
+              <CodeSection c={c} />
               <PathIdentity c={c} />
             </div>
           )}
@@ -133,12 +137,6 @@ export default async function ClassPage({ params }: { params: Params }) {
       <div className="mx-auto max-w-6xl space-y-20 px-4 py-16 sm:px-6">
         {/* ---- the legend ---- */}
         <LoreSection c={c} />
-
-        {/* ---- the code ---- */}
-        <section>
-          <h2 className="mb-6 font-display text-2xl font-bold text-foreground">The Code</h2>
-          <CodeSection c={c} />
-        </section>
 
         {/* ---- the journey ---- */}
         {hasJourney ? (

@@ -2,6 +2,7 @@ import type { Trial } from "@/lib/wow";
 import { WowIcon } from "@/components/wow-icon";
 import { Linkify } from "@/components/item-link";
 import { TrialLinks } from "@/components/trial-links";
+import { trialIcons } from "@/data/trial-icons";
 
 const KIND_ICON: Record<Trial["kind"], string> = {
   kill: "ability_warrior_savageblow",
@@ -45,7 +46,7 @@ export function TrialCard({ trial }: { trial: Trial }) {
     <div className="wow-panel relative rounded-sm p-4 transition-transform duration-200 hover:-translate-y-0.5 hover:z-40 sm:p-5">
       <div className="flex items-start gap-4">
         <div className="relative shrink-0">
-          <WowIcon token={KIND_ICON[trial.kind]} size={44} alt={KIND_LABEL[trial.kind]} />
+          <WowIcon token={trialIcons[trial.id] ?? KIND_ICON[trial.kind]} size={44} alt={KIND_LABEL[trial.kind]} />
           {trial.level && (
             <span className="absolute -bottom-1.5 -right-1.5 rounded-sm border border-gold/60 bg-black px-1 font-display text-[0.65rem] font-bold text-gold">
               {trial.level}

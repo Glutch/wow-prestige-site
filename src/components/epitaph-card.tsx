@@ -5,6 +5,7 @@ import type { PrestigeClass } from "@/lib/wow";
 const SAMPLE: Record<string, { hero: string; days: number; count: number }> = {
   mountainking: { hero: "Dunhelm", days: 84, count: 214 },
   blademaster: { hero: "Gorvash", days: 77, count: 209 },
+  spiritwalker: { hero: "Tahkoda Palehide", days: 96, count: 211 },
 };
 const FALLBACK = { hero: "Aldric", days: 60, count: 150 };
 

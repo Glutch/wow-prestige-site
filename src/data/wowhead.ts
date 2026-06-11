@@ -26,6 +26,23 @@ export const npcIds: Record<string, number> = {
   "The Razza": 11497,
   "Warchief Rend Blackhand": 10429,
   "Lord Kazzak": 12397,
+  // Spirit Walker
+  '"Squealer" Thornmantle': 3229,
+  Ishamuhale: 3257,
+  "Isha Awak": 3476,
+  "Mutanus the Devourer": 3654,
+  "Arnak Grimtotem": 10896,
+  "Amnennar the Coldbringer": 7358,
+  "Witch Doctor Zum'rah": 7271,
+  "Celebras the Cursed": 12225,
+  "Princess Theradras": 12201,
+  "Shade of Eranikus": 5709,
+  "Death Knight Darkreaver": 14516,
+  "Jin'do the Hexxer": 11380,
+  Ysondre: 14887,
+  Lethon: 14888,
+  Emeriss: 14889,
+  Taerar: 14890,
 };
 
 export const spellIds: Record<string, number> = {
@@ -39,6 +56,12 @@ export const spellIds: Record<string, number> = {
   "Copper Claymore": 9983, // the blacksmithing craft
   Whirlwind: 1680,
   Recklessness: 1719,
+  // Spirit Walker
+  "Stoneskin Totem": 8071,
+  "Ghost Wolf": 2645,
+  "Chain Heal": 1064,
+  "Mana Tide Totem": 16190,
+  "Ancestral Fortitude": 16177,
 };
 
 export const zoneIds: Record<string, number> = {
@@ -59,6 +82,9 @@ export const zoneIds: Record<string, number> = {
   Felwood: 361,
   Feralas: 357,
   "Blasted Lands": 4,
+  // Spirit Walker
+  Mulgore: 215,
+  "Thunder Bluff": 1638,
 };
 
 /** Extra per-deed quest links (verified IDs only). */
@@ -69,6 +95,28 @@ export const questsByTrial: Record<string, { name: string; id: number }[]> = {
   bm_islander: [{ name: "The Affray", id: 1719 }],
   bm_windmaster: [{ name: "The Windwatcher", id: 1791 }],
   bm_stormblade: [{ name: "Whirlwind Weapon", id: 1792 }],
+  // Spirit Walker
+  sw_firsttotem: [{ name: "Call of Earth", id: 1519 }],
+  sw_strength: [{ name: "Rite of Strength", id: 757 }],
+  sw_vision: [{ name: "Rite of Vision", id: 772 }],
+  sw_wisdom: [{ name: "Rite of Wisdom", id: 773 }],
+  sw_beastspirit: [{ name: "Ishamuhale", id: 882 }],
+  sw_deepspirit: [{ name: "Isha Awak", id: 873 }],
+  sw_dreamwood: [{ name: "Leaders of the Fang", id: 914 }],
+  sw_freedom: [
+    { name: "Wanted - Arnak Grimtotem", id: 5147 },
+    { name: "Free at Last", id: 4904 },
+  ],
+  sw_coldbringer: [{ name: "Bring the End", id: 3341 }],
+  sw_redeemed: [
+    { name: "Legends of Maraudon", id: 7044 },
+    { name: "The Scepter of Celebras", id: 7046 },
+  ],
+  sw_theradras: [
+    { name: "Corruption of Earth and Seed", id: 7064 },
+    { name: "Seed of Life", id: 7066 },
+  ],
+  sw_darkreaver: [{ name: "The Darkreaver Menace", id: 7668 }],
 };
 
 export type WowheadLink = { label: string; url: string; kind: string };

@@ -35,7 +35,7 @@
     "honorRules": [
       "Wield only the two-handed blade — never a shield, never dual-wield.",
       "Bare your head and chest; let skill be your armor.",
-      "When death looms, Wind Walk away (disengage, escape) before you fall."
+      "When death looms, be the wind — Hamstring your foe, Intimidating Shout, and flee before you fall."
     ],
     "icon": "ability_warrior_savageblow",
     "id": "blademaster",
@@ -1808,6 +1808,28 @@
   },
   {
     "breakCry": "The ancestors turn away! Walk gently between the worlds.",
+    "chapters": [
+      {
+        "index": 0,
+        "title": "The Grim Ledger"
+      },
+      {
+        "index": 1,
+        "title": "Chapter I — The Rites of the Earthmother"
+      },
+      {
+        "index": 2,
+        "title": "Chapter II — The Wandering Spirits"
+      },
+      {
+        "index": 3,
+        "title": "Chapter III — The Chained and the Dreaming"
+      },
+      {
+        "index": 4,
+        "title": "Chapter IV — A Thousand Souls"
+      }
+    ],
     "classes": [
       "SHAMAN"
     ],
@@ -1820,6 +1842,18 @@
     ],
     "icon": "spell_nature_healingwavegreater",
     "id": "spiritwalker",
+    "itemIds": {
+      "Aurastone Hammer": 17105,
+      "Crescent Staff": 6505,
+      "High Warlord's Battle Mace": 23464,
+      "Jin'do's Hexxer": 19890,
+      "Living Root": 6631,
+      "Resurgence Rod": 17743,
+      "Skyfury Helm": 20134,
+      "The Hand of Antu'sul": 9639,
+      "Will of Arlokk": 19909,
+      "Witch Doctor's Cane": 9482
+    },
     "maxArmor": "Mail",
     "name": "Spirit Walker",
     "profession": [
@@ -1831,6 +1865,68 @@
     ],
     "restoreCry": "The ancestors smile upon you.",
     "source": "Horde Player's Guide",
+    "suggested": [
+      {
+        "id": 6505,
+        "name": "Crescent Staff",
+        "note": "\"Leaders of the Fang\", Wailing Caverns — Nara Wildmane's reward, given from Elder Rise itself"
+      },
+      {
+        "id": 6631,
+        "name": "Living Root",
+        "note": "Verdan the Everliving, Wailing Caverns — wood that grew inside the Dream's nightmare"
+      },
+      {
+        "id": 9482,
+        "name": "Witch Doctor's Cane",
+        "note": "Zul'Farrak — troll-carved wood that bends nature's wrath to the bearer"
+      },
+      {
+        "id": 9639,
+        "name": "The Hand of Antu'sul",
+        "note": "Antu'sul, Zul'Farrak — a mace that answers with thunder"
+      },
+      {
+        "id": 17743,
+        "name": "Resurgence Rod",
+        "note": "\"Corruption of Earth and Seed\" — the Cenarion Circle's thanks for Theradras's fall"
+      },
+      {
+        "id": 10833,
+        "name": "Horns of Eranikus",
+        "note": "Shade of Eranikus, Sunken Temple — the nightmare's crown, worn as a vigil"
+      },
+      {
+        "id": 20134,
+        "name": "Skyfury Helm",
+        "note": "\"The Darkreaver Menace\" — the shamans' own reward for freeing the enslaved spirits"
+      },
+      {
+        "id": 20582,
+        "name": "Trance Stone",
+        "note": "The four Nightmare dragons — a sliver of the Dream to carry in your off hand"
+      },
+      {
+        "id": 16841,
+        "name": "Earthfury Vestments",
+        "note": "Golemagg, Molten Core — the Earthfury, raiment of the era's great shamans"
+      },
+      {
+        "id": 16842,
+        "name": "Earthfury Helmet",
+        "note": "Garr, Molten Core — the Earthfury's crown"
+      },
+      {
+        "id": 17105,
+        "name": "Aurastone Hammer",
+        "note": "Garr, Molten Core — a healer's mace pulled from the Firelord's halls"
+      },
+      {
+        "id": 19890,
+        "name": "Jin'do's Hexxer",
+        "note": "Jin'do the Hexxer, Zul'Gurub — the chain-binder's own mace, turned to mending"
+      }
+    ],
     "talents": {
       "keys": [
         {
@@ -1847,6 +1943,376 @@
         "points": 31
       }
     },
+    "trials": [
+      {
+        "chapter": 0,
+        "epitaph": "The grim ledger counted %d Grimtotem laid to rest.",
+        "id": "sw_ledger",
+        "kind": "counter",
+        "milestones": [
+          {
+            "count": 10,
+            "honorific": "Spiritspeaker"
+          },
+          {
+            "count": 50,
+            "honorific": "Voice of the Ancestors"
+          },
+          {
+            "count": 200,
+            "honorific": "Redeemer of the Shu'halo"
+          }
+        ],
+        "name": "The Grim Ledger",
+        "objective": "Cut down the Grimtotem wherever they raid — Stonetalon, Thousand Needles, Feralas",
+        "pattern": [
+          "Grimtotem"
+        ],
+        "text": "The Grimtotem call every other people of Kalimdor an enemy, and the dead they make are yours to answer for. Their matriarch schemes on Elder Rise, untouchable; her raiders in the hills are not. A spirit walker carries the grievances of the dead — every Grimtotem raider put down is one grievance laid to rest. The ledger is long."
+      },
+      {
+        "chapter": 1,
+        "id": "sw_firsttotem",
+        "kind": "cast",
+        "level": 5,
+        "name": "The Call of Earth",
+        "objective": "Answer Seer Ravenfeather's Call of Earth and plant your first Stoneskin Totem",
+        "spell": "Stoneskin Totem",
+        "text": "Every shaman of the Shu'halo begins the same way: Seer Ravenfeather sends you into the ravine for the earth's own token, and the earth decides whether to answer. Plant your first totem and feel it — the element standing beside you, the first of many who will fight where you cannot."
+      },
+      {
+        "chapter": 1,
+        "id": "sw_strength",
+        "kind": "kill",
+        "level": 6,
+        "name": "The Rite of Strength",
+        "objective": "Slay \"Squealer\" Thornmantle in Brambleblade Ravine",
+        "targets": [
+          "\"Squealer\" Thornmantle"
+        ],
+        "text": "The first Rite asks for bravery, not slaughter: the Bristleback raid Camp Narache from Brambleblade Ravine, and their loudest tormentor is the one called Squealer. A spirit walker learns early that peace is a thing you sometimes have to dig out from under a quilboar."
+      },
+      {
+        "chapter": 1,
+        "emote": "PRAY",
+        "id": "sw_vision",
+        "kind": "emote",
+        "level": 8,
+        "name": "The Rite of Vision",
+        "objective": "/pray at Bloodhoof Village, where Zarlman Two-Moons brews the Water of the Seers",
+        "subzone": "Bloodhoof Village",
+        "text": "Zarlman Two-Moons brews the Water of the Seers at the tribal fire, and those who drink it follow a wolf-spirit no one else can see. Stand in Bloodhoof Village and pray before the vision takes you. What walks ahead of you on that road will walk beside you for the rest of it.",
+        "zone": "Mulgore"
+      },
+      {
+        "chapter": 1,
+        "id": "sw_wisdom",
+        "kind": "visit",
+        "level": 10,
+        "name": "The Rite of Wisdom",
+        "objective": "Walk to Red Rocks, the burial ground east of Thunder Bluff, where the Ancestral Spirits keep the dead",
+        "subzone": "Red Rocks",
+        "text": "Red Rocks is where the fallen of the Shu'halo are given to the Earth Mother and the Sky Father by cleansing flame — a doorway place, half in this world and half in the next. An Ancestral Spirit waits there for those who passed the Rite of Vision. Go and be looked at by the dead. Everything you become starts with their blessing.",
+        "zone": "Mulgore"
+      },
+      {
+        "chapter": 1,
+        "emote": "KNEEL",
+        "id": "sw_oath",
+        "kind": "emote",
+        "level": 11,
+        "name": "The Oath of the High Chieftain",
+        "objective": "/kneel before Cairne Bloodhoof on the High Rise of Thunder Bluff",
+        "text": "The Ancestral Spirits hand their duty to the living through one tauren: Cairne Bloodhoof, who led the Shu'halo out of the centaur wars and onto this bluff. Climb to the High Rise, kneel, and bind your gift to your people. The dead you will serve were his people first.",
+        "zone": "Thunder Bluff"
+      },
+      {
+        "chapter": 1,
+        "cleanOnly": true,
+        "id": "sw_beastspirit",
+        "kind": "kill",
+        "level": 19,
+        "name": "The Beast Spirits of the Barrens",
+        "objective": "Slay Ishamuhale the great raptor for Jorn Skyseer of Camp Taurajo — alone, vows clean",
+        "rankTrial": true,
+        "solo": true,
+        "targets": [
+          "Ishamuhale"
+        ],
+        "text": "Jorn Skyseer reads the Barrens the way you are learning to read the veil: every great beast of the savannah carries a spirit worth knowing. The first he names is Ishamuhale, the raptor. Meet it alone, vows clean, and learn what the seers of Taurajo already know — the wild's spirits test you before they trust you."
+      },
+      {
+        "chapter": 2,
+        "id": "sw_ethereal",
+        "kind": "cast",
+        "level": 21,
+        "name": "The Ethereal Form",
+        "objective": "Take the Ghost Wolf form for the first time",
+        "spell": "Ghost Wolf",
+        "text": "The spirit walkers of the old tribes fought half in this world — ethereal, untouchable, a shape the living could not hold. Yours runs on four legs. Learn Ghost Wolf and wear the wolf-spirit that led your Rite of Vision. When death closes in, this is the door you leave by."
+      },
+      {
+        "chapter": 2,
+        "cleanOnly": true,
+        "id": "sw_dream",
+        "kind": "kill",
+        "level": 24,
+        "name": "The Devourer of Dreams",
+        "objective": "Wake Naralex in the Wailing Caverns and slay Mutanus the Devourer, vows clean",
+        "targets": [
+          "Mutanus the Devourer"
+        ],
+        "text": "Beneath the Barrens the druid Naralex sleeps, and his dream of healing the land has soured into a nightmare that warps every living thing in the caverns. Walk the serpent-deeps, stand over the dreamer while the Disciples call him back, and when the nightmare sends Mutanus to devour him — be standing in the way."
+      },
+      {
+        "chapter": 2,
+        "id": "sw_dreamwood",
+        "items": [
+          "Crescent Staff",
+          "Living Root"
+        ],
+        "kind": "equip",
+        "level": 24,
+        "name": "Wood of the Dreaming Deeps",
+        "objective": "Carry the Crescent Staff earned from Nara Wildmane, or a Living Root from Verdan the Everliving",
+        "text": "Two staves come out of that nightmare. Nara Wildmane of Elder Rise gives the Crescent Staff to those who break the Fanglords; Verdan the Everliving — a thing of vines the dream grew too large — drops a root that has not noticed it is dead. Either way, your first true staff should remember the Dream."
+      },
+      {
+        "chapter": 2,
+        "cleanOnly": true,
+        "id": "sw_deepspirit",
+        "kind": "kill",
+        "level": 27,
+        "name": "The Terror of the Deeps",
+        "objective": "Slay Isha Awak off the Merchant Coast for Mahren Skyseer — alone, vows clean",
+        "solo": true,
+        "targets": [
+          "Isha Awak"
+        ],
+        "text": "At Tidus Stair the blind seer Mahren Skyseer sits beside the sea that took her sight, and asks for the heart of the thing in it: Isha Awak, the terror of the deeps. The water gave you your healing; it owes you nothing else. Wade out alone, vows clean, and take the answer she has waited years to hear."
+      },
+      {
+        "chapter": 2,
+        "id": "sw_freedom",
+        "kind": "kill",
+        "level": 29,
+        "name": "The Stolen Daughter",
+        "objective": "Slay Arnak Grimtotem atop Darkcloud Pinnacle and see Lakota Windsong home",
+        "targets": [
+          "Arnak Grimtotem"
+        ],
+        "text": "Arnak Grimtotem stole Lakota Windsong off the plains and keeps her on Darkcloud Pinnacle, sure that no one will climb after a daughter of the Windsongs. He is wrong about that. The grim kin make the dead you answer for — better to bring this one home breathing."
+      },
+      {
+        "aura": "Ancestral Fortitude",
+        "chapter": 2,
+        "count": 25,
+        "honorific": "Ancestors' Aegis",
+        "id": "sw_ancestors",
+        "kind": "proc",
+        "level": 30,
+        "name": "The Ancestors' Aegis",
+        "objective": "Wrap allies in Ancestral Fortitude 25 times with your truest heals",
+        "text": "When a healing is perfect, something older than you reaches through it: the ancestors lay their armor over the one you mended. The talent is called Ancestral Healing; the shield it leaves is theirs, not yours. Let the dead guard the living through your hands, twenty-five times."
+      },
+      {
+        "chapter": 2,
+        "emote": "MOURN",
+        "id": "sw_mourn",
+        "kind": "emote",
+        "level": 31,
+        "name": "Where the Kodo Go to Die",
+        "objective": "/mourn among the bones of the Kodo Graveyard in Desolace",
+        "subzone": "Kodo Graveyard",
+        "text": "The kodo walk to Desolace when their time comes — whole herds of them, down all the years, until the valley is white with what they leave. The Shu'halo owe the kodo more than any other beast. Stand among the bones and mourn properly. A spirit walker grieves on behalf of everyone who didn't come.",
+        "zone": "Desolace"
+      },
+      {
+        "chapter": 2,
+        "count": 25,
+        "id": "sw_deathshead",
+        "kind": "kill",
+        "level": 34,
+        "name": "The Death's Head Heresy",
+        "objective": "Cut down 25 of the Death's Head cult in the warrens of Razorfen Kraul and Razorfen Downs",
+        "pattern": "Death's Head",
+        "text": "The quilboar's Death's Head priesthood preaches what a spirit walker knows to be obscene: that the dead are a tool, a harvest, a thing to be raised and spent. Their acolytes and necromancers fill both Razorfens. Twenty-five of them. The dead are not anyone's to use."
+      },
+      {
+        "chapter": 2,
+        "cleanOnly": true,
+        "completionNote": "The quilboar dead went quiet when he fell. The Earthmother does not ask whose bones they were.",
+        "id": "sw_coldbringer",
+        "kind": "kill",
+        "level": 40,
+        "name": "The Lich Below the Thorns",
+        "objective": "Slay Amnennar the Coldbringer in Razorfen Downs, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Amnennar the Coldbringer"
+        ],
+        "text": "The heresy has a teacher. The Scourge sent the lich Amnennar the Coldbringer to raise the quilboar dead and make a second Lordaeron under the Barrens, and the Death's Head cult worships him for it. Walk down the Spiral of Thorns with your vows clean and put out the cold light. Every spirit in those warrens is waiting on you."
+      },
+      {
+        "chapter": 3,
+        "count": 10,
+        "hits": 3,
+        "honorific": "Spirit Link",
+        "id": "sw_spiritlink",
+        "kind": "multihit",
+        "level": 41,
+        "name": "The Spirit Link",
+        "objective": "Mend 3 or more souls with a single Chain Heal, 10 times",
+        "spell": "Chain Heal",
+        "text": "The old spirit walkers linked their kin soul to soul, so that no single body bore the whole of any wound. Yours is learned at the water's edge: Chain Heal, one mending leaping down the chain. Three souls under one cast, ten times over — until the group breathes like one body."
+      },
+      {
+        "chapter": 3,
+        "id": "sw_manatide",
+        "kind": "cast",
+        "level": 42,
+        "name": "The Tide of Spirit",
+        "objective": "Plant your first Mana Tide Totem",
+        "spell": "Mana Tide Totem",
+        "text": "Thirty-one points of Restoration end at a totem that gives instead of guards: the Mana Tide, the well of spirit your kin drink from mid-battle. It is the deepest discipline this path knows. Plant it once and understand what you are now — not a fighter who heals, but a place the weary stand beside."
+      },
+      {
+        "chapter": 3,
+        "id": "sw_relics",
+        "items": [
+          "Witch Doctor's Cane",
+          "The Hand of Antu'sul",
+          "Resurgence Rod"
+        ],
+        "kind": "equip",
+        "level": 44,
+        "name": "Relics of Thunder and Root",
+        "objective": "Carry a Witch Doctor's Cane or the Hand of Antu'sul out of Zul'Farrak, or earn the Resurgence Rod in Desolace",
+        "text": "The middle of the road arms you from strange hands: a witch doctor's cane carved in Zul'Farrak, the thunder-mace of Antu'sul's keeper, or the Resurgence Rod the Cenarion Circle gives for setting Maraudon right. Take up whichever the road offers. A spirit walker's weapon is a walking stick that the elements happen to love."
+      },
+      {
+        "chapter": 3,
+        "id": "sw_zumrah",
+        "kind": "kill",
+        "level": 46,
+        "name": "The Grave-Robber of Zul'Farrak",
+        "objective": "Slay Witch Doctor Zum'rah in the graveyard of Zul'Farrak",
+        "targets": [
+          "Witch Doctor Zum'rah"
+        ],
+        "text": "In Zul'Farrak's own graveyard, Witch Doctor Zum'rah forces the city's dead into unending service — zombies pulled from their graves to guard the man who robbed them of rest. You know exactly what that is. Walk into his graveyard and give the Sandfury dead what their own priest denied them."
+      },
+      {
+        "chapter": 3,
+        "completionNote": "He rose as Celebras the Redeemed and thanked the hands that struck him.",
+        "id": "sw_redeemed",
+        "kind": "kill",
+        "level": 47,
+        "name": "The Redemption of Celebras",
+        "objective": "Defeat Celebras the Cursed in Maraudon, that he may rise redeemed",
+        "targets": [
+          "Celebras the Cursed"
+        ],
+        "text": "In Maraudon the keeper Celebras was twisted by his own father's grief until nothing of him remembered kindness. The Scepter ritual can call him back — but first the cursed shape must fall. Strike down what he became so that what he was can stand up again. Some healings can only be done through the veil."
+      },
+      {
+        "chapter": 3,
+        "cleanOnly": true,
+        "id": "sw_theradras",
+        "kind": "kill",
+        "level": 51,
+        "name": "Zaetar's Rest",
+        "objective": "Slay Princess Theradras in Maraudon and free the spirit of Zaetar, vows clean",
+        "targets": [
+          "Princess Theradras"
+        ],
+        "text": "At the heart of Maraudon the earth-princess Theradras clutches the spirit of Zaetar, Cenarius's son, whose love for her birthed the centaur and whose ghost she has never let leave. Go down with your vows clean and unclench the mountain's fist. Zaetar's spirit will hand you a seed; carry it to Moonglade, and let something grow where he rested."
+      },
+      {
+        "chapter": 3,
+        "cleanOnly": true,
+        "id": "sw_nightmare",
+        "kind": "kill",
+        "level": 55,
+        "name": "The Nightmare Below",
+        "objective": "Grant the Shade of Eranikus rest in the Temple of Atal'Hakkar, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Shade of Eranikus"
+        ],
+        "text": "Ysera sent her own consort, the green dragon Eranikus, to crush the Atal'ai beneath their sunken temple — and the Nightmare in its halls swallowed him whole. What haunts the temple now is his shade, dreaming wrong forever. Descend with your vows clean and end it. Even a god's consort deserves a walker to show him out."
+      },
+      {
+        "chapter": 3,
+        "completionNote": "The fetters that anchor the spirit realm are restored. The shamans of the Horde send the Skyfury Helm.",
+        "id": "sw_darkreaver",
+        "kind": "kill",
+        "level": 58,
+        "name": "The Spirit Thief",
+        "objective": "Summon and slay Death Knight Darkreaver in Scholomance for Sagorne Creststrider",
+        "targets": [
+          "Death Knight Darkreaver"
+        ],
+        "text": "Sagorne Creststrider in the Valley of Wisdom keeps the shamans' own hunt: the death knight Darkreaver, who bends the spirit realm to his whim and chains spirit after spirit to his bidding in Scholomance. Carry the Divination Scryer into the bone-vault beneath the school, call his stolen spirits up wave by wave, and when the thief himself comes — collect."
+      },
+      {
+        "chapter": 4,
+        "completionNote": "The shades he chained scattered like smoke. Count them freed, not fallen.",
+        "honorific": "Chainbreaker",
+        "id": "sw_chains",
+        "kind": "kill",
+        "level": 60,
+        "name": "The Broken Chains",
+        "objective": "Slay Jin'do the Hexxer in Zul'Gurub",
+        "targets": [
+          "Jin'do the Hexxer"
+        ],
+        "text": "In sunken Zul'Gurub, Jin'do the Hexxer serves the Blood God with an army that cannot refuse: shades chained to his totems, minds washed clean, the dead and the living alike bound to a hex they cannot hear past. He is everything this path stands against, wearing a crown of feathers. Take an army into the ruin and break every chain he holds."
+      },
+      {
+        "chapter": 4,
+        "honorific": "Dreamwalker",
+        "id": "sw_greattrees",
+        "kind": "kill",
+        "level": 60,
+        "name": "The Nightmare at the Trees",
+        "objective": "Slay one of the Nightmare's emissaries — Ysondre, Lethon, Emeriss or Taerar — at the Great Trees",
+        "targets": [
+          "Ysondre",
+          "Lethon",
+          "Emeriss",
+          "Taerar"
+        ],
+        "text": "The same Nightmare that swallowed Eranikus now sends Ysera's own lieutenants through the four Great Trees, corrupted past recall — Lethon drags the shadows out of the living to heal himself; Taerar is already more shades than dragon. The Dream was the spirit walkers' second home. Stand at a Great Tree when one comes through, and send the Nightmare back a piece smaller."
+      },
+      {
+        "chapter": 4,
+        "id": "sw_relicslegend",
+        "items": [
+          "Aurastone Hammer",
+          "Jin'do's Hexxer",
+          "Will of Arlokk",
+          "High Warlord's Battle Mace"
+        ],
+        "kind": "equip",
+        "level": 60,
+        "name": "A Relic of a Thousand Souls",
+        "objective": "Carry a relic out of legend — the Aurastone Hammer, Jin'do's Hexxer, the Will of Arlokk, or a High Warlord's Battle Mace",
+        "text": "Past the end of the road the relics wait: the Aurastone Hammer in the Firelord's halls, Jin'do's own hexxer-mace turned to mending, the Will of Arlokk in the Blood God's city — and for those who serve the Horde's whole war, the battle mace only a High Warlord may carry. A spirit walker's life is complete with any one of them in hand. Be few."
+      },
+      {
+        "chapter": 4,
+        "emote": "PRAY",
+        "id": "sw_home",
+        "kind": "emote",
+        "level": 60,
+        "name": "The Long Walk Home",
+        "objective": "/pray at Red Rocks, where the Ancestral Spirits first blessed you",
+        "subzone": "Red Rocks",
+        "text": "You have unchained shades, redeemed keepers, granted rest to dragons and put liches out like candles. Go home. Stand at Red Rocks where an Ancestral Spirit first judged you worthy, and pray — not for anything, this time. The circle closes where it opened, and the dead you have served all the way up the mountain are listening.",
+        "zone": "Mulgore"
+      }
+    ],
     "weaponTypes": [
       "One-Handed Maces",
       "Staves"

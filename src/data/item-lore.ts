@@ -173,4 +173,47 @@ export const itemLore: Record<string, string> = {
 
   "Ancient Petrified Leaf":
     "Found in the Cache of the Firelord after Majordomo Executus yields the Molten Core. A very large petrified leaf — and a summons: carry it to Vartrus the Ancient in Felwood, and the trees will set you their trial.",
+
+  // ---- the Spirit Walker's path -------------------------------------------
+  "Crescent Staff":
+    "Nara Wildmane's reward for breaking the four Fanglords of the Wailing Caverns — given from Elder Rise in Thunder Bluff, the same rise where the Grimtotem matriarch schemes. The first staff of the path comes from the dreaming deeps.",
+
+  "Living Root":
+    "Dropped by Verdan the Everliving, a thing of vines that Naralex's nightmare grew too large in the Wailing Caverns. Wood that has not noticed it is dead — fitting, in a walker's hands.",
+
+  "Witch Doctor's Cane":
+    "Carved somewhere in Zul'Farrak and carried by its Sandfury keepers. Troll work bends nature's wrath to the bearer — proof the spirit arts wear many feathers.",
+
+  "The Hand of Antu'sul":
+    "Held by Antu'sul, keeper of Sul, in Zul'Farrak. The mace answers with thunder, slowing every foe around its bearer — an element that fights beside you, bound in a haft.",
+
+  "Resurgence Rod":
+    "The Cenarion Circle's thanks for Princess Theradras's fall — given for the quest that frees Zaetar's spirit from Maraudon's heart. It gives back life and spirit with every breath, which is the whole path in one staff.",
+
+  "Horns of Eranikus":
+    "Cut from the Shade of Eranikus in the Temple of Atal'Hakkar — Ysera's consort, swallowed by the Nightmare he was sent to crush. Worn as a vigil, not a trophy.",
+
+  "Skyfury Helm":
+    "Sagorne Creststrider's reward for the Darkreaver Menace — the shamans' own hunt. When the death knight who chained spirit after spirit falls in Scholomance, the Horde's shamans send this.",
+
+  "Trance Stone":
+    "Dropped by all four of the Nightmare's emissaries — Ysondre, Lethon, Emeriss and Taerar — at the Great Trees. A sliver of the Dream to hold in your off hand, taken back from what corrupted it.",
+
+  "Earthfury Vestments":
+    "Won from Golemagg in the Molten Core. The Earthfury is the raiment of the era's great shamans — worn whole, it widens the reach of your totems and feeds mana back through your healing waves.",
+
+  "Earthfury Helmet":
+    "Garr's piece of the Earthfury, claimed in the Firelord's halls. The crown of the set whose final promise is the path's own art: a Healing Wave that leaps to those beside the wounded.",
+
+  "Aurastone Hammer":
+    "Pulled from Garr in the Molten Core — a healer's mace found in the halls of the elemental lord the Dark Irons' folly loosed on the world. The elements remember who serves them.",
+
+  "Jin'do's Hexxer":
+    "The chain-binder's own mace, taken when Jin'do fell in Zul'Gurub. Every healing it carries now is one more answer to the shades he kept chained.",
+
+  "Will of Arlokk":
+    "Carried by High Priestess Arlokk, the panther-priestess of sunken Zul'Gurub. A staff steeped in the Blood God's city, with more spirit in it than anything the Soulflayer ever fed on.",
+
+  "High Warlord's Battle Mace":
+    "Sold only in the Hall of Legends, and only to a High Warlord of the Horde. No drop, no luck — a healer's mace paid for in every battlefield the Horde has bled on.",
 };

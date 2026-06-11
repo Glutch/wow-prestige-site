@@ -1,16 +1,8 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  async rewrites() {
-    // Same-origin proxy for Wowhead's model viewer assets — the browser can't
-    // fetch wow.zamimg.com cross-origin, but a rewrite can.
-    return [
-      {
-        source: "/modelviewer/:path*",
-        destination: "https://wow.zamimg.com/modelviewer/:path*",
-      },
-    ];
-  },
-};
+// The model viewer's same-origin asset proxy lives in
+// src/app/modelviewer/[...path]/route.ts — a rewrite can't retry zamimg's
+// transient errors or strip the cacheable headers on its error responses.
+const nextConfig: NextConfig = {};
 
 export default nextConfig;

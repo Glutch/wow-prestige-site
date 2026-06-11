@@ -152,4 +152,62 @@ export const loreByClass: Record<string, LoreSection[]> = {
       ],
     },
   ],
+
+  spiritwalker: [
+    {
+      heading: "The white-furred omen",
+      quote: {
+        text: "Mystical Tauren caster with Ethereal Form, which allows him to avoid physical damage. Believed to be the ill omen of a coming age, white Tauren are held in near reverence by their people, often becoming reclusive priests who wander the land in search of kindred spirits.",
+        source: "Spirit Walker, Warcraft III: The Frozen Throne",
+      },
+      paragraphs: [
+        "The Spirit Walker enters Warcraft in The Frozen Throne as the tauren's strangest soldier: a white-furred mystic who fights half outside the world, ethereal and untouchable, mending the warband from a place no axe can reach. In the campaign the spirit walkers of Mulgore stand apart even from their own kind — a faction the game names simply the Tauren Outcasts.",
+        "The tabletop RPG explains the white fur: “the stress of handling so many souls turns a spirit walker's pelt or hair snow-white over the years. Some tribes consider a tauren born with a white pelt to be destined to become a spirit walker.” In Classic that destiny has a name on the character screen — a tauren shaman, Restoration to the bone, who serves the living and the dead in the same breath.",
+      ],
+    },
+    {
+      heading: "Spirit Link, and the walker's arts",
+      quote: {
+        text: "Links 4 units together in a chain. All units with Spirit Link on them will live longer, by distributing 50% of the damage they take across other Spirit Linked units.",
+        source: "Spirit Link, Warcraft III",
+      },
+      paragraphs: [
+        "Four arts define the unit, and all four survive in a Classic shaman's spellbook. The Spirit Link — kin bound soul to soul so no one body bears the whole wound — is Chain Heal, one mending leaping down the chain; the path counts ten casts that reach three souls. The Ethereal Form — “immune to physical damage, but unable to attack” — is Ghost Wolf, the shape you take when death closes in. Disenchant, which strips false magics from a whole field, is Purge by another feather.",
+        "And Ancestral Spirit, the master art that “raises a fallen non-Hero Tauren from the dead,” is the resurrection every shaman learns at twelve: “Returns the spirit to the body, restoring a dead target to life.” On Hardcore no spell may return the dead — which is the point of this path. The walker's art turns toward the living, and toward making sure the dead it cannot raise at least rest properly.",
+      ],
+    },
+    {
+      heading: "The Rites of the Earthmother",
+      quote: {
+        text: "Her right eye, An'she (the sun), gave warmth and light to the land. Her left eye, Mu'sha (the moon), gave peace and sleep to the stirring creatures of the dawning.",
+        source: "Mists of Dawn, hung in Thunder Bluff",
+      },
+      paragraphs: [
+        "Tauren faith is written on the walls of Thunder Bluff: the Earthmother who breathed the Shu'halo out of the golden mists, and the two eyes she set spinning across the sky in her sorrow. Every tauren walks her Rites — Strength against the quilboar of Brambleblade Ravine, Vision behind a wolf-spirit only the drinker of the Water of the Seers can see, and Wisdom at Red Rocks, the burial ground east of Thunder Bluff where the fallen are given to the Earth Mother and Sky Father by cleansing flame.",
+        "At Red Rocks the quest chain does something no other starting zone dares: the quest giver is already dead. An Ancestral Spirit weighs you, blesses you, and hands you the protection of Thunder Bluff as a duty passed from the dead to the living. This path opens there and closes there — the first chapter walks the Rites in order, and the last deed of all is the long walk home to pray where the ancestors first said your name.",
+      ],
+    },
+    {
+      heading: "The grim kin",
+      quote: {
+        text: "Kalimdor belongs to the Grimtotem. Nobody can stand in our way. We are supreme in all things.",
+        source: "Kela Grimtotem",
+      },
+      paragraphs: [
+        "The Grimtotem are the tauren's shame: a mighty tribe that took the gentle people's strength and aimed it at everyone else — “known for unprovoked attacks, slaughter and mayhem, in great contrast to the peaceful, spiritual nature of the other tauren clans.” Their matriarch, the Elder Crone Magatha, schemes openly on Elder Rise in Thunder Bluff, Cairne's chief rival, untouchable behind tauren law. Her raiders in Stonetalon, Thousand Needles and Feralas are not.",
+        "They are this path's lifelong counter, and its most personal entry is a kidnapping: Arnak Grimtotem holding Lakota Windsong atop Darkcloud Pinnacle, certain no one will climb after her. The years past Classic only darken the ledger — the novel The Shattering records that when the Grimtotem finally moved against Thunder Bluff, among their murdered was Beram Skychaser, the shaman trainer of Spirit Rise who blessed Cairne's own runespear. The grievances of the dead are a spirit walker's to carry. Two hundred raiders laid to rest names you Redeemer of the Shu'halo.",
+      ],
+    },
+    {
+      heading: "A legacy on paper",
+      quote: {
+        text: "The eyes of a spirit walker are ancient and shine with the light of a thousand souls. Their bodies are vessels, conduits from the realm of the dead to the world of the living.",
+        source: "Horde Player's Guide (Warcraft RPG)",
+      },
+      paragraphs: [
+        "The tabletop Warcraft RPG made the spirit walker a prestige class of the Horde Player's Guide: tauren mystics “capable of channeling ancestral spirits through their body,” revered and feared in the same breath, speaking “with the voices of the ancient ancestors” so that one can never be entirely certain who answers. By the chant of ages they reach back through every generation that came before, and the sourcebook closes on the Frozen Throne's omen: “recently spirit walkers have appeared in never before seen numbers, and many consider them the ill omens of things to come.”",
+        "This addon's Spirit Walker is that page brought to Classic Hardcore: tauren shaman, mace or staff, mail and totems, thirty-one points of Restoration — and the realm of the dead served by deed, not dice. Free what is chained, rest what is raised, mend what still breathes. Walk between.",
+      ],
+    },
+  ],
 };

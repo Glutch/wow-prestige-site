@@ -3,6 +3,14 @@
 // comes from the item's classic.wowhead.com XML (`<icon displayId="...">`),
 // NOT the item id. Verify there before editing, never guess.
 //
+// A correct displayId is NOT enough: the classic viewer's dataset is missing
+// armor meta for some of them (e.g. all Earthfury/Tier-1 pieces), and one
+// missing piece keeps the whole model from loading. Before using a displayId,
+// confirm the viewer has it:
+//   armor (slots 1,3-10):  https://wow.zamimg.com/modelviewer/classic/meta/armor/<slot>/<displayId>.json
+//   weapons (slots 21/22): https://wow.zamimg.com/modelviewer/classic/meta/item/<displayId>.json
+// must return 200, not 404.
+//
 // Viewer slots: 1 head, 3 shoulders, 5 chest, 6 waist, 7 legs, 8 feet,
 // 9 wrists, 10 hands, 16 back, 21 main hand, 22 off hand.
 
@@ -65,6 +73,32 @@ export const heroModels: Record<string, CharacterModelConfig> = {
       [8, 5853], // Embossed Leather Boots (2309)
       [10, 9543], // Devilsaur Gauntlets (15063)
       [21, 25120], // Ta'Kierthan Songblade (16039)
+    ],
+    animation: "Ready2H",
+  },
+  // Tauren spirit walker: the Frozen Throne's white-furred mystic. Pale pelt
+  // (the last skins in the tauren male range are the white ones) and a bare
+  // head — the white fur IS the omen — over Vestments of the Elements, the
+  // shaman dungeon set, with the Will of Arlokk held ready. (Earthfury would
+  // fit the lore better, but its displayIds have no armor meta in the
+  // classic viewer — see the displayId rule in the header.)
+  spiritwalker: {
+    race: 6,
+    gender: 0,
+    skin: 18,
+    face: 1,
+    hairStyle: 2,
+    hairColor: 0,
+    facialStyle: 2,
+    items: [
+      [3, 30925], // Pauldrons of Elements (16669)
+      [5, 31416], // Vest of Elements (16666)
+      [6, 31413], // Cord of Elements (16673)
+      [7, 31415], // Kilt of Elements (16668)
+      [8, 31412], // Boots of Elements (16670)
+      [9, 31411], // Bindings of Elements (16671)
+      [10, 31414], // Gauntlets of Elements (16672)
+      [21, 32612], // Will of Arlokk (19909)
     ],
     animation: "Ready2H",
   },

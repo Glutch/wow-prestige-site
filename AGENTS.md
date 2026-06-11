@@ -25,5 +25,14 @@ Key conventions:
   verify against classic.wowhead.com before editing; never guess stats.
 - Icons: Wowhead CDN via `iconUrl()` in `src/lib/wow.ts`; hero art is
   hotlinked zamimg screenshots.
+- **3D hero models** (`src/data/models.ts`): a displayId being correct in the
+  item XML does not mean the classic model viewer can render it — zamimg's
+  classic dataset is missing armor meta for some displayIds (all Tier 1
+  pieces, for example), and one missing piece keeps the whole model from
+  loading silently. Before using any displayId, confirm
+  `wow.zamimg.com/modelviewer/classic/meta/armor/<slot>/<displayId>.json`
+  (armor) or `.../meta/item/<displayId>.json` (weapons) returns 200.
+  The lib's `"the following options are missing []"` console warn is noise —
+  it logs on every successful load too.
 - Theme: dark stone + Ironforge gold, Cinzel display + Alegreya body, WoW
   quality colors as tokens in `globals.css`.
