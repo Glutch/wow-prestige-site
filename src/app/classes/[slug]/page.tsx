@@ -96,19 +96,26 @@ export default async function ClassPage({ params }: { params: Params }) {
               </span>
             </div>
           )}
-          <div className="rise mt-8" style={{ animationDelay: "340ms" }}>
-            <PathIdentity c={c} />
-          </div>
           {/* the rise animation makes each wrapper a stacking context, so a
               hovered panel must out-rank its siblings for tooltips to show */}
-          {hasJourney && (
-            <div className="rise relative mt-4 hover:z-[70] focus-within:z-[70]" style={{ animationDelay: "440ms" }}>
-              <ItemInventory c={c} />
+          {hasJourney ? (
+            <div
+              className="rise mt-8 grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(260px,320px)]"
+              style={{ animationDelay: "400ms" }}
+            >
+              <div className="min-w-0 space-y-4">
+                <div className="relative hover:z-[70] focus-within:z-[70]">
+                  <ItemInventory c={c} />
+                </div>
+                <div className="relative hover:z-[70] focus-within:z-[70]">
+                  <SuggestedItems c={c} />
+                </div>
+              </div>
+              <PathIdentity c={c} stacked />
             </div>
-          )}
-          {hasJourney && (
-            <div className="rise relative mt-4 hover:z-[70] focus-within:z-[70]" style={{ animationDelay: "520ms" }}>
-              <SuggestedItems c={c} />
+          ) : (
+            <div className="rise mt-8" style={{ animationDelay: "340ms" }}>
+              <PathIdentity c={c} />
             </div>
           )}
         </div>

@@ -68,15 +68,21 @@ function Panel({ heading, children }: { heading: string; children: React.ReactNo
   );
 }
 
-/** Who you must be, what you should train, how you spec — at a glance. */
-export function PathIdentity({ c }: { c: PrestigeClass }) {
+/** Who you must be, what you should train, how you spec — at a glance.
+ *  `stacked` renders the panels as a compact vertical column (used beside
+ *  the spoils strip); default is a responsive row of cards. */
+export function PathIdentity({ c, stacked }: { c: PrestigeClass; stacked?: boolean }) {
   const specs = specsOf(c);
   const required = c.requireProfession ?? [];
   const suggested = c.profession ?? [];
   const hasProfessions = required.length > 0 || suggested.length > 0;
 
   return (
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    <div
+      className={
+        stacked ? "flex flex-col gap-3" : "grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
+      }
+    >
       {/* ---- the blood ---- */}
       <Panel heading="The Blood">
         <ul className="space-y-2">
