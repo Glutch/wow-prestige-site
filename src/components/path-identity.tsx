@@ -7,6 +7,7 @@ import {
   talentIcons,
   RACE_LABEL,
 } from "@/data/identity";
+import { identityLoreByClass } from "@/data/identity-lore";
 
 function raceLabel(token: string) {
   return RACE_LABEL[token] ?? token;
@@ -31,28 +32,44 @@ function Cell({
   icon,
   label,
   sub,
-  title,
+  lore,
 }: {
   icon?: string;
   label: string;
   sub?: string;
-  title?: string;
+  lore?: string;
 }) {
   return (
-    <li className="flex items-center gap-2.5" title={title}>
+    // Named group — a bare `group` on an ancestor opens every tooltip at once.
+    <li
+      className="group/idcell relative flex items-center gap-2.5 hover:z-[9999] focus-within:z-[9999]"
+      tabIndex={lore ? 0 : undefined}
+    >
       {icon && (
         <span className="block shrink-0 rounded-[6px] border border-black/80 bg-black/60 p-0.5">
           <WowIcon token={icon} size={32} alt={label} />
         </span>
       )}
       <span className="min-w-0 leading-tight">
-        <span className="block truncate text-[0.85rem] font-semibold text-foreground/90">
+        <span
+          className={`block truncate text-[0.85rem] font-semibold text-foreground/90 ${
+            lore ? "cursor-help underline decoration-dotted decoration-gold/40 underline-offset-4" : ""
+          }`}
+        >
           {label}
         </span>
         {sub && (
           <span className="block text-[0.72rem] text-muted-foreground">{sub}</span>
         )}
       </span>
+      {lore && (
+        <span className="pointer-events-none invisible absolute right-full top-1/2 z-[9999] mr-3 -translate-y-1/2 opacity-0 transition-opacity duration-150 group-hover/idcell:visible group-hover/idcell:opacity-100 group-focus-within/idcell:visible group-focus-within/idcell:opacity-100 max-lg:left-0 max-lg:right-auto max-lg:top-full max-lg:mr-0 max-lg:mt-2 max-lg:translate-y-0">
+          <span className="wow-tooltip block">
+            <span className="t-yellow mb-1 block text-[0.85rem] font-semibold">{label}</span>
+            <span className="t-lore block italic">{lore}</span>
+          </span>
+        </span>
+      )}
     </li>
   );
 }
@@ -76,6 +93,7 @@ export function PathIdentity({ c, stacked }: { c: PrestigeClass; stacked?: boole
   const required = c.requireProfession ?? [];
   const suggested = c.profession ?? [];
   const hasProfessions = required.length > 0 || suggested.length > 0;
+  const lore = identityLoreByClass[c.id] ?? {};
 
   return (
     <div
@@ -92,6 +110,7 @@ export function PathIdentity({ c, stacked }: { c: PrestigeClass; stacked?: boole
               icon={raceIcons[r]}
               label={raceLabel(r)}
               sub={(c.classes ?? []).map(classLabel).join(" / ")}
+              lore={lore.races?.[r]}
             />
           ))}
           {!c.races && (
@@ -113,6 +132,7 @@ export function PathIdentity({ c, stacked }: { c: PrestigeClass; stacked?: boole
                 icon={professionIcons[p]}
                 label={p}
                 sub="required — a vow of the path"
+                lore={lore.professions?.[p]}
               />
             ))}
             {suggested.map((p) => (
@@ -121,6 +141,7 @@ export function PathIdentity({ c, stacked }: { c: PrestigeClass; stacked?: boole
                 icon={professionIcons[p]}
                 label={p}
                 sub="the path's craft — suggested"
+                lore={lore.professions?.[p]}
               />
             ))}
           </ul>
@@ -145,6 +166,7 @@ export function PathIdentity({ c, stacked }: { c: PrestigeClass; stacked?: boole
                             : tree.name
                         }
                         sub={`${tree.points}+ points as you level`}
+                        lore={lore.trees?.[`${classToken}:${tree.name}`]}
                       />
                     )}
                     {(spec.keys ?? []).map((k) => (
@@ -153,6 +175,7 @@ export function PathIdentity({ c, stacked }: { c: PrestigeClass; stacked?: boole
                         icon={talentIcons[k.name]}
                         label={k.rank ? `${k.name} ${k.rank}/${k.rank}` : k.name}
                         sub={`sworn from level ${k.level}`}
+                        lore={lore.talents?.[k.name]}
                       />
                     ))}
                   </ul>
