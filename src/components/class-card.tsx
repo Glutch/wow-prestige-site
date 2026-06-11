@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { PrestigeClass } from "@/lib/wow";
-import { slugOf, FACTION_TEXT } from "@/lib/wow";
+import { slugOf, FACTION_TEXT, CLASS_COLORS, classTokenLabel } from "@/lib/wow";
 import { WowIcon } from "@/components/wow-icon";
 
 export function ClassCard({ c, index = 0 }: { c: PrestigeClass; index?: number }) {
@@ -22,6 +22,14 @@ export function ClassCard({ c, index = 0 }: { c: PrestigeClass; index?: number }
           </h3>
           <p className={`text-[0.78rem] ${FACTION_TEXT[c.faction]}`}>
             {c.faction} · {(c.races ?? ["Any race"]).join(", ").replace("NightElf", "Night Elf")}
+          </p>
+          <p className="text-[0.78rem]">
+            {(c.classes ?? []).map((t, i) => (
+              <span key={t}>
+                {i > 0 && <span className="text-muted-foreground"> or </span>}
+                <span style={{ color: CLASS_COLORS[t] }}>{classTokenLabel(t)}</span>
+              </span>
+            ))}
           </p>
         </div>
       </div>

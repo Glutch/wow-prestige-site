@@ -39,6 +39,23 @@
     ],
     "icon": "ability_warrior_savageblow",
     "id": "blademaster",
+    "itemIds": {
+      "Ashkandi, Greatsword of the Brotherhood": 19364,
+      "Blade of Hanna": 2801,
+      "Boneslasher": 10573,
+      "Copper Claymore": 7955,
+      "Dacian Falx": 922,
+      "Duskbringer": 2205,
+      "Frost Tiger Blade": 3854,
+      "Headstriker Sword": 15251,
+      "High Warlord's Greatsword": 18877,
+      "Mo'grosh Toothpick": 2822,
+      "Sul'thraze the Lasher": 9372,
+      "Ta'Kierthan Songblade": 16039,
+      "Typhoon": 18542,
+      "Whirlwind Sword": 6977,
+      "Zin'rokh, Destroyer of Worlds": 19854
+    },
     "name": "Blademaster",
     "profession": [
       "Blacksmithing"
@@ -48,6 +65,68 @@
     ],
     "restoreCry": "The blade sings again. Walk lightly, strike once.",
     "source": "Warcraft III / Horde Player's Guide",
+    "suggested": [
+      {
+        "id": 2822,
+        "name": "Mo'grosh Toothpick",
+        "note": "Cheap world drop — the wooden bokken every student swings before steel"
+      },
+      {
+        "id": 2205,
+        "name": "Duskbringer",
+        "note": "Shadowfang Keep — the first true blade of the old shape"
+      },
+      {
+        "id": 922,
+        "name": "Dacian Falx",
+        "note": "Orgrimmar's weapon merchants — the old shape for a fistful of silver"
+      },
+      {
+        "id": 10573,
+        "name": "Boneslasher",
+        "note": "Razorfen Downs — the old curve grown long enough to matter"
+      },
+      {
+        "id": 3854,
+        "name": "Frost Tiger Blade",
+        "note": "Blacksmithing 200 — the pilgrimage blade, forged by no hands but yours"
+      },
+      {
+        "id": 15251,
+        "name": "Headstriker Sword",
+        "note": "World drop — the old shape at war length"
+      },
+      {
+        "id": 16039,
+        "name": "Ta'Kierthan Songblade",
+        "note": "Lord Darkscythe, rare of the Eastern Plaguelands — curved for the singing draw-cut"
+      },
+      {
+        "id": 7960,
+        "name": "Truesilver Champion",
+        "note": "Blacksmithing 240 — a warding champion's blade off your own anvil"
+      },
+      {
+        "id": 20130,
+        "name": "Diamond Flask",
+        "note": "Warrior quest \"Voodoo Feathers\" — a duelist's second wind"
+      },
+      {
+        "id": 12790,
+        "name": "Arcanite Champion",
+        "note": "Master Swordsmith craft — the smith-path's crowning blade"
+      },
+      {
+        "id": 18822,
+        "name": "Obsidian Edged Blade",
+        "note": "Molten Core — a sword so true it sharpens its bearer"
+      },
+      {
+        "id": 19334,
+        "name": "The Untamed Blade",
+        "note": "Razorgore, Blackwing Lair — fury that wakes mid-swing"
+      }
+    ],
     "talents": {
       "keys": [
         {
@@ -147,6 +226,18 @@
       },
       {
         "chapter": 1,
+        "id": "bm_woodblade",
+        "items": [
+          "Mo'grosh Toothpick"
+        ],
+        "kind": "equip",
+        "level": 13,
+        "name": "The Wooden Blade",
+        "objective": "Wield the Mo'grosh Toothpick, a practice blade of carved wood",
+        "text": "The old masters started every student the same way: wood before steel, drills before war. The ogres call it a toothpick; in your hands it is the first ten thousand cuts. Swing it until your arms remember without you."
+      },
+      {
+        "chapter": 1,
         "id": "bm_eye",
         "kind": "kill",
         "level": 14,
@@ -188,6 +279,19 @@
       },
       {
         "chapter": 2,
+        "id": "bm_oldshape",
+        "items": [
+          "Dacian Falx",
+          "Duskbringer"
+        ],
+        "kind": "equip",
+        "level": 21,
+        "name": "A Blade of the Old Shape",
+        "objective": "Wield a Dacian Falx from the weapon merchants of Orgrimmar, or Duskbringer from Shadowfang Keep",
+        "text": "The clan ground its blades the old way: long, curved, single-edged, light enough to sing. The merchants of Orgrimmar sell the shape for a fistful of silver — they call it a Dacian Falx, and have never once been asked why. Or take dark Duskbringer from the haunted halls of Shadowfang. Wood is behind you. Steel at last."
+      },
+      {
+        "chapter": 2,
         "count": 50,
         "honorific": "Keen Edge",
         "id": "bm_critical",
@@ -211,19 +315,6 @@
       },
       {
         "chapter": 2,
-        "id": "bm_islander",
-        "kind": "kill",
-        "level": 32,
-        "name": "The Islander's Test",
-        "objective": "Answer Klannoc Macleod's Affray on Fray Island and fell Big Will — alone",
-        "solo": true,
-        "targets": [
-          "Big Will"
-        ],
-        "text": "On Fray Island off Ratchet, the Islander Klannoc Macleod keeps an old school: waves of brawlers, then their champion, Big Will. Take the test alone. A crowd at your back teaches the blade nothing."
-      },
-      {
-        "chapter": 2,
         "count": 25,
         "id": "bm_purge",
         "kind": "kill",
@@ -238,6 +329,29 @@
       },
       {
         "chapter": 2,
+        "id": "bm_islander",
+        "kind": "kill",
+        "level": 32,
+        "name": "The Islander's Test",
+        "objective": "Answer Klannoc Macleod's Affray on Fray Island and fell Big Will — alone",
+        "solo": true,
+        "targets": [
+          "Big Will"
+        ],
+        "text": "On Fray Island off Ratchet, the Islander Klannoc Macleod keeps an old school: waves of brawlers, then their champion, Big Will. Take the test alone. A crowd at your back teaches the blade nothing."
+      },
+      {
+        "chapter": 2,
+        "id": "bm_tigerforge",
+        "kind": "cast",
+        "level": 35,
+        "name": "The Tiger's Forge",
+        "objective": "Forge a Frost Tiger Blade with your own hammer",
+        "spell": "Frost Tiger Blade",
+        "text": "The last trial of the old clan was always a pilgrimage: walk until you find the makings of your own blade, then forge it with no hands but yours. Steel, jade, frost oil — hunt down the plans and pull a white tiger out of the fire. No bought blade will ever fit your grip like this one."
+      },
+      {
+        "chapter": 2,
         "count": 10,
         "hits": 3,
         "honorific": "Bladestorm",
@@ -248,6 +362,19 @@
         "objective": "Strike 3 or more foes with a single Whirlwind, 10 times",
         "spell": "Whirlwind",
         "text": "The masters of the old clan could become the storm — one blade, everywhere at once. Learn Whirlwind, then prove it: three foes caught in one turn of the blade, ten times over."
+      },
+      {
+        "chapter": 2,
+        "id": "bm_longedge",
+        "items": [
+          "Boneslasher",
+          "Headstriker Sword"
+        ],
+        "kind": "equip",
+        "level": 38,
+        "name": "The Old Shape, Grown Long",
+        "objective": "Carve Boneslasher from Razorfen Downs, or hunt down a Headstriker Sword",
+        "text": "The shape does not change; the reach does. Beneath the Barrens, the quilboar warrens of Razorfen Downs hide Boneslasher — the old curve grown long enough to matter. Or chase the rumor of a Headstriker Sword across the world's battlefields and auction floors. Your next blade should outreach your last."
       },
       {
         "chapter": 2,
@@ -325,6 +452,18 @@
       },
       {
         "chapter": 3,
+        "id": "bm_songblade",
+        "items": [
+          "Ta'Kierthan Songblade"
+        ],
+        "kind": "equip",
+        "level": 52,
+        "name": "The Songblade",
+        "objective": "Hunt Lord Darkscythe in the Eastern Plaguelands and take the Ta'Kierthan Songblade",
+        "text": "Word from the plagued east: a death knight called Lord Darkscythe rides with an elven songblade on his back — old, curved, forged for the singing draw-cut your clan would have envied. It is wasted on a dead man. Hunt him across the Plaguelands and teach the blade to sing in Orcish."
+      },
+      {
+        "chapter": 3,
         "cleanOnly": true,
         "id": "bm_arena",
         "kind": "kill",
@@ -383,13 +522,15 @@
         "id": "bm_mythblade",
         "items": [
           "Ashkandi, Greatsword of the Brotherhood",
-          "Zin'rokh, Destroyer of Worlds"
+          "Zin'rokh, Destroyer of Worlds",
+          "Blade of Hanna",
+          "Typhoon"
         ],
         "kind": "equip",
         "level": 60,
         "name": "A Blade Out of Legend",
-        "objective": "Wield Ashkandi from Nefarian's hoard, or Zin'rokh from the Gurubashi god-king",
-        "text": "Somewhere past the end of the war two blades wait: Ashkandi, in the claws of Nefarian atop Blackwing Lair, and Zin'rokh, in the blood-soaked halls of Zul'Gurub. A blademaster's life is complete with either. Few will ever hold one. Be few."
+        "objective": "Wield a blade out of legend — Ashkandi, Zin'rokh, Typhoon, or the Blade of Hanna itself",
+        "text": "Past the end of the war the legends wait: Ashkandi in the claws of Nefarian atop Blackwing Lair, Zin'rokh in the blood-soaked halls of the Gurubashi god-king, Typhoon at the heels of the dragon Azuregos — and loose somewhere in the world, the Blade of Hanna, the long blade every swordmaster dreams of and almost none will hold. A blademaster's life is complete with any one of them. Be few."
       },
       {
         "chapter": 4,
@@ -444,6 +585,15 @@
     ],
     "icon": "inv_hammer_05",
     "id": "mountainking",
+    "itemIds": {
+      "Dark Iron Ore": 11370,
+      "Heavy Copper Maul": 6214,
+      "Mograine's Might": 7723,
+      "Smite's Mighty Hammer": 7230,
+      "Sulfuras, Hand of Ragnaros": 17182,
+      "The Rockpounder": 9413,
+      "The Unstoppable Force": 19323
+    },
     "name": "Mountain King",
     "profession": [
       "Mining",
@@ -457,6 +607,68 @@
     ],
     "restoreCry": "Stone and storm! The Mountain King stands again.",
     "source": "Alliance Player's Guide",
+    "suggested": [
+      {
+        "id": 9412,
+        "name": "Galgann's Fireblaster",
+        "note": "Galgann Firehammer, Uldaman — a Dark Iron's own gun, turned on his kin"
+      },
+      {
+        "id": 11608,
+        "name": "Dark Iron Pulverizer",
+        "note": "Smith it yourself at the Black Anvil — 18 Dark Iron Bars"
+      },
+      {
+        "id": 20130,
+        "name": "Diamond Flask",
+        "note": "Warrior quest \"Voodoo Feathers\" — served on the rocks"
+      },
+      {
+        "id": 11815,
+        "name": "Hand of Justice",
+        "note": "Emperor Dagran Thaurissan, Blackrock Depths"
+      },
+      {
+        "id": 12631,
+        "name": "Fiery Plate Gauntlets",
+        "note": "Blacksmithing 290 — found unfired in Blackrock Spire, finished in Everlook"
+      },
+      {
+        "id": 2099,
+        "name": "Dwarven Hand Cannon",
+        "note": "World drop — the King's thunder for your back"
+      },
+      {
+        "id": 12796,
+        "name": "Hammer of the Titans",
+        "note": "Blacksmithing 300 — Thorium and Arcanite, master's work"
+      },
+      {
+        "id": 17073,
+        "name": "Earthshaker",
+        "note": "Magmadar, Molten Core — the mountain answers"
+      },
+      {
+        "id": 19104,
+        "name": "Stormstrike Hammer",
+        "note": "Stormpike Revered — the clan's own one-hand warhammer"
+      },
+      {
+        "id": 12798,
+        "name": "Annihilator",
+        "note": "Master Axesmith 300 — a hand axe off your own anvil"
+      },
+      {
+        "id": 17068,
+        "name": "Deathbringer",
+        "note": "Onyxia's hoard — a hand axe for the off fist"
+      },
+      {
+        "id": 19363,
+        "name": "Crul'shorukh, Edge of Chaos",
+        "note": "Nefarian, Blackwing Lair — the heaviest hand axe there is"
+      }
+    ],
     "talents": {
       "keys": [
         {
@@ -860,6 +1072,28 @@
   },
   {
     "breakCry": "Your beast is gone — a Beastmaster never walks alone!",
+    "chapters": [
+      {
+        "index": 0,
+        "title": "The Wild's Ledger"
+      },
+      {
+        "index": 1,
+        "title": "Chapter I — The First Bond"
+      },
+      {
+        "index": 2,
+        "title": "Chapter II — The Wandering Wilds"
+      },
+      {
+        "index": 3,
+        "title": "Chapter III — Fang and Wrath"
+      },
+      {
+        "index": 4,
+        "title": "Chapter IV — The Pack Eternal"
+      }
+    ],
     "classes": [
       "HUNTER"
     ],
@@ -872,6 +1106,13 @@
     ],
     "icon": "ability_hunter_beastcall",
     "id": "beastmaster",
+    "itemIds": {
+      "Bow of Searing Arrows": 2825,
+      "Devilsaur Leather": 15417,
+      "Lok'delar, Stave of the Ancient Keepers": 18715,
+      "Rhok'delar, Longbow of the Ancient Keepers": 18713,
+      "Venomstrike": 6469
+    },
     "name": "Beastmaster",
     "profession": [
       "Skinning",
@@ -880,6 +1121,68 @@
     "requirePet": true,
     "restoreCry": "The pack is whole again.",
     "source": "Warcraft RPG",
+    "suggested": [
+      {
+        "id": 6469,
+        "name": "Venomstrike",
+        "note": "Lord Serpentis, Wailing Caverns — a serpent's fang strung as a bow"
+      },
+      {
+        "id": 2825,
+        "name": "Bow of Searing Arrows",
+        "note": "World drop — fire rides the string"
+      },
+      {
+        "id": 2824,
+        "name": "Hurricane",
+        "note": "World drop — the fastest bow in the world, quick as a wing-beat"
+      },
+      {
+        "id": 2100,
+        "name": "Precisely Calibrated Boomstick",
+        "note": "World drop — thunder for the hunter who trusts powder over feathers"
+      },
+      {
+        "id": 18323,
+        "name": "Satyr's Bow",
+        "note": "Zevrim Thornhoof, Dire Maul — taken from a tormentor of the wilds"
+      },
+      {
+        "id": 15063,
+        "name": "Devilsaur Gauntlets",
+        "note": "Leatherworking — cut from thunder-lizard hide you skinned yourself"
+      },
+      {
+        "id": 15062,
+        "name": "Devilsaur Leggings",
+        "note": "Leatherworking — the second half of the devilsaur's gift"
+      },
+      {
+        "id": 18680,
+        "name": "Ancient Bone Bow",
+        "note": "Scholomance — old bone, still singing"
+      },
+      {
+        "id": 12651,
+        "name": "Blackcrow",
+        "note": "Shadow Hunter Vosh'gajin, Lower Blackrock Spire — the crow's wing at full draw"
+      },
+      {
+        "id": 17069,
+        "name": "Striker's Mark",
+        "note": "Magmadar, Molten Core — claimed from the greatest hound in the world"
+      },
+      {
+        "id": 19361,
+        "name": "Ashjre'thul, Crossbow of Smiting",
+        "note": "Chromaggus, Blackwing Lair — taken from Nefarian's chained beast, who deserved better"
+      },
+      {
+        "id": 19853,
+        "name": "Gurubashi Dwarf Destroyer",
+        "note": "Hakkar the Soulflayer, Zul'Gurub — pulled from the Blood God's hoard"
+      }
+    ],
     "talents": {
       "keys": [
         {
@@ -891,7 +1194,312 @@
         "name": "Beast Mastery",
         "points": 31
       }
-    }
+    },
+    "trials": [
+      {
+        "chapter": 0,
+        "epitaph": "The wild's ledger counted %d despoilers dead.",
+        "id": "bst_ledger",
+        "kind": "counter",
+        "milestones": [
+          {
+            "count": 10,
+            "honorific": "Wildwarden"
+          },
+          {
+            "count": 50,
+            "honorific": "Wrath of the Wilds"
+          },
+          {
+            "count": 200,
+            "honorific": "Champion of the Wilds"
+          }
+        ],
+        "name": "The Wild's Ledger",
+        "objective": "Cut down the Venture Company wherever it fells, traps and strip-mines the wild",
+        "pattern": [
+          "Venture Co."
+        ],
+        "text": "Rexxar said it plainly: their wars do nothing but scar the land, and drive the wild things to extinction. The Venture Company does it for coin. Every logger, trapper and overseer you put down is one entry settled in the wild's ledger. The ledger is long."
+      },
+      {
+        "chapter": 1,
+        "id": "bst_bond",
+        "kind": "cast",
+        "level": 10,
+        "name": "The First Bond",
+        "objective": "Pass the taming trials of your people and tame your first beast",
+        "spell": "Tame Beast",
+        "text": "Every people sets the same test: three beasts, one rod, and the long quiet minute where the wild decides whether to trust you. Rexxar found Misha as an orphaned cub and never walked alone again. Pass the trials, speak the words, and take your first friend from the wild's own hand."
+      },
+      {
+        "chapter": 1,
+        "emote": "PAT",
+        "id": "bst_name",
+        "kind": "emote",
+        "level": 11,
+        "name": "The Naming",
+        "objective": "/pat your companion, and give it a true name",
+        "text": "A tool has a label; family has a name. Look your beast in the eye, lay a hand on its head, and name it — not for what it does, but for what it is. You will say that name ten thousand times before the end. The vow stands: never abandon it, never let it die."
+      },
+      {
+        "chapter": 1,
+        "count": 25,
+        "id": "bst_spines",
+        "kind": "kill",
+        "level": 14,
+        "name": "Thorn and Spine",
+        "objective": "Slay 25 Razormane and Bristleback quilboar with your beast at your side",
+        "pattern": [
+          "Razormane",
+          "Bristleback"
+        ],
+        "text": "The old beastmasters fought beside spine-beasts, and the quilboar are what becomes of that kinship gone rotten — thornweavers who hex the boar instead of walking with it. Cull twenty-five of their raiders, two hunters working as one. Learn how your beast moves before the fights that matter."
+      },
+      {
+        "chapter": 1,
+        "cleanOnly": true,
+        "id": "bst_bloodfeather",
+        "kind": "kill",
+        "level": 18,
+        "name": "The Bloodfeather",
+        "objective": "Slay Serena Bloodfeather in the Barrens — you and your beast alone, vows clean",
+        "rankTrial": true,
+        "solo": true,
+        "targets": [
+          "Serena Bloodfeather"
+        ],
+        "text": "The Witchwing harpies steal eggs, kill mothers, and pick the bones of the Barrens' young. Their matriarch is Serena Bloodfeather. Go to her crag with no one but your beast, vows clean, and show the wild what its two-bodied hunter is for."
+      },
+      {
+        "chapter": 2,
+        "id": "bst_pridelord",
+        "kind": "cast",
+        "level": 23,
+        "name": "The Pridelord",
+        "objective": "Tame a great beast of the Barrens — Humar the Pridelord, the black lion, prowls the lone oasis tree",
+        "spell": "Tame Beast",
+        "text": "Word among hunters of both banners: a lion black as a moonless night holds the tree at the Forgotten Pools, and no second like him walks the world. Sit out his rivals, earn his charge, and make the rarest beast of the savannah your second self. Tame the rarest you can find — that is the vow.",
+        "zone": "The Barrens"
+      },
+      {
+        "chapter": 2,
+        "count": 25,
+        "id": "bst_venture",
+        "kind": "kill",
+        "level": 26,
+        "name": "The Despoiled Hills",
+        "objective": "Slay 25 of the Venture Company — Windshear Crag in Stonetalon is theirs from ridge to ridge",
+        "pattern": "Venture Co.",
+        "text": "In Stonetalon the Venture Company has eaten a whole valley: shredders, sawmills, stumps to the horizon. The beasts that lived there did not move out; they died. Twenty-five of the Company, anywhere you find them. The crag is a good place to start the lesson."
+      },
+      {
+        "chapter": 2,
+        "id": "bst_bite",
+        "items": [
+          "Venomstrike",
+          "Bow of Searing Arrows"
+        ],
+        "kind": "equip",
+        "level": 28,
+        "name": "A Bow with a Bite",
+        "objective": "Wield Venomstrike from the Wailing Caverns, or a Bow of Searing Arrows",
+        "text": "A beastmaster's bow should be half animal itself. Venomstrike spits a serpent's poison from the deeps of the Wailing Caverns; the Bow of Searing Arrows bites with fire. Carry a weapon with its own temper, and learn to work with it the way you work with your beast."
+      },
+      {
+        "aura": "Screech",
+        "chapter": 2,
+        "count": 50,
+        "honorific": "Hawkfriend",
+        "id": "bst_hawkcry",
+        "kind": "proc",
+        "level": 30,
+        "name": "The Hawk's Cry",
+        "objective": "Take a bird of prey under your wing and land its Screech on 50 foes",
+        "text": "The beastmaster's third summons was always the hawk — eyes above the canopy, a cry that breaks the enemy's nerve. Tame a screecher of the forests, teach it the war-cry, and let fifty foes flinch under it. The sky fights for you now."
+      },
+      {
+        "chapter": 2,
+        "id": "bst_greenhills",
+        "kind": "visit",
+        "level": 32,
+        "name": "The Camp of the Great Hunt",
+        "objective": "Walk into Hemet Nesingwary's camp in Stranglethorn Vale",
+        "subzone": "Nesingwary's Expedition",
+        "text": "The dwarf in that camp is the most famous hunter alive, and he has never once walked with a beast — only over them, stuffed and mounted. Share his fire, hear his stories, take his trials if you wish. Then look at the trophies and understand the difference between a hunter of beasts and a hunter with them.",
+        "zone": "Stranglethorn Vale"
+      },
+      {
+        "chapter": 2,
+        "cleanOnly": true,
+        "id": "bst_matriarch",
+        "kind": "kill",
+        "level": 33,
+        "name": "The Thorn Matriarch",
+        "objective": "Slay Charlga Razorflank in Razorfen Kraul, vows clean",
+        "targets": [
+          "Charlga Razorflank"
+        ],
+        "text": "Beneath the Barrens the quilboar matriarch Charlga Razorflank dreams in a warren of thorns, hexing the boar-kin into chained war-beasts. The kinship she perverts is yours to defend. Walk into the Kraul with your vows clean and cut the rot out at the root."
+      },
+      {
+        "chapter": 2,
+        "count": 10,
+        "hits": 3,
+        "honorific": "Stampede",
+        "id": "bst_stampede",
+        "kind": "multihit",
+        "level": 34,
+        "name": "The Stampede",
+        "objective": "Strike 3 or more foes with a single Multi-Shot, 10 times",
+        "spell": "Multi-Shot",
+        "text": "The old beastmasters' last word was the Stampede — the whole wild loosed at once, no foe left unstruck. Yours is loosed from a bowstring. Three foes under one volley, ten times over, until the enemy hears hoofbeats every time you draw."
+      },
+      {
+        "chapter": 2,
+        "cleanOnly": true,
+        "id": "bst_bangalash",
+        "kind": "kill",
+        "level": 42,
+        "name": "The Great Hunt",
+        "objective": "Slay King Bangalash, the white king of Stranglethorn, vows clean (a level 43 elite — a deed for the low 40s)",
+        "rankTrial": true,
+        "targets": [
+          "King Bangalash"
+        ],
+        "text": "Nesingwary saves the white tiger for last because nothing in the jungle is his equal. Meet King Bangalash the old way — beast against beast, hunter against king — with your vows clean. End his hunt with honor, and leave his head where it lies. You are not collecting trophies; you are being measured."
+      },
+      {
+        "chapter": 3,
+        "id": "bst_brokentooth",
+        "kind": "cast",
+        "level": 40,
+        "name": "The Fastest Fangs",
+        "objective": "Tame a cat of the Badlands — hunters whisper of Broken Tooth, whose bite never stops",
+        "spell": "Tame Beast",
+        "text": "In the dust of the Badlands stalks a battle-scarred mountain lion the goblins' traps could never hold. Broken Tooth, they call him — no faster set of jaws exists in all the world, and every beastmaster alive knows his name. Track him through the dry hills and offer him a better war than the one that scarred him.",
+        "zone": "Badlands"
+      },
+      {
+        "chapter": 3,
+        "emote": "SALUTE",
+        "id": "bst_wanderer",
+        "kind": "emote",
+        "level": 41,
+        "name": "The Wanderer's Road",
+        "objective": "/salute Rexxar, last of the Mok'Nathal, where he walks the roads of Desolace",
+        "text": "The greatest beastmaster alive saved a nation, broke an admiral, was named champion of a whole people — and walked away from all of it, back to the empty roads with Misha at his side. Find him on his endless patrol through Desolace and salute him, whatever banner you carry. He will understand what you are becoming.",
+        "zone": "Desolace"
+      },
+      {
+        "chapter": 3,
+        "count": 50,
+        "id": "bst_predator",
+        "kind": "crit",
+        "level": 45,
+        "name": "The Predator's Eye",
+        "objective": "Land 50 critical strikes of your own",
+        "text": "Watch your beast hunt: it does not flail, it waits, and then it takes the throat. Fifty perfect strikes of your own — arrow or spear-thrust, each one placed where the prey ends. The beast teaches; the master learns."
+      },
+      {
+        "chapter": 3,
+        "id": "bst_timbermaw",
+        "kind": "visit",
+        "level": 50,
+        "name": "The Furbolg Door",
+        "objective": "Walk the tunnel of Timbermaw Hold in Felwood",
+        "subzone": "Timbermaw Hold",
+        "text": "The Timbermaw are the last uncorrupted furbolg — beast-folk who judge every visitor by deed, not banner. Their hold is a door through the mountain that opens only to the trusted. Stand in their tunnel and be weighed. A friend of the wild should be at home among the beast-people, or learn why he is not."
+      },
+      {
+        "chapter": 3,
+        "count": 10,
+        "id": "bst_thunderhides",
+        "item": "Devilsaur Leather",
+        "kind": "loot",
+        "level": 55,
+        "name": "Hides of the Thunder Lizard",
+        "objective": "Skin 10 Devilsaur Leather in Un'Goro Crater",
+        "text": "When the old beastmasters called the Stampede, it was thunder lizards that answered. Their blood runs in the devilsaurs of Un'Goro. Hunt the great lizards in their own crater and take ten hides with your own knife — the wild's armor, paid for at the wild's price."
+      },
+      {
+        "chapter": 3,
+        "id": "bst_frostsaber",
+        "kind": "cast",
+        "level": 57,
+        "name": "The Frostsaber",
+        "objective": "Tame a great cat of Winterspring — Rak'shiri, the pale stalker, hunts the snowfields",
+        "spell": "Tame Beast",
+        "text": "North of everything, where the snow never breaks, the frostsaber prides hunt in silence. Among them moves Rak'shiri, ice-blue and faster than rumor. A beastmaster's last tame should be his rarest — that was the vow at the start. Winterspring is where such vows are kept.",
+        "zone": "Winterspring"
+      },
+      {
+        "chapter": 3,
+        "cleanOnly": true,
+        "completionNote": "It died facing its keepers' door, not yours. Remember that the next time someone calls a chained thing a monster.",
+        "id": "bst_thebeast",
+        "kind": "kill",
+        "level": 58,
+        "name": "No Cage May Hold",
+        "objective": "Slay The Beast in Blackrock Spire, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "The Beast"
+        ],
+        "text": "In the upper halls of Blackrock Spire the warlocks of the Blackhand keep a creature with no name — only a cage. No taming this age knows will reach it; the fire has been bred too deep. Walk in with your vows clean and grant it the one freedom left to give. A beastmaster does not look away from this."
+      },
+      {
+        "chapter": 4,
+        "honorific": "Beastlord",
+        "id": "bst_kingmosh",
+        "kind": "kill",
+        "level": 60,
+        "name": "The King of Un'Goro",
+        "objective": "Slay King Mosh, the devilsaur king — you and your beast alone",
+        "solo": true,
+        "targets": [
+          "King Mosh"
+        ],
+        "text": "The crater has a king: King Mosh, eldest devilsaur of Un'Goro, whom whole hunting parties walk wide around. Take him with no army — just the two of you, wits, lures and legwork against the largest land predator alive. Bring this off and there is no beast on Azeroth you need fear, and none that need fear you without cause."
+      },
+      {
+        "chapter": 4,
+        "completionNote": "The raptor Ohgan fell defending the hand that whipped him. Mourn the beast; never forgive the breaking.",
+        "id": "bst_beastbreaker",
+        "kind": "kill",
+        "level": 60,
+        "name": "The Beast-Breaker",
+        "objective": "Slay Bloodlord Mandokir in Zul'Gurub",
+        "targets": [
+          "Bloodlord Mandokir"
+        ],
+        "text": "In sunken Zul'Gurub the Bloodlord Mandokir rides a raptor broken to the whip — a war-beast with no name of its own, only a master's spurs. He is everything your path stands against, wearing a crown. Take an army into the Gurubashi ruin and put the breaker of beasts in the ground."
+      },
+      {
+        "chapter": 4,
+        "id": "bst_ancients",
+        "items": [
+          "Rhok'delar, Longbow of the Ancient Keepers",
+          "Lok'delar, Stave of the Ancient Keepers"
+        ],
+        "kind": "equip",
+        "level": 60,
+        "name": "The Ancients' Answer",
+        "objective": "Earn Rhok'delar or Lok'delar from the Ancients of Irontree Woods",
+        "text": "From the Firelord's own cache comes a petrified leaf, and the Ancients of Felwood will read it as a summons. Their price is the strangest hunt of your life: four demons wearing friendly faces, each fought utterly alone — the one trial your beast must sit out. Pass it, and the trees themselves will arm you. No truer weapons exist for your kind."
+      },
+      {
+        "chapter": 4,
+        "emote": "ROAR",
+        "id": "bst_roar",
+        "kind": "emote",
+        "level": 60,
+        "name": "The Wild's Voice",
+        "objective": "/roar with your beast in Un'Goro Crater",
+        "text": "You knelt to no throne and saluted only a wanderer. Finish as Rexxar finished: go to the oldest wild place in the world, stand beside the friend who walked every road with you, and roar — two voices answering as one. Then go back to the wild, owing nothing to anyone.",
+        "zone": "Un'Goro Crater"
+      }
+    ]
   },
   {
     "breakCry": "The shot is fouled! The Marksman works alone, gun in hand.",

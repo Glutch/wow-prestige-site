@@ -109,6 +109,8 @@ for _, def in ipairs(PC.Classes) do
         restoreCry = def.restoreCry,
         chapters = chapters,
         trials = def.trials,
+        itemIds = def.itemIds,
+        suggested = def.suggestedItems,
     }
 end
 

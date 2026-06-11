@@ -11,6 +11,23 @@ export type IdentityLore = {
 };
 
 export const identityLoreByClass: Record<string, IdentityLore> = {
+  beastmaster: {
+    professions: {
+      Skinning:
+        "The wild feeds those who walk with it, and nothing is wasted. The path's own trial sends you into Un'Goro for ten devilsaur hides taken with your own knife — the wild's armor, paid for at the wild's price.",
+      Leatherworking:
+        "What the knife takes, the needle honors. The Devilsaur Gauntlets and Leggings are cut from thunder-lizard hide you skinned yourself — armor with no smith, no forge, and no debt to any city.",
+    },
+    trees: {
+      "HUNTER:Beast Mastery":
+        "The RPG calls beastmasters “wilderness warriors with an uncanny rapport with animals” — and Beast Mastery is that rapport made discipline. Thirty-one points sworn to the beast, not the bow: its fangs, its hide, its loyalty. The pet is not a tool; it is the other half of the hunter.",
+    },
+    talents: {
+      "Bestial Wrath":
+        "“Send your pet into a rage… While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed.” The 31-point oath of the tree, sworn by 42 — the moment the bond stops being protection and becomes a weapon.",
+    },
+  },
+
   blademaster: {
     races: {
       Orc: "The blademasters were orcs of the ill-fated Burning Blade, the clan that “consumed itself in the throes of demonic corruption.” The survivors swore their grim oath as orcs of Thrall's new Horde and stood as his personal honor guard. Only an orc can carry that banner — or buy back that name.",

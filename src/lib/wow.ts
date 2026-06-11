@@ -75,6 +75,9 @@ export type PrestigeClass = {
   restoreCry?: string;
   chapters?: { index: number; title: string }[];
   trials?: Trial[];
+  /** Item name -> verified Classic item ID, for every item a deed names. */
+  itemIds?: Record<string, number>;
+  suggested?: { id: number; name: string; note: string }[];
 };
 
 export const prestigeClasses = classesJson as unknown as PrestigeClass[];
@@ -103,11 +106,29 @@ export const FACTION_TEXT: Record<string, string> = {
   Both: "text-gold",
 };
 
+/** Classic class colors, keyed by the addon's class tokens. */
+export const CLASS_COLORS: Record<string, string> = {
+  WARRIOR: "#c79c6e",
+  HUNTER: "#abd473",
+  ROGUE: "#fff569",
+  MAGE: "#69ccf0",
+  PRIEST: "#ffffff",
+  WARLOCK: "#9482c9",
+  SHAMAN: "#0070de",
+  PALADIN: "#f58cba",
+  DRUID: "#ff7d0a",
+};
+
+/** "WARRIOR" -> "Warrior" */
+export function classTokenLabel(token: string): string {
+  return token[0] + token.slice(1).toLowerCase();
+}
+
 /** Pretty-print the machine-enforced ruleset of a class. */
 export function ruleLines(c: PrestigeClass): string[] {
   const lines: string[] = [];
   if (c.races) lines.push(`Race: ${c.races.join(" or ").replace("NightElf", "Night Elf")}`);
-  if (c.classes) lines.push(`Class: ${c.classes.map(t => t[0] + t.slice(1).toLowerCase()).join(" or ")}`);
+  if (c.classes) lines.push(`Class: ${c.classes.map(classTokenLabel).join(" or ")}`);
   if (c.minLevel) lines.push(`Level ${c.minLevel}+`);
   for (const slot of c.forbidSlots ?? [])
     lines.push(`No ${slot.replace("Slot", "").toLowerCase()} armor — the slot stays empty`);

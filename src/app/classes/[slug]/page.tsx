@@ -10,6 +10,8 @@ import { ItemInventory } from "@/components/item-inventory";
 import { SuggestedItems } from "@/components/suggested-items";
 import { LoreSection } from "@/components/lore-section";
 import { PathIdentity } from "@/components/path-identity";
+import { CharacterModel } from "@/components/character-model";
+import { heroModels } from "@/data/models";
 
 type Params = Promise<{ slug: string }>;
 
@@ -31,6 +33,7 @@ const HERO_BG: Record<string, string> = {
   mountainking: "https://wow.zamimg.com/uploads/screenshots/normal/1260971.jpg",
   blademaster:
     "https://wow.zamimg.com/uploads/screenshots/normal/1024918-durotar-tiragarde-keep-view.jpg",
+  beastmaster: "https://wow.zamimg.com/uploads/screenshots/normal/70250.jpg",
 };
 const DEFAULT_BG = "https://wow.zamimg.com/uploads/screenshots/normal/84153.jpg";
 
@@ -52,12 +55,17 @@ export default async function ClassPage({ params }: { params: Params }) {
           escape; the bg layers are inset-0 and cannot overflow anyway */}
       <section className="relative border-b border-border/60">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
+          className="absolute inset-0 bg-cover bg-center opacity-55"
           style={{ backgroundImage: `url(${HERO_BG[c.id] ?? DEFAULT_BG})` }}
           aria-hidden
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" aria-hidden />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/15 via-background/45 to-background" aria-hidden />
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+          {heroModels[c.id] && (
+            <div className="absolute right-0 top-0 hidden h-[480px] w-[400px] lg:block">
+              <CharacterModel config={heroModels[c.id]} className="h-full w-full" />
+            </div>
+          )}
           <Link href="/classes" className="text-sm text-muted-foreground hover:text-gold">
             ← All paths
           </Link>

@@ -109,4 +109,47 @@ export const loreByClass: Record<string, LoreSection[]> = {
       ],
     },
   ],
+
+  beastmaster: [
+    {
+      heading: "The wild's own warrior",
+      quote: {
+        text: "A warrior Hero, able to call forth the creatures of the forest to serve him.",
+        source: "Beastmaster, Warcraft III: The Frozen Throne",
+      },
+      paragraphs: [
+        "The Beastmaster enters Warcraft as a wolf-cowled wanderer of The Frozen Throne — a hero who fights as a pack of one: a bear at his side, quilbeasts at his heel, a hawk above the canopy, and, at his full fury, a stampede of thunder lizards loosed across the field. Solitary forest dwellers, the lore calls them, who sought the mastery of combat by mimicking the wild beasts they bonded with.",
+        "The tabletop RPG made them a class of their own: “wilderness warriors with an uncanny rapport with animals,” noble savages “more at home with wild animals than sapient beings,” who over a lifetime grow claws, fangs and horns of their own. In Classic, all of that already has a name — the Beast Mastery hunter, one great beast at their side for life. This path is that page, enforced: the pet is not a tool, it is family, and it never fights alone.",
+      ],
+    },
+    {
+      heading: "Rexxar, last of the Mok'Nathal",
+      quote: {
+        text: "I have watched the other races... Their wars do nothing but scar the land, and drive the wild things to extinction. No, they cannot be trusted. Only beasts are above deceit.",
+        source: "Rexxar, The Founding of Durotar",
+      },
+      paragraphs: [
+        "The model for every beastmaster is Rexxar, the half-orc half-ogre of the Mok'Nathal, who found the bear Misha as an orphaned cub and never walked alone again. In The Frozen Throne's Founding of Durotar campaign he carries a dying warrior's last message to Thrall, rescues young Baine Bloodhoof from the centaur, breaks the ogre warlord Kor'gall, and stands at the front of the assault that fells Admiral Daelin Proudmoore at Theramore. They named him Champion of the Horde for it — and he walked away, back to the empty roads, with Misha at his side.",
+        "In Classic he is still walking: Rexxar patrols the long roads of Desolace to this day, and this journey sends you to find him there and salute him, whatever banner you carry. The path ends the way his story does — not kneeling at a throne, but roaring beside your beast in the oldest wild place in the world, owing nothing to anyone.",
+      ],
+    },
+    {
+      heading: "Bear, quilbeast and hawk",
+      paragraphs: [
+        "The hero's summons are this path's trials, read back through Classic. The bear is the bond itself — the first taming at ten, the naming, and a string of legendary tames every hunter of the era knew by heart: Humar the Pridelord, the black lion of the Barrens' lone tree; Broken Tooth, whose bite never stops; Rak'shiri, the pale stalker of Winterspring. The hawk is the bird of prey you take under your wing, its Screech breaking fifty foes' nerve — eyes above the canopy, the sky fighting for you.",
+        "The quilbeast is the kinship gone rotten: the quilboar hex the boar instead of walking with it, and the path culls their raiders and their matriarch Charlga Razorflank for it. And the Stampede is loosed from a bowstring — three foes under one volley, ten times over — until it comes back around in the flesh, hunting the devilsaurs of Un'Goro, blood-kin of the thunder lizards the old beastmasters called down.",
+      ],
+    },
+    {
+      heading: "The wild's ledger",
+      quote: {
+        text: "Send your pet into a rage... While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed.",
+        source: "Bestial Wrath, 31-point Beast Mastery talent",
+      },
+      paragraphs: [
+        "Rexxar's judgment of the warring races — wars that scar the land and drive the wild things to extinction — has a corporate face in Classic: the Venture Company, strip-mining Stonetalon ridge to ridge, felling and trapping from the Barrens to Stranglethorn. They are this path's lifelong counter. The ledger opens at your first taming and never closes; every logger, trapper and overseer is one entry settled, and two hundred make you Champion of the Wilds.",
+        "The darker entries are the cages. Bloodlord Mandokir rides a raptor broken to the whip, and the warlocks of Blackrock Spire keep a creature with no name — only a cage — that no taming of this age can reach. The journey demands you answer both, and mourn what falls: a beastmaster does not look away from a chained thing, and never forgives the breaking.",
+      ],
+    },
+  ],
 };

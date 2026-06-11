@@ -1,5 +1,6 @@
 import type { PrestigeClass } from "@/lib/wow";
 import { itemByName, type WowItem } from "@/data/items";
+import { suggestedByClass } from "@/data/suggested";
 import { ItemTooltip } from "@/components/item-tooltip";
 import { WowIcon } from "@/components/wow-icon";
 
@@ -12,14 +13,17 @@ const SLOT_RING: Record<WowItem["quality"], string> = {
   legendary: "border-quality-legendary/80 shadow-[0_0_14px_rgba(255,128,0,0.35)]",
 };
 
-/** Every known item this class's journey references, in journey order. */
+/** Every known item this class's journey references, in journey order.
+ *  Anything in the class's suggested-gear list is excluded: spoils are
+ *  what the deeds award, not the shopping list along the way. */
 function collectItems(c: PrestigeClass): WowItem[] {
+  const suggested = new Set((suggestedByClass[c.id] ?? []).map((s) => s.name));
   const found = new Map<string, WowItem>();
   for (const trial of c.trials ?? []) {
     const explicit = [...(trial.items ?? []), ...(trial.item ? [trial.item] : [])];
     for (const name of explicit) {
       const item = itemByName.get(name);
-      if (item) found.set(item.name, item);
+      if (item && !suggested.has(name)) found.set(item.name, item);
     }
     // Items only mentioned in prose (the crafted maul...). completionNotes
     // are deliberately excluded: they name what the path REFUSES (Ironfoe,
@@ -27,7 +31,9 @@ function collectItems(c: PrestigeClass): WowItem[] {
     // tooltip via Linkify inside the deed card.
     const prose = `${trial.objective} ${trial.text ?? ""}`;
     for (const [name, item] of itemByName) {
-      if (!found.has(name) && prose.includes(name)) found.set(name, item);
+      if (!found.has(name) && !suggested.has(name) && prose.includes(name)) {
+        found.set(name, item);
+      }
     }
   }
   return [...found.values()];

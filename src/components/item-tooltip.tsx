@@ -29,6 +29,7 @@ export function ItemTooltip({ item }: { item: WowItem }) {
           <span>{item.speed}</span>
         </span>
       )}
+      {item.bonusDamage && <span className="block">{item.bonusDamage}</span>}
       {item.dps && <span className="block">{item.dps}</span>}
       {item.stats?.map((s) => (
         <span key={s} className="block">
