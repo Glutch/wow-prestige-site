@@ -6,7 +6,10 @@ import { ItemLink } from "@/components/item-link";
 
 export default function Home() {
   const featured = prestigeClasses.find((c) => c.id === "mountainking")!;
-  const rest = prestigeClasses.filter((c) => c.id !== "mountainking").slice(0, 7);
+  const blademaster = prestigeClasses.find((c) => c.id === "blademaster")!;
+  const rest = prestigeClasses
+    .filter((c) => c.id !== "mountainking" && c.id !== "blademaster")
+    .slice(0, 6);
 
   return (
     <div>
@@ -36,9 +39,15 @@ export default function Home() {
           <div className="rise mt-9 flex flex-wrap items-center justify-center gap-4" style={{ animationDelay: "360ms" }}>
             <Link
               href="/classes/mountain-king"
-              className="rounded border border-gold/70 bg-gold/10 px-6 py-3 font-display text-sm font-bold uppercase tracking-widest text-gold transition-colors hover:bg-gold/20"
+              className="rounded border border-alliance/70 bg-alliance/10 px-6 py-3 font-display text-sm font-bold uppercase tracking-widest text-alliance transition-colors hover:bg-alliance/20"
             >
               Walk the Mountain King&apos;s path
+            </Link>
+            <Link
+              href="/classes/blademaster"
+              className="rounded border border-horde/70 bg-horde/10 px-6 py-3 font-display text-sm font-bold uppercase tracking-widest text-horde transition-colors hover:bg-horde/20"
+            >
+              Walk the Blademaster&apos;s path
             </Link>
             <Link
               href="/classes"
@@ -114,6 +123,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---- featured: blademaster ---- */}
+      <section className="relative overflow-hidden border-b border-border/60">
+        <div
+          className="absolute inset-0 bg-cover bg-[center_60%] opacity-25"
+          style={{ backgroundImage: "url(https://wow.zamimg.com/uploads/screenshots/normal/1024918-durotar-tiragarde-keep-view.jpg)" }}
+          aria-hidden
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-background via-background/70 to-background/30" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <div className="ml-auto max-w-xl text-right">
+            <div className="flex flex-row-reverse items-center gap-4">
+              <WowIcon token={blademaster.icon} size={56} alt={blademaster.name} />
+              <div>
+                <p className="text-xs uppercase tracking-[0.3em] text-horde/80">The Horde&apos;s answer</p>
+                <h2 className="font-display text-3xl font-black text-foreground">Blademaster</h2>
+              </div>
+            </div>
+            <p className="mt-5 leading-relaxed text-foreground/85">{blademaster.fantasy}</p>
+            <p className="mt-4 leading-relaxed text-muted-foreground">
+              Twenty-five deeds from the Valley of Trials to the Tainted Scar.
+              Kneel before Thrall. Forge your own <ItemLink name="Copper Claymore" /> in
+              the Valley of Honor. Call your first mak&apos;gora, become the
+              bladestorm, cut down the cult that stole your clan&apos;s name — and
+              maybe, one day, carry{" "}
+              <ItemLink name="Ashkandi, Greatsword of the Brotherhood" />.
+            </p>
+            <Link
+              href="/classes/blademaster"
+              className="mt-7 inline-block rounded border border-gold/70 bg-gold/10 px-6 py-3 font-display text-sm font-bold uppercase tracking-widest text-gold transition-colors hover:bg-gold/20"
+            >
+              Read the full chronicle
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ---- grid teaser ---- */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <div className="flex items-end justify-between">
@@ -124,8 +169,9 @@ export default function Home() {
         </div>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <ClassCard c={featured} index={0} />
+          <ClassCard c={blademaster} index={1} />
           {rest.map((c, i) => (
-            <ClassCard key={c.id} c={c} index={i + 1} />
+            <ClassCard key={c.id} c={c} index={i + 2} />
           ))}
         </div>
       </section>

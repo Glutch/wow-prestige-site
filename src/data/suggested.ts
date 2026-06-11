@@ -37,4 +37,26 @@ export const suggestedByClass: Record<string, SuggestedItem[]> = {
       note: "Magmadar, Molten Core — the mountain answers",
     },
   ],
+  blademaster: [
+    {
+      name: "Truesilver Champion",
+      note: "Blacksmithing 240 — a warding champion's blade off your own anvil",
+    },
+    {
+      name: "Diamond Flask",
+      note: "Warrior quest “Voodoo Feathers” — a duelist's second wind",
+    },
+    {
+      name: "Arcanite Champion",
+      note: "Master Swordsmith craft — the smith-path's crowning blade",
+    },
+    {
+      name: "Obsidian Edged Blade",
+      note: "Molten Core — a sword so true it sharpens its bearer",
+    },
+    {
+      name: "The Untamed Blade",
+      note: "Razorgore, Blackwing Lair — fury that wakes mid-swing",
+    },
+  ],
 };

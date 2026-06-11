@@ -8,6 +8,59 @@ export type LoreSection = {
 };
 
 export const loreByClass: Record<string, LoreSection[]> = {
+  blademaster: [
+    {
+      heading: "The last of the Burning Blade",
+      quote: {
+        text: "These skilled swordsmen were once part of the ill-fated Burning Blade clan which consumed itself in the throes of demonic corruption. With their clan scattered and broken, the proud blademasters swore a grim oath to free themselves and their brethren from demonic control once and for all. Under Thrall's command, the blademasters once again joined the Horde and came to serve as the young Warchief's personal honor guard.",
+        source: "Warcraft III: Reign of Chaos manual",
+      },
+      paragraphs: [
+        "The Blademaster is the wandering swordsman of the orc Horde in Warcraft III — bare-chested, banner on his back, a single great blade in both hands. His clan's story is the orcs' whole tragedy in miniature: the Burning Blade drank deepest of the demon gift and burned itself to nothing, and the swordsmen who survived swore to spend their lives buying the name back. “Though their numbers are few, the seasoned blademasters represent an elite fighting force within the Horde.”",
+        "In Classic, the cult that stole that name is everywhere an orc levels: Yarrog Baneshadow scratching sigils within sight of the Den, Skull Rock, Dreadmist Peak, Thunder Axe Fortress, the Searing Blade beneath Orgrimmar itself. That is this path's lifelong counter — the blood debt, paid one cultist at a time, and never paid in full.",
+      ],
+    },
+    {
+      heading: "The four arts",
+      quote: {
+        text: "By focusing their warrior energies, blademasters can become living cyclones of fighting rage.",
+        source: "Bladestorm, Warcraft III",
+      },
+      paragraphs: [
+        "Four arts define the hero. The Critical Strike: “by channeling their potent powers in one focused strike, blademasters can cause even greater damage.” The Mirror Image, “one of the blademasters' more mystical abilities — to create duplicate phantom images of themselves.” The Wind Walk, moving “so quickly that they appear to be invisible.” And the Bladestorm, the living cyclone of fighting rage.",
+        "Read this path's rules back against that page: fifty critical strikes counted as the Trial of the Critical Strike, Whirlwind catching three foes at once for the Bladestorm, Zalazane's false images cut through on the Echo Isles, and the standing vow to Wind Walk — to vanish rather than die — when a fight is lost. Every trial is one of the four arts, enforced.",
+      ],
+    },
+    {
+      heading: "Mak'gora, and the pilgrim Samuro",
+      paragraphs: [
+        "Mak'gora is the orcish duel of honor — by the old law, a fight to the death; under Thrall's rule a thing you may survive, though the proud still choose otherwise. The duels of this journey are fought by the old law, because Hardcore already is: Hezrul Bloodmark alone at the Kolkar camps, the white lion Echeyakee called by horn, Herod bellowing for a challenger in his own armory. Alone, vows clean, one blade.",
+        "The model for all of it is Samuro, “the last remaining blademaster to wear the banner of the Burning Blade clan,” who walks Kalimdor in The Frozen Throne “on a warrior's pilgrimage in search of vengeance and redemption for his fallen clan.” This path is that pilgrimage, handed to you: twenty-five deeds of vengeance and redemption, and a banner you carry by refusing to wear armor over it.",
+      ],
+    },
+    {
+      heading: "The blood debt",
+      quote: {
+        text: "Here lies Grommash Hellscream, Chieftain of the Warsong Clan. In many ways, the curse of our people began and ended with Grom.",
+        source: "Grom's monument, Demon Fall Canyon",
+      },
+      paragraphs: [
+        "Grommash Hellscream was the first orc to drink Mannoroth's blood, and the one who ended it: in Ashenvale he stood against the demon who had bought his people and killed him with one swing of Gorehowl, dying in the act. Thrall's last words to him stand for the whole race: “No, old friend. You've freed us all.” The canyon where it happened bears his monument, and this path sends you there to salute it.",
+        "But the Legion's ledger is longer than Mannoroth. The Shadow Council that brokered the bargain festers in Jaedenar; the Burning Blade is its knife; and Lord Kazzak, the Legion's last general on Azeroth, still broods in the Tainted Scar. The journey's final line is written there — take an army if you must, but take his head.",
+      ],
+    },
+    {
+      heading: "A legacy on paper",
+      quote: {
+        text: "Among the Horde, orcs with the gladiator class are known as blademasters.",
+        source: "World of Warcraft: The Roleplaying Game",
+      },
+      paragraphs: [
+        "The tabletop Warcraft RPG kept the blademaster alive on paper. The Horde Player's Guide has them “lead their people into melee combat,” with many serving “as bodyguards for other Horde champions” — Thrall's own honor guard, statted out. The sourcebooks count Grom Hellscream and Thrall himself among those who walked the style.",
+        "This addon's Blademaster is that page brought to Classic Hardcore: orc warrior, one two-handed sword, bare head and bare chest, Arms to the bone — and a clan name you redeem by deed, not dice.",
+      ],
+    },
+  ],
   mountainking: [
     {
       heading: "Thanes of Khaz Modan",

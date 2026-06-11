@@ -17,6 +17,12 @@ export function SiteHeader() {
           >
             Mountain King
           </Link>
+          <Link
+            href="/classes/blademaster"
+            className="hidden whitespace-nowrap text-muted-foreground transition-colors hover:text-gold sm:inline"
+          >
+            Blademaster
+          </Link>
           <a
             href="https://github.com/Glutch/wow-prestige-classes"
             className="whitespace-nowrap rounded border border-border px-2.5 py-1.5 font-display text-xs font-semibold text-gold transition-colors hover:bg-secondary sm:px-3"

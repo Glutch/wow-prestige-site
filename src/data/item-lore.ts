@@ -46,4 +46,44 @@ export const itemLore: Record<string, string> = {
 
   "Sulfuras, Hand of Ragnaros":
     "The hammer of the Firelord whom Thaurissan's desperate summoning loosed upon the world. Its haft can only be smithed at the Black Anvil, in the heart of the enemy's city.",
+
+  // ---- the Blademaster's path ---------------------------------------------
+  "Copper Claymore":
+    "Ten bars of copper, fluxed, ground and struck by your own hand at the forge in the Valley of Honor. A blademaster should know the weight of every step from ore to edge.",
+
+  "Whirlwind Sword":
+    "Bath'rah the Windwatcher binds the heart of Cyclonian — the Windmaster you slew in Alterac — into a warrior's greatsword. The storm itself, sheathed at your back.",
+
+  "Sul'thraze the Lasher":
+    "Sundered long ago into Sang'thraze and Jang'thraze, its halves kept apart in Zul'Farrak. Whoever joins them holds the whip-blade whole — and the Sandfury fear it more than you.",
+
+  Ravager:
+    "Herod's weapon spins its bearer into a steel cyclone — but it is an axe, for all his bluster. No blade at all. The path leaves it where it falls.",
+
+  "Dal'Rend's Sacred Charge":
+    "Rend Blackhand carried his brother Maim's twin swords — one for each hand. A blademaster needs but one. The path leaves them on the false Warchief's floor.",
+
+  "Dal'Rend's Tribal Guardian":
+    "The second of the false Warchief's pair. Two blades is a juggler's act, not a discipline; the vow of the single sword stands even over loot like this.",
+
+  "Truesilver Champion":
+    "A champion's blade off your own anvil — truesilver worked at 240 skill, warding its bearer with a holy shield. The smith-vow and the sword-vow, one item.",
+
+  "Arcanite Champion":
+    "The crowning work of a master swordsmith: arcanite, enchanted thorium, and the patience to have learned the craft twice over. Few smiths ever forge one; fewer carry it themselves.",
+
+  "Obsidian Edged Blade":
+    "Won in the Molten Core, and whetted so fine it teaches your own hands — the two-handed sword arm of its bearer grows truer. A blade that makes blademasters.",
+
+  "The Untamed Blade":
+    "Razorgore the Untamed guards it atop Blackwing Lair. Its fury wakes mid-swing — three hundred men's strength for eight heartbeats — exactly the moment a blademaster lives for.",
+
+  "High Warlord's Greatsword":
+    "Sold only in the Hall of Legends, and only to a High Warlord of the Horde. No drop, no luck — every inch of this blade is paid for in battlefields.",
+
+  "Zin'rokh, Destroyer of Worlds":
+    "The god-blade of the Gurubashi, claimed from Hakkar the Soulflayer in Zul'Gurub. A sword old enough to remember when trolls ruled this world — and named for what they did with it.",
+
+  "Ashkandi, Greatsword of the Brotherhood":
+    "Carried by Nefarian, who would forge a false Horde of his own atop Blackrock Spire — as his father's Dark Horde marched below. Cutting it from his claws settles both insults at once.",
 };

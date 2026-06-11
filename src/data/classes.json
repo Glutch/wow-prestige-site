@@ -1,6 +1,28 @@
 [
   {
     "breakCry": "The blade is dishonored! A true Blademaster carries nothing but the sword.",
+    "chapters": [
+      {
+        "index": 0,
+        "title": "The Blood Debt"
+      },
+      {
+        "index": 1,
+        "title": "Chapter I — The First Edge"
+      },
+      {
+        "index": 2,
+        "title": "Chapter II — The Wandering Blade"
+      },
+      {
+        "index": 3,
+        "title": "Chapter III — The Burning Path"
+      },
+      {
+        "index": 4,
+        "title": "Chapter IV — The Perfect Cut"
+      }
+    ],
     "classes": [
       "WARRIOR"
     ],
@@ -25,7 +47,342 @@
       "Orc"
     ],
     "restoreCry": "The blade sings again. Walk lightly, strike once.",
-    "source": "Warcraft III / Orcish tradition",
+    "source": "Warcraft III / Horde Player's Guide",
+    "trials": [
+      {
+        "chapter": 0,
+        "epitaph": "The blood debt counted %d of the Burning Blade dead.",
+        "id": "bm_debt",
+        "kind": "counter",
+        "milestones": [
+          {
+            "count": 10,
+            "honorific": "Bladesworn"
+          },
+          {
+            "count": 50,
+            "honorific": "Cultbreaker"
+          },
+          {
+            "count": 200,
+            "honorific": "Redeemer of the Burning Blade"
+          }
+        ],
+        "name": "The Blood Debt",
+        "objective": "Cut down the Burning Blade cult — and the Searing Blade beneath Orgrimmar — wherever it festers",
+        "pattern": [
+          "Burning Blade",
+          "Searing Blade"
+        ],
+        "text": "Your clan drank first when Mannoroth poured. Now its name belongs to a cult that knives the Horde from the shadows. Every cultist you cut down buys back one drop of what was drunk. The debt is long."
+      },
+      {
+        "chapter": 1,
+        "id": "bm_firstcut",
+        "kind": "kill",
+        "level": 5,
+        "name": "The First Cut",
+        "objective": "Slay Yarrog Baneshadow in the cave above the Valley of Trials",
+        "targets": [
+          "Yarrog Baneshadow"
+        ],
+        "text": "The cult does not wait for you to be ready. In a cave they call the Burning Blade Coven, within sight of the Den, Yarrog Baneshadow scratches demon marks into the rock. Walk in and make your first cut count."
+      },
+      {
+        "chapter": 1,
+        "emote": "KNEEL",
+        "id": "bm_oath",
+        "kind": "emote",
+        "level": 8,
+        "name": "The Oath of the Warchief",
+        "objective": "/kneel before Thrall in his fortress in the Valley of Wisdom",
+        "subzone": "Valley of Wisdom",
+        "text": "A blade without an oath is just sharp iron. Walk into the Warchief's fortress in the Valley of Wisdom, kneel before Thrall, who freed your people, and bind your edge to the Horde where the old wolves can hear it.",
+        "zone": "Orgrimmar"
+      },
+      {
+        "chapter": 1,
+        "id": "bm_forge",
+        "kind": "cast",
+        "level": 10,
+        "name": "Forged in the Valley of Honor",
+        "objective": "Craft a Copper Claymore at the forge in Orgrimmar's Valley of Honor",
+        "spell": "Copper Claymore",
+        "subzone": "Valley of Honor",
+        "text": "Before you master the blade, make one. Smelt the copper yourself and hammer out a claymore in the Valley of Honor — a blademaster should know the weight of every step from ore to edge.",
+        "zone": "Orgrimmar"
+      },
+      {
+        "chapter": 1,
+        "id": "bm_mirrors",
+        "kind": "kill",
+        "level": 12,
+        "name": "The Way of Mirrored Images",
+        "objective": "Slay Zalazane on the Echo Isles",
+        "targets": [
+          "Zalazane"
+        ],
+        "text": "Zalazane hides behind hexed kin and false faces on the Echo Isles. A blademaster knows the art of mirrored images better than any witch doctor — walk through the lies and cut the one that bleeds."
+      },
+      {
+        "chapter": 1,
+        "id": "bm_eye",
+        "kind": "kill",
+        "level": 14,
+        "name": "The Eye in the Dark",
+        "objective": "Slay Gazz'uz in Skull Rock",
+        "targets": [
+          "Gazz'uz"
+        ],
+        "text": "In the cave called Skull Rock, the warlock Gazz'uz whispers Durotar's secrets to a burning eye. The cult's tongue in this land. Cut it out."
+      },
+      {
+        "chapter": 1,
+        "cleanOnly": true,
+        "id": "bm_whitemist",
+        "kind": "kill",
+        "level": 16,
+        "name": "The White Mist",
+        "objective": "Call and slay Echeyakee in the Barrens — alone, vows clean",
+        "solo": true,
+        "targets": [
+          "Echeyakee"
+        ],
+        "text": "Sergra Darkthorn will teach you the horn-call that brings Echeyakee, the white mist of the Barrens. Meet him alone, vows clean, and give the great hunt the respect of a single blade."
+      },
+      {
+        "chapter": 1,
+        "cleanOnly": true,
+        "id": "bm_makgora",
+        "kind": "kill",
+        "level": 20,
+        "name": "The First Mak'gora",
+        "objective": "Slay Hezrul Bloodmark, the Kolkar khan — alone, vows clean",
+        "rankTrial": true,
+        "solo": true,
+        "targets": [
+          "Hezrul Bloodmark"
+        ],
+        "text": "Hezrul Bloodmark bleeds the Crossroads white and calls himself khan for it. Call your first mak'gora: walk into the Kolkar camps alone, vows clean, and answer him blade to blade. Win, and the Barrens will know a Disciple walks the gold grass."
+      },
+      {
+        "chapter": 2,
+        "count": 50,
+        "honorific": "Keen Edge",
+        "id": "bm_critical",
+        "kind": "crit",
+        "level": 25,
+        "name": "Trial of the Critical Strike",
+        "objective": "Land 50 critical strikes",
+        "text": "Any orc can swing hard. A blademaster finds the seam in the armor, the beat between heartbeats. Fifty perfect cuts — let your blade learn where the killing line runs."
+      },
+      {
+        "chapter": 2,
+        "emote": "SALUTE",
+        "id": "bm_hellscream",
+        "kind": "emote",
+        "level": 29,
+        "name": "Where Hellscream Fell",
+        "objective": "/salute at Grommash Hellscream's monument in Demon Fall Canyon",
+        "subzone": "Demon Fall Canyon",
+        "text": "Grom Hellscream drank the same blood your clan did — and paid the whole debt back in one swing. Walk to Demon Fall Canyon, stand before his axe, and salute the chieftain who showed every orc the way out.",
+        "zone": "Ashenvale"
+      },
+      {
+        "chapter": 2,
+        "id": "bm_islander",
+        "kind": "kill",
+        "level": 32,
+        "name": "The Islander's Test",
+        "objective": "Answer Klannoc Macleod's Affray on Fray Island and fell Big Will — alone",
+        "solo": true,
+        "targets": [
+          "Big Will"
+        ],
+        "text": "On Fray Island off Ratchet, the Islander Klannoc Macleod keeps an old school: waves of brawlers, then their champion, Big Will. Take the test alone. A crowd at your back teaches the blade nothing."
+      },
+      {
+        "chapter": 2,
+        "count": 25,
+        "id": "bm_purge",
+        "kind": "kill",
+        "level": 31,
+        "name": "The Purge of Thunder Axe",
+        "objective": "Cut down 25 of the Burning Blade cult — Thunder Axe Fortress in Desolace crawls with them",
+        "pattern": [
+          "Burning Blade",
+          "Searing Blade"
+        ],
+        "text": "The cult holds a fortress now — Thunder Axe, in Desolace — and dreams demon dreams on Dreadmist Peak. Twenty-five of them. The debt does not collect itself."
+      },
+      {
+        "chapter": 2,
+        "count": 10,
+        "hits": 3,
+        "honorific": "Bladestorm",
+        "id": "bm_bladestorm",
+        "kind": "multihit",
+        "level": 36,
+        "name": "The Bladestorm",
+        "objective": "Strike 3 or more foes with a single Whirlwind, 10 times",
+        "spell": "Whirlwind",
+        "text": "The masters of the old clan could become the storm — one blade, everywhere at once. Learn Whirlwind, then prove it: three foes caught in one turn of the blade, ten times over."
+      },
+      {
+        "chapter": 2,
+        "id": "bm_windmaster",
+        "kind": "kill",
+        "level": 40,
+        "name": "The Windmaster",
+        "objective": "Summon and slay Cyclonian, the Windmaster of Alterac",
+        "targets": [
+          "Cyclonian"
+        ],
+        "text": "Bath'rah the Windwatcher can call the Windmaster down from the peaks of Alterac — if you bring what the rite demands. Slay Cyclonian and take the storm itself into your steel."
+      },
+      {
+        "chapter": 2,
+        "cleanOnly": true,
+        "completionNote": "He dropped the Ravager — an axe, for all his bluster. No blade at all. Leave it.",
+        "id": "bm_champion",
+        "kind": "kill",
+        "level": 42,
+        "name": "The Scarlet Champion",
+        "objective": "Answer Herod's challenge in the Scarlet Monastery, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Herod"
+        ],
+        "text": "In the Monastery's armory, Herod bellows for a challenger worth his blade. Be the answer. Walk in with your vows clean and show the Scarlet Crusade what a single sword is for."
+      },
+      {
+        "chapter": 3,
+        "id": "bm_stormblade",
+        "items": [
+          "Whirlwind Sword",
+          "Sul'thraze the Lasher"
+        ],
+        "kind": "equip",
+        "level": 41,
+        "name": "A Blade with History",
+        "objective": "Wield the Whirlwind Sword forged from Cyclonian's heart, or reforge Sul'thraze the Lasher in Zul'Farrak",
+        "text": "Bath'rah can bind the Windmaster's heart into a greatsword — the storm you slew, sheathed at your back. Or piece Sul'thraze together from the two halves the Sandfury keep apart. Either way, carry a blade with a story worth telling."
+      },
+      {
+        "chapter": 3,
+        "emote": "SALUTE",
+        "id": "bm_bladefist",
+        "kind": "emote",
+        "level": 44,
+        "name": "The Price of the Blade",
+        "objective": "/salute at Kargath in the Badlands",
+        "subzone": "Kargath",
+        "text": "The outpost of Kargath bears the name of Bladefist, who cut off his own sword hand to be free of his chains. Stand among his namesakes and salute. Then ask yourself what you would give up for the blade.",
+        "zone": "Badlands"
+      },
+      {
+        "chapter": 3,
+        "id": "bm_reckless",
+        "kind": "kill",
+        "level": 50,
+        "name": "The Reckless Strike",
+        "objective": "Slay an elite enemy while Recklessness is active",
+        "requireBuff": "Recklessness",
+        "requireElite": true,
+        "text": "There is a moment when the blademaster throws away the guard entirely — all edge, nothing held back. Call on Recklessness and fell an elite foe before the moment closes. The blade forgives nothing halfway."
+      },
+      {
+        "chapter": 3,
+        "count": 25,
+        "id": "bm_council",
+        "kind": "kill",
+        "level": 52,
+        "name": "The Masters of the Cult",
+        "objective": "Slay 25 of the Shadow Council's servants in Jaedenar, Felwood",
+        "pattern": "Jaedenar",
+        "text": "The Burning Blade is the knife; the Shadow Council is the hand. In Felwood they named their den Jaedenar, after their demon lord. Carve twenty-five of them out of it."
+      },
+      {
+        "chapter": 3,
+        "cleanOnly": true,
+        "id": "bm_arena",
+        "kind": "kill",
+        "level": 56,
+        "name": "The Gordunni Arena",
+        "objective": "Slay the champion of the Dire Maul arena pit, vows clean",
+        "targets": [
+          "Skarr the Unbreakable",
+          "Mushgog",
+          "The Razza"
+        ],
+        "text": "In the broken heart of Dire Maul the Gordunni keep a fighting pit, and things worse than ogres hold its title. Step onto the sand with your vows clean and take it from whichever champion is breathing."
+      },
+      {
+        "chapter": 3,
+        "cleanOnly": true,
+        "completionNote": "He carried his father's twin blades — one for each hand. A blademaster needs but one. Leave them.",
+        "id": "bm_falsewarchief",
+        "kind": "kill",
+        "level": 58,
+        "name": "The False Warchief",
+        "objective": "Slay Rend Blackhand in Blackrock Spire, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Warchief Rend Blackhand"
+        ],
+        "text": "Rend Blackhand squats on a throne of black rock and dares to call himself Warchief of a truer Horde. You knelt to the real one. Climb the Spire with your vows clean and cut the lie off at the neck."
+      },
+      {
+        "chapter": 4,
+        "honorific": "Doomsbane",
+        "id": "bm_doomlord",
+        "kind": "kill",
+        "level": 60,
+        "name": "The Last General",
+        "objective": "Slay Lord Kazzak in the Tainted Scar",
+        "targets": [
+          "Lord Kazzak"
+        ],
+        "text": "The Legion that bought your clan with blood left a general behind: Kazzak, brooding in the Tainted Scar. The debt has a final name on it. Take an army if you must — but take his head."
+      },
+      {
+        "chapter": 4,
+        "id": "bm_warlord",
+        "items": [
+          "High Warlord's Greatsword"
+        ],
+        "kind": "equip",
+        "level": 60,
+        "name": "The Warlord's Blade",
+        "objective": "Earn and wield the High Warlord's Greatsword",
+        "text": "The Horde's war has its own proving ground, and only its fiercest ever hold a High Warlord's blade. Fight under the banner until the whole Horde knows your name, and carry that greatsword into the field."
+      },
+      {
+        "chapter": 4,
+        "id": "bm_mythblade",
+        "items": [
+          "Ashkandi, Greatsword of the Brotherhood",
+          "Zin'rokh, Destroyer of Worlds"
+        ],
+        "kind": "equip",
+        "level": 60,
+        "name": "A Blade Out of Legend",
+        "objective": "Wield Ashkandi from Nefarian's hoard, or Zin'rokh from the Gurubashi god-king",
+        "text": "Somewhere past the end of the war two blades wait: Ashkandi, in the claws of Nefarian atop Blackwing Lair, and Zin'rokh, in the blood-soaked halls of Zul'Gurub. A blademaster's life is complete with either. Few will ever hold one. Be few."
+      },
+      {
+        "chapter": 4,
+        "emote": "BOW",
+        "id": "bm_firstdust",
+        "kind": "emote",
+        "level": 60,
+        "name": "The First Dust",
+        "objective": "/bow in the Valley of Trials",
+        "subzone": "Valley of Trials",
+        "text": "You knelt to a Warchief; now bow to the dirt. Go back to the Valley of Trials, where the first cut was made, and bow to the dust that drank your first blood. The circle closes where it opened.",
+        "zone": "Durotar"
+      }
+    ],
     "weaponTypes": [
       "Two-Handed Swords"
     ]

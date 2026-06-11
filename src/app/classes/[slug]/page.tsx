@@ -28,6 +28,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 
 const HERO_BG: Record<string, string> = {
   mountainking: "https://wow.zamimg.com/uploads/screenshots/normal/1260971.jpg",
+  blademaster:
+    "https://wow.zamimg.com/uploads/screenshots/normal/1024918-durotar-tiragarde-keep-view.jpg",
 };
 const DEFAULT_BG = "https://wow.zamimg.com/uploads/screenshots/normal/84153.jpg";
 
@@ -162,7 +164,7 @@ export default async function ClassPage({ params }: { params: Params }) {
               <p className="mb-6 text-center text-muted-foreground">
                 On Hardcore every story ends once. The addon writes yours.
               </p>
-              <EpitaphCard />
+              <EpitaphCard c={c} />
             </section>
           </>
         ) : (
