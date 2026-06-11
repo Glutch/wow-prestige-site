@@ -21,8 +21,11 @@ function collectItems(c: PrestigeClass): WowItem[] {
       const item = itemByName.get(name);
       if (item) found.set(item.name, item);
     }
-    // items only mentioned in prose (the crafted maul, Ironfoe...)
-    const prose = `${trial.objective} ${trial.text ?? ""} ${trial.completionNote ?? ""}`;
+    // Items only mentioned in prose (the crafted maul...). completionNotes
+    // are deliberately excluded: they name what the path REFUSES (Ironfoe,
+    // the Ravager) — rejected loot is not a spoil. Those still get their
+    // tooltip via Linkify inside the deed card.
+    const prose = `${trial.objective} ${trial.text ?? ""}`;
     for (const [name, item] of itemByName) {
       if (!found.has(name) && prose.includes(name)) found.set(name, item);
     }
