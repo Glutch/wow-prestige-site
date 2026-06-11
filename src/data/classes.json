@@ -48,6 +48,27 @@
     ],
     "restoreCry": "The blade sings again. Walk lightly, strike once.",
     "source": "Warcraft III / Horde Player's Guide",
+    "talents": {
+      "keys": [
+        {
+          "level": 32,
+          "name": "Sweeping Strikes"
+        },
+        {
+          "level": 34,
+          "name": "Sword Specialization",
+          "rank": 5
+        },
+        {
+          "level": 42,
+          "name": "Mortal Strike"
+        }
+      ],
+      "tree": {
+        "name": "Arms",
+        "points": 31
+      }
+    },
     "trials": [
       {
         "chapter": 0,
@@ -415,9 +436,9 @@
       "WARRIOR"
     ],
     "faction": "Alliance",
-    "fantasy": "A legendary dwarven warrior wreathed in plate, swinging a massive hammer and hurling thunder. Immovable and proud.",
+    "fantasy": "A legendary dwarven warrior wreathed in plate, bearing warhammer and hand axe, hurling thunder. Immovable and proud.",
     "honorRules": [
-      "Carry a two-handed hammer (mace) — the Storm Bolt is thrown, never sheathed.",
+      "Bear the thane's arms — one great warhammer, or hammer and hand axe in each fist. The Storm Bolt is thrown, never sheathed.",
       "Keep a gun on your back to mimic the King's ranged thunder.",
       "Stand and fight as a dwarf should — never flee a winnable brawl."
     ],
@@ -436,6 +457,19 @@
     ],
     "restoreCry": "Stone and storm! The Mountain King stands again.",
     "source": "Alliance Player's Guide",
+    "talents": {
+      "keys": [
+        {
+          "level": 36,
+          "name": "Mace Specialization",
+          "rank": 5
+        }
+      ],
+      "tree": {
+        "name": "Arms",
+        "points": 31
+      }
+    },
     "trials": [
       {
         "chapter": 0,
@@ -700,7 +734,7 @@
       {
         "chapter": 3,
         "cleanOnly": true,
-        "completionNote": "He carried Ironfoe — a one-handed mace. A lesser dwarf's weapon. Leave it.",
+        "completionNote": "He carried Ironfoe — Franclorn Forgewright's stolen masterwork. In a thane's main fist, a hand axe beside it, it serves honest folk at last.",
         "id": "mk_usurper",
         "kind": "kill",
         "level": 58,
@@ -762,9 +796,23 @@
         "zone": "Dun Morogh"
       }
     ],
-    "weaponTypes": [
-      "Two-Handed Maces"
-    ]
+    "weaponProfiles": {
+      "label": "2H hammer, or dual 1H hammers/hand axes",
+      "profiles": [
+        {
+          "types": [
+            "Two-Handed Maces"
+          ]
+        },
+        {
+          "dual": true,
+          "types": [
+            "One-Handed Maces",
+            "One-Handed Axes"
+          ]
+        }
+      ]
+    }
   },
   {
     "breakCry": "The fury fades — you hide like prey! Cast off the shell and rage.",
@@ -792,7 +840,23 @@
       "Orc"
     ],
     "restoreCry": "The blood boils once more. RAAAGH!",
-    "source": "WoW RPG"
+    "source": "WoW RPG",
+    "talents": {
+      "keys": [
+        {
+          "level": 32,
+          "name": "Death Wish"
+        },
+        {
+          "level": 42,
+          "name": "Bloodthirst"
+        }
+      ],
+      "tree": {
+        "name": "Fury",
+        "points": 31
+      }
+    }
   },
   {
     "breakCry": "Your beast is gone — a Beastmaster never walks alone!",
@@ -815,7 +879,19 @@
     ],
     "requirePet": true,
     "restoreCry": "The pack is whole again.",
-    "source": "Warcraft RPG"
+    "source": "Warcraft RPG",
+    "talents": {
+      "keys": [
+        {
+          "level": 42,
+          "name": "Bestial Wrath"
+        }
+      ],
+      "tree": {
+        "name": "Beast Mastery",
+        "points": 31
+      }
+    }
   },
   {
     "breakCry": "The shot is fouled! The Marksman works alone, gun in hand.",
@@ -841,7 +917,23 @@
       "Crossbows"
     ],
     "restoreCry": "Sights aligned. One shot, one kill.",
-    "source": "Alliance & Horde Compendium"
+    "source": "Alliance & Horde Compendium",
+    "talents": {
+      "keys": [
+        {
+          "level": 22,
+          "name": "Aimed Shot"
+        },
+        {
+          "level": 42,
+          "name": "Trueshot Aura"
+        }
+      ],
+      "tree": {
+        "name": "Marksmanship",
+        "points": 31
+      }
+    }
   },
   {
     "breakCry": "The contract is void! Only daggers, only shadow.",
@@ -865,6 +957,22 @@
     ],
     "restoreCry": "The shadows welcome you back.",
     "source": "WoW RPG",
+    "talents": {
+      "keys": [
+        {
+          "level": 27,
+          "name": "Improved Poisons"
+        },
+        {
+          "level": 32,
+          "name": "Cold Blood"
+        }
+      ],
+      "tree": {
+        "name": "Assassination",
+        "points": 31
+      }
+    },
     "weaponTypes": [
       "Daggers"
     ]
@@ -891,6 +999,38 @@
     ],
     "restoreCry": "En garde. Your honor is restored.",
     "source": "WoW RPG",
+    "talents": {
+      "ROGUE": {
+        "keys": [
+          {
+            "level": 22,
+            "name": "Riposte"
+          },
+          {
+            "level": 36,
+            "name": "Sword Specialization",
+            "rank": 5
+          }
+        ],
+        "tree": {
+          "name": "Combat",
+          "points": 31
+        }
+      },
+      "WARRIOR": {
+        "keys": [
+          {
+            "level": 36,
+            "name": "Sword Specialization",
+            "rank": 5
+          }
+        ],
+        "tree": {
+          "name": "Arms",
+          "points": 31
+        }
+      }
+    },
     "weaponTypes": [
       "One-Handed Swords"
     ]
@@ -922,7 +1062,19 @@
       "Thrown"
     ],
     "restoreCry": "The watch resumes. None escape.",
-    "source": "Alliance Player's Guide"
+    "source": "Alliance Player's Guide",
+    "talents": {
+      "keys": [
+        {
+          "level": 32,
+          "name": "Preparation"
+        }
+      ],
+      "tree": {
+        "name": "Subtlety",
+        "points": 31
+      }
+    }
   },
   {
     "breakCry": "The wild rejects you! Shed the trappings of civilization.",
@@ -945,7 +1097,23 @@
       "Alchemy"
     ],
     "restoreCry": "Tooth and claw. The wild knows its own.",
-    "source": "Warcraft RPG"
+    "source": "Warcraft RPG",
+    "talents": {
+      "keys": [
+        {
+          "level": 22,
+          "name": "Feral Charge"
+        },
+        {
+          "level": 42,
+          "name": "Leader of the Pack"
+        }
+      ],
+      "tree": {
+        "name": "Feral Combat",
+        "points": 31
+      }
+    }
   },
   {
     "breakCry": "The Light dims! Take up the hammer of judgment.",
@@ -972,6 +1140,18 @@
     ],
     "restoreCry": "The Light shines upon you once more.",
     "source": "Dark Factions",
+    "talents": {
+      "keys": [
+        {
+          "level": 32,
+          "name": "Blessing of Sanctuary"
+        }
+      ],
+      "tree": {
+        "name": "Protection",
+        "points": 31
+      }
+    },
     "weaponTypes": [
       "One-Handed Maces",
       "Two-Handed Maces"
@@ -1000,6 +1180,19 @@
     ],
     "restoreCry": "The crowd roars your name!",
     "source": "Warcraft RPG",
+    "talents": {
+      "keys": [
+        {
+          "level": 36,
+          "name": "Sword Specialization",
+          "rank": 5
+        }
+      ],
+      "tree": {
+        "name": "Arms",
+        "points": 31
+      }
+    },
     "weaponTypes": [
       "One-Handed Swords",
       "Two-Handed Swords"
@@ -1030,6 +1223,22 @@
     ],
     "restoreCry": "The ancestors smile upon you.",
     "source": "Horde Player's Guide",
+    "talents": {
+      "keys": [
+        {
+          "level": 17,
+          "name": "Totemic Focus"
+        },
+        {
+          "level": 42,
+          "name": "Mana Tide Totem"
+        }
+      ],
+      "tree": {
+        "name": "Restoration",
+        "points": 31
+      }
+    },
     "weaponTypes": [
       "One-Handed Maces",
       "Staves"
@@ -1060,6 +1269,23 @@
     ],
     "restoreCry": "Da spirits be pleased. Da mojo flows.",
     "source": "Horde Player's Guide",
+    "talents": {
+      "keys": [
+        {
+          "level": 25,
+          "name": "Frostbite",
+          "rank": 3
+        },
+        {
+          "level": 32,
+          "name": "Ice Block"
+        }
+      ],
+      "tree": {
+        "name": "Frost",
+        "points": 31
+      }
+    },
     "weaponTypes": [
       "Staves",
       "Daggers",
@@ -1090,7 +1316,23 @@
     ],
     "requirePet": true,
     "restoreCry": "The dead march with you once more.",
-    "source": "Alliance & Horde Compendium"
+    "source": "Alliance & Horde Compendium",
+    "talents": {
+      "keys": [
+        {
+          "level": 27,
+          "name": "Master Summoner"
+        },
+        {
+          "level": 42,
+          "name": "Soul Link"
+        }
+      ],
+      "tree": {
+        "name": "Demonology",
+        "points": 31
+      }
+    }
   },
   {
     "breakCry": "The Kirin Tor disavows you! Staff and robes, archmage — nothing less.",
@@ -1119,6 +1361,22 @@
     ],
     "restoreCry": "Dalaran acknowledges your mastery once more.",
     "source": "WoW RPG",
+    "talents": {
+      "keys": [
+        {
+          "level": 32,
+          "name": "Presence of Mind"
+        },
+        {
+          "level": 42,
+          "name": "Arcane Power"
+        }
+      ],
+      "tree": {
+        "name": "Arcane",
+        "points": 31
+      }
+    },
     "weaponTypes": [
       "Staves"
     ]
@@ -1148,6 +1406,19 @@
     ],
     "restoreCry": "Bones will break again. Forward!",
     "source": "Horde Player's Guide",
+    "talents": {
+      "keys": [
+        {
+          "level": 30,
+          "name": "Enrage",
+          "rank": 5
+        }
+      ],
+      "tree": {
+        "name": "Fury",
+        "points": 31
+      }
+    },
     "weaponTypes": [
       "Two-Handed Maces"
     ]
@@ -1177,6 +1448,18 @@
     ],
     "restoreCry": "Da loa watch over ya again.",
     "source": "Magic & Mayhem",
+    "talents": {
+      "keys": [
+        {
+          "level": 22,
+          "name": "Mind Flay"
+        }
+      ],
+      "tree": {
+        "name": "Shadow",
+        "points": 21
+      }
+    },
     "weaponTypes": [
       "Daggers",
       "One-Handed Maces",
@@ -1211,7 +1494,27 @@
       "Alchemy"
     ],
     "restoreCry": "The cauldron bubbles anew. For the Dark Lady.",
-    "source": "Lands of Conflict"
+    "source": "Lands of Conflict",
+    "talents": {
+      "PRIEST": {
+        "tree": {
+          "name": "Shadow",
+          "points": 21
+        }
+      },
+      "WARLOCK": {
+        "keys": [
+          {
+            "level": 32,
+            "name": "Siphon Life"
+          }
+        ],
+        "tree": {
+          "name": "Affliction",
+          "points": 31
+        }
+      }
+    }
   },
   {
     "breakCry": "You are not prepared! Twin blades, bare skin, nothing more.",
@@ -1244,6 +1547,34 @@
     "requireDualWield": true,
     "restoreCry": "The sacrifice is honored. Hunt the demon within.",
     "source": "WoW RPG / The Illidari",
+    "talents": {
+      "ROGUE": {
+        "keys": [
+          {
+            "level": 32,
+            "name": "Dual Wield Specialization",
+            "rank": 5
+          }
+        ],
+        "tree": {
+          "name": "Combat",
+          "points": 31
+        }
+      },
+      "WARRIOR": {
+        "keys": [
+          {
+            "level": 32,
+            "name": "Dual Wield Specialization",
+            "rank": 5
+          }
+        ],
+        "tree": {
+          "name": "Fury",
+          "points": 31
+        }
+      }
+    },
     "weaponTypes": [
       "One-Handed Swords",
       "Fist Weapons"
@@ -1277,6 +1608,22 @@
     ],
     "restoreCry": "Elune-adore. The goddess smiles upon you.",
     "source": "Warcraft III / Sisterhood of Elune",
+    "talents": {
+      "keys": [
+        {
+          "level": 22,
+          "name": "Holy Nova"
+        },
+        {
+          "level": 42,
+          "name": "Lightwell"
+        }
+      ],
+      "tree": {
+        "name": "Holy",
+        "points": 31
+      }
+    },
     "weaponTypes": [
       "Staves",
       "One-Handed Maces"
@@ -1309,7 +1656,23 @@
       "Bows"
     ],
     "restoreCry": "The forest breathes again. Loose your arrows.",
-    "source": "Warcraft RPG"
+    "source": "Warcraft RPG",
+    "talents": {
+      "keys": [
+        {
+          "level": 22,
+          "name": "Deterrence"
+        },
+        {
+          "level": 42,
+          "name": "Wyvern Sting"
+        }
+      ],
+      "tree": {
+        "name": "Survival",
+        "points": 31
+      }
+    }
   },
   {
     "breakCry": "The vision clouds! The elements demand a worthy vessel.",
@@ -1336,6 +1699,18 @@
     ],
     "restoreCry": "The sight returns. The elements speak through you.",
     "source": "Warcraft III / Horde tradition",
+    "talents": {
+      "keys": [
+        {
+          "level": 42,
+          "name": "Elemental Mastery"
+        }
+      ],
+      "tree": {
+        "name": "Elemental Combat",
+        "points": 31
+      }
+    },
     "weaponTypes": [
       "Staves",
       "One-Handed Maces"
@@ -1368,6 +1743,15 @@
     ],
     "restoreCry": "Da voodoo be strong again, mon!",
     "source": "Warcraft III / Darkspear tradition",
+    "talents": {
+      "keys": [
+        {
+          "level": 25,
+          "name": "Totemic Focus",
+          "rank": 5
+        }
+      ]
+    },
     "weaponTypes": [
       "Daggers",
       "Staves",
@@ -1399,6 +1783,22 @@
     ],
     "restoreCry": "Back aboard, captain. The horizon is yours.",
     "source": "Warcraft RPG / Pirates of the South Seas",
+    "talents": {
+      "keys": [
+        {
+          "level": 22,
+          "name": "Riposte"
+        },
+        {
+          "level": 32,
+          "name": "Blade Flurry"
+        }
+      ],
+      "tree": {
+        "name": "Combat",
+        "points": 31
+      }
+    },
     "weaponTypes": [
       "One-Handed Swords",
       "Daggers"

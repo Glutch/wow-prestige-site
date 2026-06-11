@@ -39,6 +39,11 @@ export type Trial = {
   milestones?: { count: number; honorific?: string }[];
 };
 
+export type TalentSpec = {
+  tree?: { name: string; points: number };
+  keys?: { name: string; level: number; rank?: number }[];
+};
+
 export type PrestigeClass = {
   id: string;
   name: string;
@@ -52,6 +57,10 @@ export type PrestigeClass = {
   forbidSlots?: string[];
   maxArmor?: string;
   weaponTypes?: string[];
+  weaponProfiles?: {
+    label?: string;
+    profiles: { types: string[]; dual?: boolean }[];
+  };
   requireDualWield?: boolean;
   forbidShield?: boolean;
   rangedTypes?: string[];
@@ -59,6 +68,8 @@ export type PrestigeClass = {
   forbidPet?: boolean;
   requireProfession?: string[];
   profession?: string[];
+  /** Single-spec paths: a TalentSpec. Multi-class paths: keyed by class token. */
+  talents?: TalentSpec | Record<string, TalentSpec>;
   honorRules?: string[];
   breakCry?: string;
   restoreCry?: string;
@@ -102,6 +113,15 @@ export function ruleLines(c: PrestigeClass): string[] {
     lines.push(`No ${slot.replace("Slot", "").toLowerCase()} armor — the slot stays empty`);
   if (c.maxArmor) lines.push(`Armor no heavier than ${c.maxArmor}`);
   if (c.weaponTypes) lines.push(`Weapons: ${c.weaponTypes.join(", ")} only`);
+  if (c.weaponProfiles)
+    lines.push(
+      `Weapons: ${
+        c.weaponProfiles.label ??
+        c.weaponProfiles.profiles
+          .map((p) => p.types.join(" + ") + (p.dual ? " (both hands)" : ""))
+          .join(", or ")
+      }`,
+    );
   if (c.requireDualWield) lines.push("A weapon in each hand, always");
   if (c.forbidShield) lines.push("Never raise a shield");
   if (c.rangedTypes) lines.push(`Ranged slot: ${c.rangedTypes.join(" or ")}`);

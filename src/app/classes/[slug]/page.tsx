@@ -9,6 +9,7 @@ import { EpitaphCard } from "@/components/epitaph-card";
 import { ItemInventory } from "@/components/item-inventory";
 import { SuggestedItems } from "@/components/suggested-items";
 import { LoreSection } from "@/components/lore-section";
+import { PathIdentity } from "@/components/path-identity";
 
 type Params = Promise<{ slug: string }>;
 
@@ -95,10 +96,13 @@ export default async function ClassPage({ params }: { params: Params }) {
               </span>
             </div>
           )}
+          <div className="rise mt-8" style={{ animationDelay: "340ms" }}>
+            <PathIdentity c={c} />
+          </div>
           {/* the rise animation makes each wrapper a stacking context, so a
               hovered panel must out-rank its siblings for tooltips to show */}
           {hasJourney && (
-            <div className="rise relative mt-8 hover:z-[70] focus-within:z-[70]" style={{ animationDelay: "400ms" }}>
+            <div className="rise relative mt-4 hover:z-[70] focus-within:z-[70]" style={{ animationDelay: "440ms" }}>
               <ItemInventory c={c} />
             </div>
           )}

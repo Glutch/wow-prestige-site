@@ -87,6 +87,15 @@ for _, def in ipairs(PC.Classes) do
         forbidSlots = def.forbidSlots,
         maxArmor = def.maxArmor,
         weaponTypes = def.weaponTypes,
+        -- mixed table { label = "...", {types=...}, ... } -> normalize here
+        weaponProfiles = def.weaponProfiles and {
+            label = def.weaponProfiles.label,
+            profiles = (function()
+                local out = {}
+                for _, p in ipairs(def.weaponProfiles) do out[#out + 1] = p end
+                return out
+            end)(),
+        } or nil,
         requireDualWield = def.requireDualWield,
         forbidShield = def.forbidShield,
         rangedTypes = def.rangedTypes,
@@ -94,6 +103,7 @@ for _, def in ipairs(PC.Classes) do
         forbidPet = def.forbidPet,
         requireProfession = def.requireProfession,
         profession = def.profession,
+        talents = def.talents,
         honorRules = def.honorRules,
         breakCry = def.breakCry,
         restoreCry = def.restoreCry,
