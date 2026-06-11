@@ -11,7 +11,7 @@ import { SuggestedItems } from "@/components/suggested-items";
 import { LoreSection } from "@/components/lore-section";
 import { PathIdentity } from "@/components/path-identity";
 import { CharacterModel } from "@/components/character-model";
-import { heroModels } from "@/data/models";
+import { modelForClass } from "@/data/models";
 
 type Params = Promise<{ slug: string }>;
 
@@ -43,6 +43,7 @@ export default async function ClassPage({ params }: { params: Params }) {
   if (!c) notFound();
 
   const hasJourney = !!c.trials?.length;
+  const model = modelForClass(c);
   const honorifics = (c.trials ?? []).flatMap((t) => [
     ...(t.milestones?.map((m) => m.honorific).filter(Boolean) ?? []),
     ...(t.honorific ? [t.honorific] : []),
@@ -61,9 +62,9 @@ export default async function ClassPage({ params }: { params: Params }) {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/15 via-background/45 to-background" aria-hidden />
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-          {heroModels[c.id] && (
+          {model && (
             <div className="absolute right-0 top-0 hidden h-[480px] w-[400px] lg:block">
-              <CharacterModel config={heroModels[c.id]} className="h-full w-full" />
+              <CharacterModel config={model} className="h-full w-full" />
             </div>
           )}
           <Link href="/classes" className="text-sm text-muted-foreground hover:text-gold">

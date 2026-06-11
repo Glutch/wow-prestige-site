@@ -23,6 +23,30 @@ export type CharacterModelConfig = {
 };
 
 export const heroModels: Record<string, CharacterModelConfig> = {
+  // Orc beastmaster in the Rexxar mold: Wolfshead Helm over a bare-chested
+  // Warbear Harness, Devilsaur leather below — all leatherworked from beasts
+  // he skinned himself — and Striker's Mark, taken from Magmadar, the
+  // greatest hound in the world. Bow drawn in a ready stance.
+  beastmaster: {
+    race: 2,
+    gender: 0,
+    skin: 1,
+    face: 3,
+    hairStyle: 3,
+    hairColor: 3,
+    facialStyle: 4,
+    items: [
+      [1, 28987], // Wolfshead Helm (8345)
+      [3, 9562], // Wild Leather Shoulders (8210)
+      [5, 10883], // Warbear Harness (15064)
+      [6, 7766], // Barbaric Belt (4264)
+      [7, 8160], // Devilsaur Leggings (15062)
+      [8, 5853], // Embossed Leather Boots (2309)
+      [10, 9543], // Devilsaur Gauntlets (15063)
+      [22, 30927], // Striker's Mark (17069) — bows ride the off-hand slot
+    ],
+    animation: "ReadyBow",
+  },
   // Dwarf in Imperial Plate (smithed, as a Mountain King would), Fiery Plate
   // Gauntlets, Stormstrike Hammer main hand, Deathbringer off hand.
   // Bare head and chest — the path forbids those slots. Black Devilsaur
@@ -65,3 +89,65 @@ export const heroModels: Record<string, CharacterModelConfig> = {
     ],
   },
 };
+
+// ---- default models -------------------------------------------------------
+// Every path without a hand-dressed hero still gets a 3D model: its signature
+// race, bare of items. Race tokens match the addon's file tokens (Data.lua).
+
+const RACE_IDS = {
+  Human: 1,
+  Orc: 2,
+  Dwarf: 3,
+  NightElf: 4,
+  Scourge: 5,
+  Tauren: 6,
+  Gnome: 7,
+  Troll: 8,
+} as const;
+
+type RaceToken = keyof typeof RACE_IDS;
+
+// One curated look per race so a bare model reads as a person, not a mannequin.
+const RACE_LOOKS: Record<
+  RaceToken,
+  Pick<CharacterModelConfig, "skin" | "face" | "hairStyle" | "hairColor" | "facialStyle">
+> = {
+  Human: { skin: 1, face: 2, hairStyle: 5, hairColor: 2, facialStyle: 3 },
+  Orc: { skin: 2, face: 1, hairStyle: 4, hairColor: 2, facialStyle: 3 },
+  Dwarf: { skin: 3, face: 2, hairStyle: 6, hairColor: 2, facialStyle: 2 },
+  NightElf: { skin: 2, face: 1, hairStyle: 4, hairColor: 3, facialStyle: 2 },
+  Scourge: { skin: 2, face: 1, hairStyle: 3, hairColor: 2, facialStyle: 1 },
+  Tauren: { skin: 5, face: 1, hairStyle: 2, hairColor: 1, facialStyle: 2 },
+  Gnome: { skin: 1, face: 1, hairStyle: 4, hairColor: 4, facialStyle: 3 },
+  Troll: { skin: 1, face: 2, hairStyle: 3, hairColor: 4, facialStyle: 4 },
+};
+
+// Race-unrestricted paths still need a face for the hero panel — the race the
+// fantasy conjures first.
+const SIGNATURE_RACE: Record<string, RaceToken> = {
+  marksman: "Dwarf",
+  assassin: "Scourge",
+  duelist: "Human",
+  druidwild: "Tauren",
+  gladiator: "Orc",
+  buccaneer: "Human",
+};
+
+// Paths whose legend is a woman (Maiev's wardens, the Sisterhood of Elune).
+const FEMALE_PATHS = new Set(["warden", "priestessmoon"]);
+
+export function modelForClass(c: {
+  id: string;
+  races?: string[];
+}): CharacterModelConfig | undefined {
+  const hero = heroModels[c.id];
+  if (hero) return hero;
+  const race = (c.races?.[0] ?? SIGNATURE_RACE[c.id]) as RaceToken | undefined;
+  if (!race || !(race in RACE_IDS)) return undefined;
+  return {
+    race: RACE_IDS[race],
+    gender: FEMALE_PATHS.has(c.id) ? 1 : 0,
+    ...RACE_LOOKS[race],
+    items: [],
+  };
+}

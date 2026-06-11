@@ -31,7 +31,12 @@ function loadScript(src: string): Promise<void> {
       const el = document.createElement("script");
       el.src = src;
       el.onload = () => resolve();
-      el.onerror = () => reject(new Error(`Failed to load ${src}`));
+      el.onerror = () => {
+        // Drop the poisoned cache entry so a retry can load it fresh.
+        scriptPromises.delete(src);
+        el.remove();
+        reject(new Error(`Failed to load ${src}`));
+      };
       document.head.appendChild(el);
     });
     scriptPromises.set(src, p);
@@ -62,46 +67,83 @@ export function CharacterModel({
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+    // display:none (the model is desktop-only) — a hidden canvas can't get a
+    // WebGL context, so don't fetch megabytes of model data for nothing.
+    if (container.clientWidth === 0) return;
     let cancelled = false;
     let viewer: Viewer | undefined;
 
+    // Rotate-only: swallow wheel events in capture before the viewer's canvas
+    // sees them, so the model can't zoom but the page still scrolls.
+    const blockZoom = (e: WheelEvent) => e.stopPropagation();
+    container.addEventListener("wheel", blockZoom, { capture: true });
+
     (async () => {
-      try {
-        window.CONTENT_PATH = VIEWER_BASE;
-        await loadScript("https://code.jquery.com/jquery-3.7.1.min.js");
-        await loadScript(VIEWER_SCRIPT);
-        const { generateModels } = await import("wow-model-viewer");
-        if (cancelled) return;
-        const aspect =
-          container.clientHeight > 0
-            ? container.clientWidth / container.clientHeight
-            : 0.75;
-        viewer = await generateModels(
-          aspect,
-          `#${containerId}`,
-          { ...config },
-          "classic",
-        );
-        if (cancelled) {
-          viewer?.destroy?.();
-          return;
+      // The viewer's data fetches occasionally get a CDN error page instead
+      // of JSON; one bad response must not cost us the model, so retry the
+      // whole init with backoff.
+      for (let attempt = 0; attempt < 3; attempt++) {
+        if (attempt > 0) {
+          await new Promise((r) => setTimeout(r, attempt * 3000));
         }
-        if (config.animation) {
+        if (cancelled) return;
+        try {
+          window.CONTENT_PATH = VIEWER_BASE;
+          await loadScript("https://code.jquery.com/jquery-3.7.1.min.js");
+          await loadScript(VIEWER_SCRIPT);
+          const { generateModels } = await import("wow-model-viewer");
+          if (cancelled) return;
+          const aspect =
+            container.clientHeight > 0
+              ? container.clientWidth / container.clientHeight
+              : 0.75;
+          viewer = (await generateModels(
+            aspect,
+            `#${containerId}`,
+            { ...config },
+            "classic",
+          )) as unknown as Viewer;
+          if (cancelled) {
+            viewer?.destroy?.();
+            return;
+          }
+          if (config.animation) {
+            // The viewer drops method calls that land before the actor's load
+            // promise is registered, so re-apply the pose a few times.
+            const animation = config.animation;
+            for (const delay of [0, 1000, 2500, 5000]) {
+              setTimeout(() => {
+                if (cancelled) return;
+                try {
+                  viewer?.method?.("setAnimation", [animation]);
+                } catch {
+                  /* unknown animation — keep the default pose */
+                }
+              }, delay);
+            }
+          }
+          setReady(true);
+          return;
+        } catch (e) {
+          // A half-initialized viewer may have left a canvas behind.
           try {
-            viewer.method?.("setAnimation", [config.animation]);
+            viewer?.destroy?.();
           } catch {
-            /* unknown animation — keep the default pose */
+            /* already gone */
+          }
+          viewer = undefined;
+          container.replaceChildren();
+          if (attempt === 2) {
+            // No model is a cosmetic loss — leave the hero as it was.
+            console.warn("character model failed to load", e);
           }
         }
-        setReady(true);
-      } catch (e) {
-        // No model is a cosmetic loss — leave the hero as it was.
-        console.warn("character model failed to load", e);
       }
     })();
 
     return () => {
       cancelled = true;
+      container.removeEventListener("wheel", blockZoom, { capture: true });
       try {
         viewer?.destroy?.();
       } catch {
@@ -119,6 +161,8 @@ export function CharacterModel({
       style={{
         opacity: ready ? 1 : 0,
         transition: "opacity 700ms ease",
+        transform: "scale(0.9)",
+        transformOrigin: "center",
       }}
     />
   );
