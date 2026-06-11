@@ -33,7 +33,19 @@ export const itemLore: Record<string, string> = {
     "Carried by Emperor Dagran Thaurissan, and claimed when the Usurper fell.",
 
   Ironfoe:
-    "Forged by Franclorn Forgewright, stolen by the Dark Irons, swung by the Emperor himself — and one-handed. A lesser dwarf's weapon. The path leaves it where it falls.",
+    "Forged by Franclorn Forgewright and counted among the Dark Irons' most sacred relics — stolen from Marshal Windsor's line, swung by the Emperor himself. In a thane's main fist, a hand axe beside it, it serves honest folk at last.",
+
+  "Stormstrike Hammer":
+    "Sold by the Stormpike quartermasters only to those the clan calls Revered. A dwarven warhammer for the thane's strong hand, earned in the snows of Alterac.",
+
+  Annihilator:
+    "A Master Axesmith's work a smith-thane can forge with his own hands — thorium and arcanite, the plans kept by Quartermaster Zigris in Blackrock Spire. It shears the armor off a foe three layers deep.",
+
+  Deathbringer:
+    "A hand axe out of Onyxia's own hoard. The old portraits arm the thane with hammer and hand axe — this is an axe worthy of the picture.",
+
+  "Crul'shorukh, Edge of Chaos":
+    "Hewn from Nefarian's hoard at the very crown of Blackrock Mountain — the heaviest hand axe a thane's off fist will ever close around.",
 
   "Hammer of the Titans":
     "A master hammersmith's crowning work. For a people who learned at Uldaman that titans carved them from stone, the name alone is reason to carry it.",

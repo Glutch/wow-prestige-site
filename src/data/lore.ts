@@ -80,7 +80,7 @@ export const loreByClass: Record<string, LoreSection[]> = {
       },
       paragraphs: [
         "Four arts define the hero. The Storm Bolt — a thrown hammer that drops a foe where he stands. The Thunder Clap, first used by Murgen Hammerfall to decimate a swathe of invading gnolls in the Alterac Mountains, slamming the ground so hard that everything around staggers. The Bash, a blow heavy enough to stun mid-swing. And the Avatar: by focusing the energies of the dwarves' newly discovered enchanted heritage, a mountain king grows in size and strength and takes on the physical characteristics of carved stone, impervious to magic.",
-        "That is the whole ruleset of this path, read back as legend. The two-handed hammer that never leaves your grip, the Mace Specialization stuns counted as Storm Bolts, the Thunder Clap trials, the rite of felling an elite while Stoneform turns your skin to stone — every vow on this page is one of the four arts, enforced.",
+        "That is the whole ruleset of this path, read back as legend. The hammer that never leaves your grip — one great two-hander, or warhammer and hand axe paired in each fist, exactly the arms the unit data lists — the Mace Specialization stuns counted as Storm Bolts, the Thunder Clap trials, the rite of felling an elite while Stoneform turns your skin to stone — every vow on this page is one of the four arts, enforced.",
       ],
     },
     {
@@ -105,7 +105,7 @@ export const loreByClass: Record<string, LoreSection[]> = {
       },
       paragraphs: [
         "The tabletop Warcraft RPG made the mountain king a prestige class in the Alliance Player's Guide — “the most respected and revered of the Ironforge dwarves' warriors,” representing “mighty champions of their race.” It restricts the path to Ironforge dwarves alone, grants them storm hammers, the thunderclap, and the stoneflesh of the avatar, and warns that any mountain king who abandons the Alliance is branded a traitor and outcast. The sourcebook says they draw on a powerful spark that lives within every Ironforge dwarf and fan it into a raging flame.",
-        "This addon's Mountain King is that page brought to Classic Hardcore: dwarf warrior, two-handed hammer, gun on the back, Arms to the bone — and a spark you keep lit by deed, not dice.",
+        "This addon's Mountain King is that page brought to Classic Hardcore: dwarf warrior, warhammer and hand axe, gun on the back, Arms to the bone — and a spark you keep lit by deed, not dice.",
       ],
     },
   ],

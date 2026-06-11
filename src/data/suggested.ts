@@ -36,6 +36,22 @@ export const suggestedByClass: Record<string, SuggestedItem[]> = {
       name: "Earthshaker",
       note: "Magmadar, Molten Core — the mountain answers",
     },
+    {
+      name: "Stormstrike Hammer",
+      note: "Stormpike Revered — the clan's own one-hand warhammer",
+    },
+    {
+      name: "Annihilator",
+      note: "Master Axesmith 300 — a hand axe off your own anvil",
+    },
+    {
+      name: "Deathbringer",
+      note: "Onyxia's hoard — a hand axe for the off fist",
+    },
+    {
+      name: "Crul'shorukh, Edge of Chaos",
+      note: "Nefarian, Blackwing Lair — the heaviest hand axe there is",
+    },
   ],
   blademaster: [
     {
