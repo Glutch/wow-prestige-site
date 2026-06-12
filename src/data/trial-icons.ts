@@ -114,6 +114,66 @@ export const trialIcons: Record<string, string> = {
   nc_atiesh: "inv_staff_medivh", // Atiesh's own icon
   nc_lastlaugh: "spell_misc_emotionhappy", // the last laugh
 
+  // ---- Potion Doc ----------------------------------------------------------
+  pd_log: "inv_misc_head_gnome_01", // the kin the bomb left walking
+  pd_troggs: "ability_warstomp", // the Rockjaw tribe
+  pd_firstbrew: "inv_potion_49", // Minor Healing Potion's own icon
+  pd_oath: "inv_misc_gear_02", // a gnome's banner is a gear
+  pd_garden: "inv_misc_flower_02", // Peacebloom's own icon
+  pd_gates: "inv_misc_key_03", // the door sealed from the inside
+  pd_sacs: "inv_misc_organ_02", // Small Venom Sac's own icon
+  pd_mortwake: "trade_brewpoison", // the rival chemist's trade
+  pd_fang: "inv_misc_monsterfang_01", // Venom Web Fang's own icon
+  pd_cripple: "ability_poisonsting", // Crippling Poison's own icon
+  pd_fadeleaf: "inv_misc_herb_12", // Fadeleaf's own icon
+  pd_fap: "inv_potion_04", // Free Action Potion's own icon
+  pd_cleanzone: "spell_nature_nullifydisease", // air that scrubs itself
+  pd_grubbis: "inv_misc_monsterclaw_03", // the trogg at the breach
+  pd_revenger: "inv_weapon_shortblade_02", // Toxic Revenger's own icon
+  pd_thermaplugg: "spell_fire_selfdestruct", // the bomb he dropped
+  pd_stone: "inv_misc_orb_01", // Philosopher's Stone's own icon
+  pd_ghostcap: "inv_mushroom_08", // Ghost Mushroom's own icon
+  pd_noxxion: "spell_nature_acid_01", // venom with ambition
+  pd_oozes: "inv_misc_slime_01", // someone's escaped experiment
+  pd_thank: "trade_alchemy", // the fraternity of the bench
+  pd_cauldrons: "spell_shadow_plaguecloud", // the Scourge's field stations
+  pd_dose: "inv_potion_32", // Elixir of the Mongoose's own icon
+  pd_krastinov: "inv_misc_bandage_12", // the Butcher's bloody linens
+  pd_lotus: "inv_misc_herb_blacklotus", // Black Lotus's own icon
+  pd_titans: "inv_potion_62", // Flask of the Titans' own icon
+  pd_legend: "inv_weapon_shortblade_18", // Gutgore Ripper's own icon
+  pd_hakkar: "spell_shadow_bloodboil", // the Corrupted Blood
+  pd_lastround: "inv_drink_10", // one raised at Brewnall
+
+  // ---- Pyromancer ----------------------------------------------------------
+  py_thaw: "spell_fire_flameshock", // the war on winter
+  py_wendigo: "spell_frost_frostshock", // the cold blood of the Grizzled Den
+  py_firstbomb: "inv_misc_bomb_09", // Rough Copper Bomb's own icon
+  py_oath: "spell_fire_fire", // the Great Forge, never gone out
+  py_frostmane: "inv_misc_head_troll_01", // the trolls who named themselves after the enemy
+  py_ignition: "ability_criticalstrike", // the crit that catches
+  py_sneed: "trade_engineering", // Venture-grade engineering, retired
+  py_pyroblast: "spell_fire_fireball02", // Pyroblast's own icon
+  py_impact: "spell_fire_meteorstorm", // Impact's own icon
+  py_firestorm: "spell_fire_selfdestruct", // Flamestrike's own icon
+  py_goblinschool: "inv_misc_bomb_04", // the goblins' curriculum
+  py_rocketboots: "inv_gizmo_rocketboot_01", // Goblin Rocket Boots' own icon
+  py_doan: "inv_misc_book_07", // the books he burned
+  py_firegoggles: "inv_helmet_47", // Fire Goggles' own icon
+  py_dragongun: "spell_fire_flamebolt", // Goblin Dragon Gun's own icon
+  py_fireplume: "spell_fire_lavaspawn", // the living volcano
+  py_pyron: "spell_fire_elemental_totem", // the gatekeeper of the quarry
+  py_essence: "spell_fire_volcano", // Essence of Fire's own icon
+  py_combustion: "spell_fire_sealoffire", // Combustion's own icon
+  py_loregrain: "inv_misc_head_dwarf_01", // the other claimant's head
+  py_chillwind: "spell_frost_chillingblast", // the chimaera's frozen breath
+  py_flamelash: "spell_fire_immolation", // the embassy, closed
+  py_arcanite: "inv_misc_head_dragon_01", // Arcanite Dragonling's own icon
+  py_geddon: "spell_fire_incinerate", // the Baron's Inferno
+  py_shadowflame: "inv_staff_06", // Staff of the Shadow Flame's own icon
+  py_firelord: "spell_fire_volcano", // the occupied throne
+  py_lastspark: "spell_misc_emotionhappy", // a dance in warm water
+
   // ---- Spirit Walker -------------------------------------------------------
   sw_ledger: "inv_misc_bone_taurenskull_01", // a tauren skull for the Grimtotem ledger
   sw_firsttotem: "spell_nature_stoneskintotem", // the totem the trial asks for

@@ -268,4 +268,113 @@ export const itemLore: Record<string, string> = {
 
   Soulkeeper:
     "Carried by the Shadowsworn cultists of the Blasted Lands, who never understood what they held. A staff that keeps what you harvest.",
+
+  "Minor Healing Potion":
+    "The first dose ever bottled at Berryfizz's bench in Tinker Town — seventy points of mended flesh, and the whole career in miniature.",
+
+  Peacebloom:
+    "Picked from the snow-edges of Dun Morogh with your own fingers. The first entry in the research log, and still the base of half the pharmacopoeia.",
+
+  "Small Venom Sac":
+    "Cut intact from the spiders of the hills. Nature has been running toxicology trials for ten thousand years — a Potion Doc merely reads her notes.",
+
+  "Venom Web Fang":
+    "Pulled from a Venom Web spider of Duskwood with the venom channel running true. The first proper instrument — half dagger, half syringe.",
+
+  Fadeleaf:
+    "Ground fine it becomes Blinding Powder, the rogue's three free seconds of darkness. A weapon you grow in the shade.",
+
+  "Free Action Potion":
+    "The escape protocol: thirty seconds in which net, snare and stunning blow simply decline to apply. On Hardcore, not optional equipment.",
+
+  "Toxic Revenger":
+    "Left behind when Viscous Fallout boils away — a dagger that sweats the city's own poison. The bomb's signature, carried as evidence until the debt is paid.",
+
+  "Philosopher's Stone":
+    "Pestlezugg's recipe out of Gadgetzan, the old transmuter's secret: one element into another. Proof that chemistry has no fixed walls, only unfunded experiments.",
+
+  "Ghost Mushroom":
+    "Grows only where the sun has given up — Skulk Rock and the poisoned deeps of Maraudon. It glows faintly, like an apology.",
+
+  "Black Lotus":
+    "The rarest herb in the world, and the crown of every flask that matters. There is no honest way to hold one but to pick it yourself.",
+
+  "Flask of the Titans":
+    "Three hundred skill, a crystal flask, the Black Lotus dissolved at last — a draught that makes a body briefly titanic and does not fade even in death.",
+
+  "Gutgore Ripper":
+    "Garr's prize in the Molten Core. Its wound unmakes the whole patient, twenty-five points of everything at a time — venom written in shadow.",
+
+  "Core Hound Tooth":
+    "Pulled from the jaw of the Firelord's own kennel, in Majordomo Executus's keeping. A fang pre-proofed against fire.",
+
+  "Perdition's Blade":
+    "From the hand of Ragnaros himself — the reference specimen of the whole collection, its venom replaced with fire.",
+
+  "Blackvenom Blade":
+    "Rohh the Silent carries it through the hills above Render's Valley — proof some other chemist reached the steel first. Relieve him of the evidence.",
+
+  "Assassin's Blade":
+    "The trade's plain instrument, surfacing wherever the trade does. No provenance, no questions — honest steel for the second hand.",
+
+  "Herbalist's Gloves":
+    "Five points of Herbalism off a leatherworker's needle. Commission a friend — the doc's own hands are busy with the mortar.",
+
+  "Heart of Noxxion":
+    "Cut from a creature of pure poison in Maraudon: an antidote in a jar, five minutes between doses. The literature thanks you.",
+
+  "Distracting Dagger":
+    "Prince Tortheldrin's, in the broken halls of Dire Maul — a lecturer's pointer that teaches the off hand six points of dagger discipline.",
+
+  "Cadaverous Armor":
+    "Mortician's wear out of the Scholomance, sized down and worn with intent — the apron of the profession's honest half, taken from the school of its worst.",
+
+  Felstriker:
+    "Rend Blackhand's blade in the Spire: three seconds in which every cut lands and every dose takes. The perfect trial, bottled in steel.",
+
+  // ---- the Pyromancer's path ----------------------------------------------
+  "Rough Copper Bomb":
+    "Copper, bolts and rough powder, assembled at a Tinker Town bench. The first spell of the second school — and the only fireball you can hand to a friend.",
+
+  "Goblin Sapper Charge":
+    "The goblins' graduation piece: fire for everyone nearby, including, partially, you. The only spell in the book that bills the caster — respect it accordingly.",
+
+  "Goblin Rocket Boots":
+    "Black mageweave, mithril tubing and goblin rocket fuel. Significantly faster than your own arithmetic, and prone to explode — the schematic says so itself.",
+
+  "Fire Goggles":
+    "Lenses ground at your own bench at 205 skill, for watching the world's heat without blinking. An engineer trusts no optics she didn't torque.",
+
+  "Goblin Dragon Gun":
+    "A personal flamethrower out of the goblin curriculum. It works every time, unless it explodes — the fine print is part of the design.",
+
+  "Essence of Fire":
+    "What remains when something made of fire dies and the fire refuses to. Five of them, warm through the glass — proof that fire, handled right, keeps.",
+
+  "Arcanite Dragonling":
+    "A mechanical dragonling rebuilt in arcanite with a furnace where its heart should be. Wizards summon familiars; three-hundred-skill engineers build better ones.",
+
+  "Staff of the Shadow Flame":
+    "Nefarian's prize at the crown of Blackwing Lair: fire crossed with shadow, the one experiment your school forbids. Carried as a reminder, not a trophy.",
+
+  "Mantle of Doan":
+    "Arcanist Doan kept the Monastery's library and burned the books that frightened him. His mantle fits a reader who doesn't frighten.",
+
+  "Searing Needle":
+    "Carried by the Anvilrage garrison of Blackrock Depths — a lancet that teaches the wound to welcome fire, ten points deeper at a time.",
+
+  "Burst of Knowledge":
+    "Ambassador Flamelash's trinket, taken when the embassy closed: ten seconds in which the mana bill simply isn't sent.",
+
+  "Drakefire Amulet":
+    "General Drakkisath's blood, worn at the throat — the key that opens Onyxia's lair, and proof you walked the whole Spire to draw it.",
+
+  "Mana Igniting Cord":
+    "Won in the Molten Core — the belt every fire mage of the era tied on first, stitched for spell-crit with the Core's own heat.",
+
+  "Choker of the Fire Lord":
+    "Out of the Firelord's halls — the office's own circle, worn by whoever currently holds the fire.",
+
+  "Talisman of Ephemeral Power":
+    "The Core's loan against the future: fifteen seconds in which every spell lands like the finished thesis.",
 };

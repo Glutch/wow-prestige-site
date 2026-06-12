@@ -1,4 +1,5 @@
 import { itemByName } from "@/data/items";
+import { itemUrl } from "@/data/wowhead";
 import { ItemTooltip } from "@/components/item-tooltip";
 
 /** An item name that shows its real classic tooltip on hover/focus —
@@ -9,7 +10,7 @@ export function ItemLink({ name }: { name: string }) {
   return (
     <span className="group/item relative inline-block hover:z-[9999] focus-within:z-[9999]" tabIndex={0}>
       <a
-        href={`https://classic.wowhead.com/item=${item.id}`}
+        href={itemUrl(item.id)}
         target="_blank"
         rel="noreferrer"
         className={`item-link q-${item.quality}`}

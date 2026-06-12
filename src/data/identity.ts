@@ -40,6 +40,7 @@ export const treeIcons: Record<string, string> = {
   "HUNTER:Marksmanship": "ability_marksmanship",
   "HUNTER:Survival": "ability_hunter_swiftstrike",
   "MAGE:Arcane": "spell_holy_magicalsentry",
+  "MAGE:Fire": "spell_fire_firebolt02",
   "MAGE:Frost": "spell_frost_frostbolt02",
   "PALADIN:Protection": "spell_holy_devotionaura",
   "PRIEST:Holy": "spell_holy_holybolt",
@@ -63,6 +64,7 @@ export const talentIcons: Record<string, string> = {
   Enrage: "spell_shadow_unholyfrenzy",
   "Dual Wield Specialization": "ability_dualwield",
   // Rogue
+  "Adrenaline Rush": "spell_shadow_shadowworddominate",
   "Blade Flurry": "ability_warrior_punishingblow",
   "Cold Blood": "spell_ice_lament",
   "Improved Poisons": "ability_poisons",
@@ -76,6 +78,9 @@ export const talentIcons: Record<string, string> = {
   "Wyvern Sting": "inv_spear_02",
   // Mage
   "Arcane Power": "spell_nature_lightning",
+  Combustion: "spell_fire_sealoffire",
+  Impact: "spell_fire_meteorstorm",
+  Pyroblast: "spell_fire_fireball02",
   Frostbite: "spell_frost_frostarmor",
   "Ice Block": "spell_frost_frost",
   "Presence of Mind": "spell_nature_enchantarmor",

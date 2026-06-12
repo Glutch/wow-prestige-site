@@ -94,6 +94,50 @@ export const identityLoreByClass: Record<string, IdentityLore> = {
     },
   },
 
+  potiondoc: {
+    races: {
+      Gnome:
+        "The Horde Player's Guide counts “gnomes, with their scientific interests” among the likeliest potion docs — and no gnome lacks a motive. The finest laboratories in the world stand sealed behind the doors of Gnomeregan, and the patient list is eight in ten of everyone you knew.",
+    },
+    professions: {
+      Alchemy:
+        "The hard rule of the path — drop the craft and the vow breaks aloud. “They combine science and magic in their unique art.” Every chapter runs through the bench: the first dose at Berryfizz's, the escape protocol on the belt, the Philosopher's Stone, and at three hundred skill the Flask of the Titans.",
+      Herbalism:
+        "Everything green is research. Twenty Peacebloom from the snow-edges, Fadeleaf ground into darkness, Ghost Mushrooms gathered by lamplight where the sun gave up — and at the summit, one Black Lotus, picked with your own hand because there is no other honest way to hold one.",
+    },
+    trees: {
+      "ROGUE:Combat":
+        "Not the assassin's patience and not the shadow's vows — Combat is the improviser's tree, the scrapper who stays standing at bench-distance while the chemistry finishes its work. Thirty-one points of staying alive long enough to observe the results.",
+    },
+    talents: {
+      "Blade Flurry":
+        "One edge is a trial; two edges are a controlled study. Blade Flurry turns the off hand loose on everything in reach — sworn by 32, both blades poisoned, every swing a double dose.",
+      "Adrenaline Rush":
+        "The goblin alchemists rode to war on “a chemically induced rage.” Yours is refined and self-administered: the 31-point oath of the tree, sworn by 42 — a needle of pure speed, depressed mid-fight.",
+    },
+  },
+
+  pyromancer: {
+    professions: {
+      Engineering:
+        "The hard rule of the path — drop the craft and the vow breaks aloud. Fire is half the work; the half that ticks is the other. From the Rough Copper Bomb at a Tinker Town bench to the Arcanite Dragonling at three hundred skill, every chapter runs through the workshop — and at two hundred, the goblins' pledge of secrecy is signed in Gadgetzan.",
+      Mining:
+        "Powder begins as stone. The bombs, the tubes, the truesilver for the dragon gun — all of it comes out of the ground first, and an engineer who buys her ore is a customer, not a craftsman. Swing the pick; the fuse starts in the rock.",
+    },
+    trees: {
+      "MAGE:Fire":
+        "“Those who master the forces of fire tend to be a little more audacious than their peers. If a threat stands before them, the answer is always to neutralize it in a glorious blaze.” Thirty-one points sworn to the one school that answers — Frostbolt and Arcane Missiles stay untrained forever.",
+    },
+    talents: {
+      Impact:
+        "Fire that staggers: five points by 16, and every spell that burns has a chance to stop its subject mid-stride for two heartbeats. The cold school freezes feet; yours convinces them. Fifty such stuns make the Trial of the Stagger.",
+      Pyroblast:
+        "“Hurls an immense fiery boulder that causes Fire damage and additional Fire damage over time.” Six seconds of standing still, sworn by 20 — and at the end of them, you are not a mage who uses fire. You are a Pyromancer.",
+      Combustion:
+        "The 31-point oath of the tree, sworn by 40: each fire spell that lands stokes your critical chance higher until the fire feeds the fire feeds the fire. The journey's own rite demands an elite foe slain while it burns.",
+    },
+  },
+
   necromancer: {
     races: {
       Scourge:

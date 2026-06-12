@@ -1,7 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { prestigeClasses, classBySlug, slugOf, FACTION_TEXT, RANKS } from "@/lib/wow";
+import {
+  prestigeClasses,
+  classBySlug,
+  slugOf,
+  FACTION_TEXT,
+  RANKS,
+  raceLabel,
+  classTokenLabel,
+  honorificsOf,
+} from "@/lib/wow";
 import { WowIcon } from "@/components/wow-icon";
 import { CodeSection } from "@/components/code-section";
 import { Journey } from "@/components/journey";
@@ -38,6 +47,10 @@ const HERO_BG: Record<string, string> = {
   spiritwalker: "https://wow.zamimg.com/uploads/screenshots/normal/9349.jpg",
   // The Scholomance library, green candles and old bones.
   necromancer: "https://wow.zamimg.com/uploads/screenshots/normal/67442.jpg",
+  // Gnomeregan's irradiated halls, green as the bomb that emptied them.
+  potiondoc: "https://wow.zamimg.com/uploads/screenshots/normal/22010-gnomeregan.jpg",
+  // The Searing Gorge — fire country, where the world never cooled.
+  pyromancer: "https://wow.zamimg.com/uploads/screenshots/normal/71244.jpg",
 };
 const DEFAULT_BG = "https://wow.zamimg.com/uploads/screenshots/normal/84153.jpg";
 
@@ -48,10 +61,7 @@ export default async function ClassPage({ params }: { params: Params }) {
 
   const hasJourney = !!c.trials?.length;
   const model = modelForClass(c);
-  const honorifics = (c.trials ?? []).flatMap((t) => [
-    ...(t.milestones?.map((m) => m.honorific).filter(Boolean) ?? []),
-    ...(t.honorific ? [t.honorific] : []),
-  ]) as string[];
+  const honorifics = honorificsOf(c);
 
   return (
     <div>
@@ -83,9 +93,9 @@ export default async function ClassPage({ params }: { params: Params }) {
               <p className="mt-2 text-sm uppercase tracking-[0.2em] text-muted-foreground">
                 <span className={FACTION_TEXT[c.faction]}>{c.faction}</span>
                 {" · "}
-                {(c.races ?? ["Any race"]).join(", ").replace("NightElf", "Night Elf")}
+                {(c.races ?? ["Any race"]).map(raceLabel).join(", ")}
                 {" · "}
-                {(c.classes ?? []).map((t) => t[0] + t.slice(1).toLowerCase()).join(" / ")}
+                {(c.classes ?? []).map(classTokenLabel).join(" / ")}
                 {" · "}
                 {c.source}
               </p>

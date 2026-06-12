@@ -211,6 +211,99 @@ export const loreByClass: Record<string, LoreSection[]> = {
     },
   ],
 
+  pyromancer: [
+    {
+      heading: "The audacious school",
+      quote: {
+        text: "Those who master the forces of fire tend to be a little more audacious than their peers. If a threat stands before them, the answer is always to neutralize it in a glorious blaze. A lifetime dedicated to the study of fiery forces only fuels their pyromania, and these mages take pride — even pleasure — in igniting their enemies in wild bursts of flame.",
+        source: "Blizzard's class lore for the fire mage",
+      },
+      paragraphs: [
+        "The lore calls them pyromancers, pyromages, firecallers — mages who chose the one school that answers and never looked back. Classic agrees with the choice before you do: Fireball is the very first spell a mage is taught, at level one, before any trainer mentions frost. This path simply refuses the second lesson. Frostbolt stays untrained, Arcane Missiles unlearned, and every kill from Coldridge to the Core is delivered burning.",
+        "The old Kirin Tor argued over what created fire even is — called into being, or summoned from somewhere else? Medivh's answer, in The Last Guardian, is the working pyromancer's creed: the mage merely concentrates the fire already inherent in the world into one place. The fire was always there. You are just the one with the nerve to gather it.",
+      ],
+    },
+    {
+      heading: "The second school",
+      quote: {
+        text: "Bring 20 Big Iron Bombs, 20 Solid Dynamite, and 5 Explosive Sheep to Nixx Sprocketspring in Gadgetzan.",
+        source: "Show Your Work — the goblin engineers' examination",
+      },
+      paragraphs: [
+        "A pyromancer trains two schools; the second one ticks. Engineering is the path's hard rule — drop the craft and the vow breaks aloud — because a bomb is a fireball with better scheduling, and a discipline that worships fire cannot ignore the people who mass-produce it. The journey opens at a Tinker Town bench with a Rough Copper Bomb and closes at three hundred skill with an arcanite dragonling breathing fire of its own.",
+        "At two hundred skill the craft splits, and the path's third vow decides it: the gnomes of your own blood build target dummies and shrink rays, while Nixx Sprocketspring in Gadgetzan teaches the sapper charge and the dragon gun. Sign the goblins' pledge of secrecy, pass their exam, and accept the curriculum's one recurring footnote — it works, unless it explodes.",
+      ],
+    },
+    {
+      heading: "The fire under the mountain",
+      paragraphs: [
+        "Azeroth keeps its fire in chains under Blackrock Mountain. Thaurissan's desperate summoning dragged Ragnaros into the world and birthed the Searing Gorge in a day; ever since, the Dark Irons have served the Firelord, and fire itself has been a slave. At the quarry gate Overmaster Pyron drives laborers like a lash; in Shadowforge City, Ambassador Flamelash brokers the servitude and calls it diplomacy; and at altars in the deep, a Dark Iron keeps the title Pyromancer Loregrain — borrowed fire and a stolen word.",
+        "Chapter by chapter, the journey walks down that mountain and disputes every one of them: the gatekeeper snuffed, the title reclaimed, the embassy closed with vows clean. It ends at the bottom of the world, where the only title above Pyromancer sits occupied on a throne of magma. The path's last honorific is taken, not granted: Firelord.",
+      ],
+    },
+    {
+      heading: "The war on winter",
+      paragraphs: [
+        "Every pyromancer on this path is born in snow. Dun Morogh is a frozen shelf — wendigo packed in the Grizzled Den, Frostmane trolls who named themselves after the enemy — and Gnomeregan's exiles know better than anyone that the cold is always waiting to take the world back. So the path keeps one ledger for life: the War on Winter, a tally of every creature of frost and cold given to the fire, from the first wendigo at level six to the Chillwind chimaera of Winterspring.",
+        "The journey's final deed is the war's victory lap. In the coldest land on the continent there is water that never freezes — the Frostfire Hot Springs, kept warm by the fire under the world. The path ends there, dancing in the steam: winter, formally conceded.",
+      ],
+    },
+  ],
+
+  potiondoc: [
+    {
+      heading: "Science and magic in the same vial",
+      quote: {
+        text: "They combine science and magic in their unique art. They know how to overcome the restrictions inherent in potion-making.",
+        source: "Potion doc, Horde Player's Guide (Warcraft RPG)",
+      },
+      paragraphs: [
+        "The potion doc is the tabletop Warcraft RPG's mad chemist — a prestige class for characters who treat the alchemy bench as a weapons platform. The sourcebook names its likeliest students: troll witch doctors, Forsaken apothecaries, goblins — and “gnomes, with their scientific interests.” A gnome who took that page seriously has reasons no troll or goblin can match: the best-equipped laboratories in the world are sealed behind the doors of Gnomeregan, and the patient list is eight in ten of everyone they ever knew.",
+        "Why a rogue? Because in Classic, applied chemistry already has a class. Poisons are brewed and painted on steel, Blinding Powder is ground from a herb, and the only daggers that matter are the ones that deliver a dose. The Potion Doc is a scientist whose field kit happens to be lethal: lancets for blades, vials on the ranged slot, and Alchemy sworn as a hard rule — the addon checks, and the vow breaks aloud the day the craft is dropped.",
+      ],
+    },
+    {
+      heading: "The four arts",
+      quote: {
+        text: "Hurls a flask of acid at a target. The flask breaks upon impact, splashing a powerful acid on nearby hostile units.",
+        source: "Acid Bomb, Warcraft III: The Frozen Throne",
+      },
+      paragraphs: [
+        "Warcraft gave the archetype a hero in The Frozen Throne: the goblin Alchemist, a fanatical chemist riding his ogre into battle with a bandolier of glassware. Four arts define him, and all four survive on this path. The Healing Spray — “waves of healing mist” — is the bench's first duty, from the Minor Healing Potion bottled in Tinker Town to the Flask of the Titans. The Acid Bomb is the thrown vial, kept alive in the ruleset's ranged slot and in every poison sweated onto a blade.",
+        "The Chemical Rage — “a chemically induced rage, increasing movement rate by 40% and increasing attack rate” — is Adrenaline Rush, the Combat tree's 31-point talent, demanded by 42 and best read as a self-administered injection. And Transmute, which turns a living target into gold, is the Philosopher's Stone, crafted as a deed of the third chapter from the recipe a goblin sells in Gadgetzan. Every art the ogre-rider had, the gnome keeps — in smaller, better-labeled bottles.",
+      ],
+    },
+    {
+      heading: "The fall of Gnomeregan",
+      quote: {
+        text: "Usurpers! Gnomeregan is mine!",
+        source: "Mekgineer Thermaplugg, Gnomeregan",
+      },
+      paragraphs: [
+        "During the Third War, troggs woken by the digging at Uldaman breached Gnomeregan's lower vaults. The city fought five years; the soldiers were not enough. Then Mekgineer Sicco Thermaplugg — trusted advisor to High Tinker Gelbin Mekkatorque — proposed the engineer's solution: flood the lower levels with radiation, kill the invaders, save the city. His figures were falsified. He had privately calculated thirty percent casualties, a price he was happy to pay for the throne he expected to inherit from the ruins.",
+        "The radiation did not stay in the lower levels. Nearly eighty percent of gnomekind died in days, and many of the survivors kept walking — the leper gnomes who shamble through Dun Morogh and the fallen halls. Mekkatorque, who signed the order on his friend's false data, leads the exiles from a borrowed corner of Ironforge called Tinker Town. This path's oath is sworn kneeling before him there, and its second chapter goes home: down the service tunnels, past Grubbis at the breach, through the radiation given a body in Viscous Fallout, to the throne room where the traitor plays king — vows clean, margin of error zero.",
+      ],
+    },
+    {
+      heading: "The plague war",
+      paragraphs: [
+        "The third chapter is the discipline's dark mirror, fought across the Western Plaguelands. The Scourge brews its plague openly there, in farm-field cauldrons stirred by bound Cauldron Lords — chemistry as atrocity, an entire kingdom used as a culture dish. At Chillwind Camp a human alchemist named Arbington holds the counter-line with mortar, pestle and no sleep; the path stops to thank him, because the fraternity of the bench is small and older than any Alliance. In the Scholomance above Caer Darrow works the path's true opposite: Doctor Theolen Krastinov, the Butcher, who kept the title and burned everything it means. The chapter's rank trial retires him from practice.",
+        "The journey's last rounds are made in Zul'Gurub, where the Blood God Hakkar waits — and here the path touches the strangest page in Classic's own history. Hakkar's Corrupted Blood was the most virulent agent the game ever produced: in 2005 a single hunter's pet carried it out of the temple, and the plague emptied the cities of an entire world for weeks. Epidemiologists still cite the incident. The Potion Doc's final kill order reads accordingly: drain the source, end the last epidemic before it begins, and take the honorific the deed deserves — Panacea.",
+      ],
+    },
+    {
+      heading: "A legacy on paper",
+      quote: {
+        text: "Perhaps they are best known for brewing potion bombs — toss one of these beakers and watch the explosions.",
+        source: "Potion doc, Horde Player's Guide (Warcraft RPG)",
+      },
+      paragraphs: [
+        "The sourcebook's potion doc brews at impossible speed, builds doses with command delays that sit inert in a drinker's blood until the doc speaks, and decants brews that spray from the bottle in a fifteen-foot cone. It is five pages of a rulebook grinning at its own chemistry set — equal parts pharmacist and arsonist, the laboratory declared a battlefield.",
+        "This addon's Potion Doc is that page brought to Classic Hardcore: gnome rogue, daggers and a bandolier of brews, Thrown on the back and Alchemy sworn as law — twenty-nine deeds from the first Peacebloom to the Black Lotus, and a city cured by deed, not dice.",
+      ],
+    },
+  ],
+
   necromancer: [
     {
       heading: "The forbidden art",

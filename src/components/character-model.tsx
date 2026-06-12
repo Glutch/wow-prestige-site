@@ -48,6 +48,8 @@ type Viewer = {
   destroy?: () => void;
   /** Dispatches to the loaded actor, queueing while the model still loads. */
   method?: (name: string, args?: unknown[]) => void;
+  /** The internal scene renderer; its draw() runs on every rAF tick. */
+  renderer?: { draw?: (t: number) => void; time?: number };
 };
 
 export function CharacterModel({
@@ -72,6 +74,7 @@ export function CharacterModel({
     if (container.clientWidth === 0) return;
     let cancelled = false;
     let viewer: Viewer | undefined;
+    let visibility: IntersectionObserver | undefined;
 
     // Rotate-only: swallow wheel events in capture before the viewer's canvas
     // sees them, so the model can't zoom but the page still scrolls.
@@ -122,6 +125,23 @@ export function CharacterModel({
               }, delay);
             }
           }
+          // The viewer redraws on every rAF tick with no visibility check, so
+          // an offscreen model keeps the GPU busy for nothing. Its render loop
+          // looks up `renderer.draw` each frame — swap in a no-op while the
+          // container is out of view. The no-op still records the frame time
+          // so the animation doesn't lurch forward on resume.
+          const renderer = viewer?.renderer;
+          const realDraw = renderer?.draw;
+          if (renderer && realDraw) {
+            visibility = new IntersectionObserver(([entry]) => {
+              renderer.draw = entry.isIntersecting
+                ? realDraw
+                : (t: number) => {
+                    renderer.time = t;
+                  };
+            });
+            visibility.observe(container);
+          }
           setReady(true);
           return;
         } catch (e) {
@@ -143,6 +163,7 @@ export function CharacterModel({
 
     return () => {
       cancelled = true;
+      visibility?.disconnect();
       container.removeEventListener("wheel", blockZoom, { capture: true });
       try {
         viewer?.destroy?.();

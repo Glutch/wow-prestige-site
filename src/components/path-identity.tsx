@@ -1,21 +1,14 @@
 import type { PrestigeClass, TalentSpec } from "@/lib/wow";
+import { raceLabel, classTokenLabel } from "@/lib/wow";
 import { WowIcon } from "@/components/wow-icon";
+import { Panel } from "@/components/panel";
 import {
   raceIcons,
   professionIcons,
   treeIcons,
   talentIcons,
-  RACE_LABEL,
 } from "@/data/identity";
 import { identityLoreByClass } from "@/data/identity-lore";
-
-function raceLabel(token: string) {
-  return RACE_LABEL[token] ?? token;
-}
-
-function classLabel(token: string) {
-  return token[0] + token.slice(1).toLowerCase();
-}
 
 /** talents is either one spec, or one per class token (multi-class paths). */
 function specsOf(c: PrestigeClass): { classToken: string; spec: TalentSpec }[] {
@@ -74,17 +67,6 @@ function Cell({
   );
 }
 
-function Panel({ heading, children }: { heading: string; children: React.ReactNode }) {
-  return (
-    <div className="wow-panel rounded-sm px-4 py-3">
-      <p className="mb-2.5 text-[0.7rem] uppercase tracking-[0.25em] text-muted-foreground">
-        {heading}
-      </p>
-      {children}
-    </div>
-  );
-}
-
 /** Who you must be, what you should train, how you spec — at a glance.
  *  `stacked` renders the panels as a compact vertical column (used beside
  *  the spoils strip); default is a responsive row of cards. */
@@ -109,14 +91,14 @@ export function PathIdentity({ c, stacked }: { c: PrestigeClass; stacked?: boole
               key={r}
               icon={raceIcons[r]}
               label={raceLabel(r)}
-              sub={(c.classes ?? []).map(classLabel).join(" / ")}
+              sub={(c.classes ?? []).map(classTokenLabel).join(" / ")}
               lore={lore.races?.[r]}
             />
           ))}
           {!c.races && (
             <Cell
               label="Any race"
-              sub={(c.classes ?? []).map(classLabel).join(" / ")}
+              sub={(c.classes ?? []).map(classTokenLabel).join(" / ")}
             />
           )}
         </ul>
@@ -162,7 +144,7 @@ export function PathIdentity({ c, stacked }: { c: PrestigeClass; stacked?: boole
                         icon={treeIcons[`${classToken}:${tree.name}`]}
                         label={
                           specs.length > 1
-                            ? `${tree.name} (${classLabel(classToken)})`
+                            ? `${tree.name} (${classTokenLabel(classToken)})`
                             : tree.name
                         }
                         sub={`${tree.points}+ points as you level`}

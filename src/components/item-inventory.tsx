@@ -1,17 +1,11 @@
 import type { PrestigeClass } from "@/lib/wow";
+import { SLOT_RING } from "@/lib/wow";
 import { itemByName, type WowItem } from "@/data/items";
+import { itemUrl } from "@/data/wowhead";
 import { suggestedByClass } from "@/data/suggested";
 import { ItemTooltip } from "@/components/item-tooltip";
 import { WowIcon } from "@/components/wow-icon";
-
-const SLOT_RING: Record<WowItem["quality"], string> = {
-  poor: "border-quality-poor/50",
-  common: "border-quality-common/40",
-  uncommon: "border-quality-uncommon/60",
-  rare: "border-quality-rare/70",
-  epic: "border-quality-epic/70",
-  legendary: "border-quality-legendary/80 shadow-[0_0_14px_rgba(255,128,0,0.35)]",
-};
+import { Panel } from "@/components/panel";
 
 /** Every known item this class's journey references, in journey order.
  *  Anything in the class's suggested-gear list is excluded: spoils are
@@ -46,15 +40,12 @@ export function ItemInventory({ c }: { c: PrestigeClass }) {
   if (loot.length === 0) return null;
 
   return (
-    <div className="wow-panel inline-block rounded-sm px-4 py-3">
-      <p className="mb-2.5 text-[0.7rem] uppercase tracking-[0.25em] text-muted-foreground">
-        The spoils of this path
-      </p>
+    <Panel heading="The spoils of this path" inline>
       <ul className="flex flex-wrap gap-2">
         {loot.map((item) => (
           <li key={item.id} className="group/slot relative hover:z-[9999] focus-within:z-[9999]" tabIndex={0}>
             <a
-              href={`https://classic.wowhead.com/item=${item.id}`}
+              href={itemUrl(item.id)}
               target="_blank"
               rel="noreferrer"
               aria-label={item.name}
@@ -72,6 +63,6 @@ export function ItemInventory({ c }: { c: PrestigeClass }) {
           </li>
         ))}
       </ul>
-    </div>
+    </Panel>
   );
 }

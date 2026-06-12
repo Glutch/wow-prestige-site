@@ -1,4 +1,6 @@
 import classesJson from "@/data/classes.json";
+import { RACE_LABEL } from "@/data/identity";
+import type { WowItem } from "@/data/items";
 
 export type Trial = {
   id: string;
@@ -129,10 +131,34 @@ export function classTokenLabel(token: string): string {
   return token[0] + token.slice(1).toLowerCase();
 }
 
+/** "NightElf" -> "Night Elf", "Scourge" -> "Undead"; unknown tokens pass through. */
+export function raceLabel(token: string): string {
+  return RACE_LABEL[token] ?? token;
+}
+
+/** All titles a class's trials award, in journey order: milestone honorifics
+ *  first (the lifelong counter leads the file), then deed honorifics. */
+export function honorificsOf(c: PrestigeClass): string[] {
+  return (c.trials ?? []).flatMap((t) => [
+    ...(t.milestones?.map((m) => m.honorific).filter(Boolean) ?? []),
+    ...(t.honorific ? [t.honorific] : []),
+  ]) as string[];
+}
+
+/** Quality-colored border classes for item slots. */
+export const SLOT_RING: Record<WowItem["quality"], string> = {
+  poor: "border-quality-poor/50",
+  common: "border-quality-common/40",
+  uncommon: "border-quality-uncommon/60",
+  rare: "border-quality-rare/70",
+  epic: "border-quality-epic/70",
+  legendary: "border-quality-legendary/80 shadow-[0_0_14px_rgba(255,128,0,0.35)]",
+};
+
 /** Pretty-print the machine-enforced ruleset of a class. */
 export function ruleLines(c: PrestigeClass): string[] {
   const lines: string[] = [];
-  if (c.races) lines.push(`Race: ${c.races.join(" or ").replace("NightElf", "Night Elf")}`);
+  if (c.races) lines.push(`Race: ${c.races.map(raceLabel).join(" or ")}`);
   if (c.classes) lines.push(`Class: ${c.classes.map(classTokenLabel).join(" or ")}`);
   if (c.minLevel) lines.push(`Level ${c.minLevel}+`);
   for (const slot of c.forbidSlots ?? [])

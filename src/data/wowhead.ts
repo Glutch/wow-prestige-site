@@ -52,10 +52,33 @@ export const npcIds: Record<string, number> = {
   "Ras Frostwhisper": 10508,
   "Darkmaster Gandling": 1853,
   "Kel'Thuzad": 15990,
+  // Potion Doc
+  "Klaven Mortwake": 7053,
+  Grubbis: 7361,
+  "Viscous Fallout": 7079,
+  "Mekgineer Thermaplugg": 7800,
+  "High Tinker Mekkatorque": 7937,
+  "Alchemist Arbington": 11056,
+  Noxxion: 13282,
+  "Cauldron Lord Bilemaw": 11075,
+  "Cauldron Lord Malvinious": 11077,
+  "Cauldron Lord Razarch": 11076,
+  "Cauldron Lord Soulwrath": 11078,
+  "Doctor Theolen Krastinov": 11261,
+  Hakkar: 14834,
+  // Pyromancer
+  Sneed: 643,
+  "Arcanist Doan": 6487,
+  "Overmaster Pyron": 9026,
+  "Pyromancer Loregrain": 9024,
+  "Ambassador Flamelash": 9156,
+  "Baron Geddon": 12056,
 };
 
 export const spellIds: Record<string, number> = {
   "Heavy Copper Maul": 7408, // the blacksmithing craft
+  "Mighty Iron Hammer": 3297, // the blacksmithing craft
+  "Dark Iron Pulverizer": 15292, // the Black Anvil craft
   "Smelt Dark Iron": 14891,
   "Mace Stun Effect": 5530,
   "Mace Specialization": 12704,
@@ -79,6 +102,24 @@ export const spellIds: Record<string, number> = {
   "Drain Life": 689,
   "Rain of Fire": 5740,
   "Soul Link": 19028,
+  // Potion Doc
+  "Minor Healing Potion": 2330, // the alchemy craft
+  "Free Action Potion": 6624, // the alchemy craft
+  "Philosophers' Stone": 11459, // the alchemy craft (the spell keeps the odd apostrophe)
+  "Flask of the Titans": 17635, // the alchemy craft
+  "Crippling Poison": 3420,
+  "Elixir of the Mongoose": 17571,
+  "Blade Flurry": 13877,
+  "Adrenaline Rush": 13750,
+  // Pyromancer
+  "Rough Copper Bomb": 3923, // the engineering craft
+  "Goblin Sapper Charge": 12760, // the engineering craft
+  "Goblin Dragon Gun": 12908, // the engineering craft
+  "Arcanite Dragonling": 19830, // the engineering craft
+  Pyroblast: 11366,
+  Flamestrike: 2120,
+  Combustion: 11129,
+  Impact: 11103, // the talent whose stun the Trial of the Stagger counts
 };
 
 export const zoneIds: Record<string, number> = {
@@ -107,6 +148,16 @@ export const zoneIds: Record<string, number> = {
   "Silverpine Forest": 130,
   Undercity: 1497,
   "Western Plaguelands": 28,
+  // Pyromancer
+  "Un'Goro Crater": 490,
+  Winterspring: 618,
+  // Potion Doc
+  Gnomeregan: 721,
+  Westfall: 40,
+  Duskwood: 10,
+  Maraudon: 2100,
+  Scholomance: 2057,
+  "Zul'Gurub": 1977,
 };
 
 /** Extra per-deed quest links (verified IDs only). */
@@ -144,10 +195,24 @@ export const questsByTrial: Record<string, { name: string; id: number }[]> = {
   nc_arugal: [{ name: "Arugal Must Die", id: 1014 }],
   nc_araj: [{ name: "Araj's Scarab", id: 5804 }],
   nc_kelthuzad: [{ name: "The Fall of Kel'Thuzad", id: 9120 }],
+  // Pyromancer
+  py_goblinschool: [
+    { name: "The Pledge of Secrecy", id: 3638 },
+    { name: "Show Your Work", id: 3639 },
+  ],
+  py_pyron: [{ name: "Overmaster Pyron", id: 4262 }],
+  py_chillwind: [{ name: "Chillwind Horns", id: 4809 }],
+  // Potion Doc
+  pd_mortwake: [{ name: "Klaven's Tower", id: 2359 }],
+  pd_krastinov: [{ name: "Doctor Theolen Krastinov, the Butcher", id: 5382 }],
+  pd_cauldrons: [{ name: "A Plague Upon Thee", id: 5901 }],
 };
 
 export type WowheadLink = { label: string; url: string; kind: string };
 
+export function itemUrl(id: number) {
+  return `${BASE}/item=${id}`;
+}
 export function npcUrl(id: number) {
   return `${BASE}/npc=${id}`;
 }

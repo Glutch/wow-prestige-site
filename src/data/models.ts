@@ -124,6 +124,54 @@ export const heroModels: Record<string, CharacterModelConfig> = {
     ],
     animation: "Ready2H",
   },
+  // Gnome potion doc: Green Tinted Goggles over the Cadaverous Garb — the
+  // Scholomance mortician's leathers, the closest Classic comes to a plague
+  // doctor's apron — with Gutgore Ripper in the main fist and the Toxic
+  // Revenger, Viscous Fallout's poison-sweating dagger, in the off hand.
+  potiondoc: {
+    race: 7,
+    gender: 0,
+    skin: 1,
+    face: 1,
+    hairStyle: 4,
+    hairColor: 4,
+    facialStyle: 3,
+    items: [
+      [1, 13374], // Green Tinted Goggles (4385)
+      [3, 8434], // Nightscape Shoulders (8192)
+      [5, 7787], // Cadaverous Armor (14637)
+      [6, 4300], // Cadaverous Belt (14636)
+      [7, 4304], // Cadaverous Leggings (14638)
+      [8, 4622], // Cadaverous Walkers (14641)
+      [10, 4370], // Cadaverous Gloves (14640)
+      [21, 34111], // Gutgore Ripper (17071)
+      [22, 20595], // Toxic Revenger (9453)
+    ],
+    animation: "Ready1H",
+  },
+  // Gnome pyromancer: Fire Goggles off her own bench over Crimson Silk — the
+  // reddest cloth a Classic tailor cuts — Goblin Rocket Boots below (prone to
+  // explode), and Nefarian's Staff of the Shadow Flame held ready. Gnome
+  // female is the look, not a rule — the path takes any Alliance mage.
+  pyromancer: {
+    race: 7,
+    gender: 1,
+    skin: 1,
+    face: 2,
+    hairStyle: 3,
+    hairColor: 5,
+    facialStyle: 1,
+    items: [
+      [1, 11700], // Fire Goggles (10500)
+      [3, 9574], // Crimson Silk Shoulders (7059)
+      [6, 5804], // Crimson Silk Belt (7055)
+      [8, 14763], // Goblin Rocket Boots (7189)
+      [10, 11482], // Crimson Silk Gloves (7064)
+      [20, 5483], // Crimson Silk Robe (7063) — robes ride slot 20
+      [21, 31960], // Staff of the Shadow Flame (19356)
+    ],
+    animation: "Ready2H",
+  },
   mountainking: {
     race: 3,
     gender: 0,

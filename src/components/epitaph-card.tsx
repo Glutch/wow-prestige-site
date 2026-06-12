@@ -1,4 +1,5 @@
 import type { PrestigeClass } from "@/lib/wow";
+import { honorificsOf } from "@/lib/wow";
 
 /** Per-class flavor for the sample epitaph: a fitting hero name, a days-walked
  *  figure, and the lifelong counter's final tally. */
@@ -6,6 +7,7 @@ const SAMPLE: Record<string, { hero: string; days: number; count: number }> = {
   mountainking: { hero: "Dunhelm", days: 84, count: 214 },
   blademaster: { hero: "Gorvash", days: 77, count: 209 },
   spiritwalker: { hero: "Tahkoda Palehide", days: 96, count: 211 },
+  pyromancer: { hero: "Nixie Cinderbolt", days: 81, count: 226 },
 };
 const FALLBACK = { hero: "Aldric", days: 60, count: 150 };
 
@@ -16,12 +18,7 @@ export function EpitaphCard({ c }: { c: PrestigeClass }) {
   const sample = SAMPLE[c.id] ?? FALLBACK;
   const trials = c.trials ?? [];
 
-  // Titles in journey order: milestone honorifics first (the lifelong
-  // counter leads the file), then deed honorifics.
-  const titles = trials.flatMap((t) => [
-    ...(t.milestones?.map((m) => m.honorific).filter(Boolean) ?? []),
-    ...(t.honorific ? [t.honorific] : []),
-  ]) as string[];
+  const titles = honorificsOf(c);
 
   const counter = trials.find((t) => t.epitaph);
   const counterLine = counter?.epitaph?.replace("%d", String(sample.count));

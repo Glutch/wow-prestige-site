@@ -587,7 +587,9 @@
     "id": "mountainking",
     "itemIds": {
       "Dark Iron Ore": 11370,
+      "Dark Iron Pulverizer": 11608,
       "Heavy Copper Maul": 6214,
+      "Mighty Iron Hammer": 3492,
       "Mograine's Might": 7723,
       "Smite's Mighty Hammer": 7230,
       "Sulfuras, Hand of Ragnaros": 17182,
@@ -612,11 +614,6 @@
         "id": 9412,
         "name": "Galgann's Fireblaster",
         "note": "Galgann Firehammer, Uldaman — a Dark Iron's own gun, turned on his kin"
-      },
-      {
-        "id": 11608,
-        "name": "Dark Iron Pulverizer",
-        "note": "Smith it yourself at the Black Anvil — 18 Dark Iron Bars"
       },
       {
         "id": 20130,
@@ -860,6 +857,16 @@
       },
       {
         "chapter": 2,
+        "id": "mk_ironhammer",
+        "kind": "cast",
+        "level": 32,
+        "name": "Iron for the War Road",
+        "objective": "Forge a Mighty Iron Hammer at your own anvil",
+        "spell": "Mighty Iron Hammer",
+        "text": "Copper was the apprentice's lesson; iron is the journeyman's word. Six bars, strong flux, ogre's strength in a bottle and moonstone set in the haft — hammer it out yourself, and let the war road see your craft has grown with your arm."
+      },
+      {
+        "chapter": 2,
         "cleanOnly": true,
         "id": "mk_titans",
         "kind": "kill",
@@ -941,6 +948,17 @@
         "objective": "Smelt Dark Iron at the Black Forge in Blackrock Depths",
         "spell": "Smelt Dark Iron",
         "text": "Gloom'rel's ghost guards the secret of Dark Iron smelting, and only the Black Forge will work it. Pay his tribute, learn the rite, and smelt the enemy's own iron in the heart of his city.",
+        "zone": "Blackrock Depths"
+      },
+      {
+        "chapter": 3,
+        "id": "mk_pulverizer",
+        "kind": "cast",
+        "level": 58,
+        "name": "The Enemy's Iron",
+        "objective": "Forge a Dark Iron Pulverizer at the Black Anvil in Blackrock Depths",
+        "spell": "Dark Iron Pulverizer",
+        "text": "You learned the rite; now finish the insult. Eighteen bars of their own black iron, four hearts of fire, and the Black Anvil ringing under the Emperor's floor. Walk out of his city carrying a warhammer made of everything he holds dear.",
         "zone": "Blackrock Depths"
       },
       {
@@ -1557,7 +1575,6 @@
     ],
     "icon": "ability_rogue_eviscerate",
     "id": "assassin",
-    "maxArmor": "Leather",
     "name": "Assassin",
     "profession": [
       "Skinning",
@@ -1657,7 +1674,6 @@
     ],
     "icon": "ability_ambush",
     "id": "warden",
-    "maxArmor": "Leather",
     "name": "Warden",
     "profession": [
       "Skinning",
@@ -1698,7 +1714,6 @@
     ],
     "icon": "ability_druid_catform",
     "id": "druidwild",
-    "maxArmor": "Leather",
     "name": "Druid of the Wild",
     "profession": [
       "Herbalism",
@@ -1854,7 +1869,6 @@
       "Will of Arlokk": 19909,
       "Witch Doctor's Cane": 9482
     },
-    "maxArmor": "Mail",
     "name": "Spirit Walker",
     "profession": [
       "Herbalism",
@@ -2332,7 +2346,6 @@
     ],
     "icon": "spell_nature_polymorph",
     "id": "hexer",
-    "maxArmor": "Cloth",
     "name": "Hexer",
     "profession": [
       "Tailoring",
@@ -2838,7 +2851,6 @@
     ],
     "icon": "spell_holy_magicalsentry",
     "id": "archmage",
-    "maxArmor": "Cloth",
     "minLevel": 20,
     "name": "Archmage of the Kirin Tor",
     "profession": [
@@ -2927,7 +2939,6 @@
     ],
     "icon": "spell_shadow_curseoftounges",
     "id": "shadowhunter",
-    "maxArmor": "Cloth",
     "name": "Shadow Hunter",
     "profession": [
       "Herbalism",
@@ -2972,7 +2983,6 @@
     ],
     "icon": "inv_potion_19",
     "id": "darkapothecary",
-    "maxArmor": "Cloth",
     "name": "Dark Apothecary",
     "profession": [
       "Herbalism"
@@ -3084,7 +3094,6 @@
     ],
     "icon": "spell_holy_elunesgrace",
     "id": "priestessmoon",
-    "maxArmor": "Cloth",
     "name": "Priestess of the Moon",
     "profession": [
       "Tailoring",
@@ -3178,7 +3187,6 @@
     ],
     "icon": "spell_nature_farsight",
     "id": "farseer",
-    "maxArmor": "Mail",
     "name": "Far Seer",
     "profession": [
       "Herbalism",
@@ -3262,7 +3270,6 @@
     ],
     "icon": "inv_misc_coin_02",
     "id": "buccaneer",
-    "maxArmor": "Leather",
     "name": "Buccaneer",
     "profession": [
       "Fishing",
@@ -3291,6 +3298,966 @@
     },
     "weaponTypes": [
       "One-Handed Swords",
+      "Daggers"
+    ]
+  },
+  {
+    "breakCry": "The formula is compromised! A Potion Doc trusts the brew and the blade — nothing else.",
+    "chapters": [
+      {
+        "index": 0,
+        "title": "The Decontamination Log"
+      },
+      {
+        "index": 1,
+        "title": "Chapter I — First, Do Harm"
+      },
+      {
+        "index": 2,
+        "title": "Chapter II — The Toxic Heart"
+      },
+      {
+        "index": 3,
+        "title": "Chapter III — The Plague War"
+      },
+      {
+        "index": 4,
+        "title": "Chapter IV — The Grand Experiment"
+      }
+    ],
+    "classes": [
+      "ROGUE"
+    ],
+    "faction": "Alliance",
+    "fantasy": "A Gnomeregan chemist with poisoned daggers and a bandolier of brews — equal parts surgeon, poisoner and walking laboratory. Somewhere in all that glassware is the cure for a city.",
+    "honorRules": [
+      "Keep both blades poisoned from the day the trainer teaches you the craft — the chemistry does the killing.",
+      "Brew your own: potions, elixirs and antidotes from your own bench, and a swig of the newest batch before every dangerous fight.",
+      "Pick every herb you pass and pocket every venom sac — everything green is research, everything venomous a reagent."
+    ],
+    "icon": "inv_potion_24",
+    "id": "potiondoc",
+    "itemIds": {
+      "Black Lotus": 13468,
+      "Core Hound Tooth": 18805,
+      "Fadeleaf": 3818,
+      "Flask of the Titans": 13510,
+      "Free Action Potion": 5634,
+      "Ghost Mushroom": 8845,
+      "Gutgore Ripper": 17071,
+      "Minor Healing Potion": 118,
+      "Peacebloom": 2447,
+      "Perdition's Blade": 18816,
+      "Philosopher's Stone": 9149,
+      "Small Venom Sac": 1475,
+      "Toxic Revenger": 9453,
+      "Venom Web Fang": 899
+    },
+    "name": "Potion Doc",
+    "profession": [
+      "Herbalism"
+    ],
+    "races": [
+      "Gnome"
+    ],
+    "rangedTypes": [
+      "Thrown"
+    ],
+    "requireProfession": [
+      "Alchemy"
+    ],
+    "restoreCry": "The mixture stabilizes. Science resumes.",
+    "source": "Horde Player's Guide",
+    "suggested": [
+      {
+        "id": 4446,
+        "name": "Blackvenom Blade",
+        "note": "Rohh the Silent, a rare blade above Render's Valley — the venom already in the steel"
+      },
+      {
+        "id": 1935,
+        "name": "Assassin's Blade",
+        "note": "World drop — the trade's plain instrument, honest steel for the second hand"
+      },
+      {
+        "id": 7349,
+        "name": "Herbalist's Gloves",
+        "note": "Leatherworked, +5 Herbalism — commission a friend; the doc supplies the formula"
+      },
+      {
+        "id": 17744,
+        "name": "Heart of Noxxion",
+        "note": "Noxxion, Maraudon — an antidote in a jar, cut from a creature of pure poison"
+      },
+      {
+        "id": 18392,
+        "name": "Distracting Dagger",
+        "note": "Prince Tortheldrin, Dire Maul — a lecturer's pointer for the off hand"
+      },
+      {
+        "id": 14637,
+        "name": "Cadaverous Armor",
+        "note": "Scholomance — the mortician's apron, sized down and worn with intent"
+      },
+      {
+        "id": 12590,
+        "name": "Felstriker",
+        "note": "Warchief Rend Blackhand, Blackrock Spire — three seconds in which no dose misses"
+      }
+    ],
+    "talents": {
+      "keys": [
+        {
+          "level": 32,
+          "name": "Blade Flurry"
+        },
+        {
+          "level": 42,
+          "name": "Adrenaline Rush"
+        }
+      ],
+      "tree": {
+        "name": "Combat",
+        "points": 31
+      }
+    },
+    "trials": [
+      {
+        "chapter": 0,
+        "epitaph": "The decontamination log recorded %d of the fallen city's sick, given rest.",
+        "id": "pd_log",
+        "kind": "counter",
+        "milestones": [
+          {
+            "count": 10,
+            "honorific": "Mercygiver"
+          },
+          {
+            "count": 50,
+            "honorific": "Quarantine Warden"
+          },
+          {
+            "count": 200,
+            "honorific": "Reclaimer of Gnomeregan"
+          }
+        ],
+        "name": "The Long Decontamination",
+        "objective": "Put the fallen of Gnomeregan to rest — leper gnomes, the Leprous and the Irradiated, wherever the sickness shambles",
+        "pattern": [
+          "Leper Gnome",
+          "Leprous",
+          "Irradiated"
+        ],
+        "text": "Thermaplugg's bomb did not kill eight gnomes in ten. It left most of them walking. There is no antidote yet for what your people became — so until you brew one, mercy is the only medicine, and every dose is delivered on a blade. Log each one. The cure will want data."
+      },
+      {
+        "chapter": 1,
+        "count": 10,
+        "id": "pd_troggs",
+        "kind": "kill",
+        "level": 6,
+        "name": "Know Your Enemy",
+        "objective": "Slay 10 Rockjaw troggs in Dun Morogh",
+        "pattern": "Rockjaw",
+        "text": "It was troggs that breached the lower vaults and troggs the bomb was meant for. The Rockjaw tribe squats in the hills above Coldridge as if the experiment ended well. Ten specimens, terminated and noted. Science begins with observation."
+      },
+      {
+        "chapter": 1,
+        "id": "pd_firstbrew",
+        "kind": "cast",
+        "level": 8,
+        "name": "The First Brew",
+        "objective": "Brew a Minor Healing Potion in Tinker Town, Ironforge",
+        "spell": "Minor Healing Potion",
+        "subzone": "Tinker Town",
+        "text": "Every great work starts with a clean bench. Beg space at Berryfizz's in Tinker Town, among your own exiled people, and bottle your first dose of mended flesh. Smell it. Remember it. That is what you are for.",
+        "zone": "Ironforge"
+      },
+      {
+        "chapter": 1,
+        "emote": "KNEEL",
+        "id": "pd_oath",
+        "kind": "emote",
+        "level": 10,
+        "name": "The Oath of the Exile",
+        "objective": "/kneel before High Tinker Mekkatorque in Tinker Town",
+        "subzone": "Tinker Town",
+        "text": "Gelbin Mekkatorque signed the order that gassed his own city, because his most trusted friend falsified the data. He carries it every day, in a borrowed corner of a dwarven mountain. Kneel to him there — and swear the exile's oath: the city will be clean again, and the data will be honest.",
+        "zone": "Ironforge"
+      },
+      {
+        "chapter": 1,
+        "count": 20,
+        "id": "pd_garden",
+        "item": "Peacebloom",
+        "kind": "loot",
+        "level": 10,
+        "name": "The First Garden",
+        "objective": "Gather 20 Peacebloom with your own hands",
+        "text": "A chemist who buys reagents is a customer, not a scientist. Twenty Peacebloom, picked by your own fingers from the snow-edges and roadsides. Everything green is research. Everything white and small doubly so."
+      },
+      {
+        "chapter": 1,
+        "emote": "MOURN",
+        "id": "pd_gates",
+        "kind": "emote",
+        "level": 12,
+        "name": "The Sealed Door",
+        "objective": "/mourn before the gates of Gnomeregan",
+        "subzone": "Gnomeregan",
+        "text": "Go west past Brewnall, to where the doors of the greatest city ever engineered stand sealed from the inside. Behind them: your laboratories, your libraries, and most of your family, still walking. Mourn properly. Then take out your notebook, because grief is also data.",
+        "zone": "Dun Morogh"
+      },
+      {
+        "chapter": 1,
+        "count": 5,
+        "id": "pd_sacs",
+        "item": "Small Venom Sac",
+        "kind": "loot",
+        "level": 14,
+        "name": "Raw Material",
+        "objective": "Harvest 5 Small Venom Sacs from the spiders of the hills",
+        "text": "Nature has been running toxicology trials for ten thousand years; a Potion Doc merely reads her notes. Open the spiders of Dun Morogh and Loch Modan carefully and take five venom sacs intact. Waste no specimen."
+      },
+      {
+        "chapter": 1,
+        "cleanOnly": true,
+        "completionNote": "His journal goes to SI:7. His poisons go in your bag. Peer review.",
+        "id": "pd_mortwake",
+        "kind": "kill",
+        "level": 24,
+        "name": "The Rival's Tower",
+        "objective": "Slay Klaven Mortwake in his tower in Westfall — alone, vows clean",
+        "rankTrial": true,
+        "solo": true,
+        "targets": [
+          "Klaven Mortwake"
+        ],
+        "text": "SI:7 sends every young poisoner to one door: Klaven Mortwake, the Defias chemist buying Venture Company formulas in his tower in the Dust Plains — dead things walking his yard that no honest medicine made. Go alone, vows clean, and close his laboratory permanently. The first rule of the craft: there are wrong hands, and chemistry must not be in them."
+      },
+      {
+        "chapter": 2,
+        "id": "pd_fang",
+        "items": [
+          "Venom Web Fang"
+        ],
+        "kind": "equip",
+        "level": 21,
+        "name": "The First Fang",
+        "objective": "Take and wield a Venom Web Fang from the spiders of Duskwood",
+        "text": "In Duskwood the Venom Web spiders grow fangs the length of your forearm, and the venom channel runs true enough to use unmodified. Pull one, clean it, hilt it. Your first proper instrument — half dagger, half syringe."
+      },
+      {
+        "aura": "Crippling Poison",
+        "chapter": 2,
+        "count": 50,
+        "honorific": "Toxicologist",
+        "id": "pd_cripple",
+        "kind": "proc",
+        "level": 26,
+        "name": "Trial of the Crippled Step",
+        "objective": "Slow 50 foes with Crippling Poison",
+        "text": "Any thug can make a blade hurt. A toxicologist makes it govern: a dose on the edge, and the subject's own blood carries the instruction — slower, slower, stop. Fifty field trials, fifty limping witnesses. Publish on steel."
+      },
+      {
+        "chapter": 2,
+        "count": 10,
+        "id": "pd_fadeleaf",
+        "item": "Fadeleaf",
+        "kind": "loot",
+        "level": 28,
+        "name": "The Blinding Crop",
+        "objective": "Gather 10 Fadeleaf",
+        "text": "Fadeleaf hides in the shade it makes — fitting, since ground fine it becomes the powder that buys a rogue three free seconds of darkness. Ten leaves, picked whole. The garden arms you better than any armory."
+      },
+      {
+        "chapter": 2,
+        "id": "pd_fap",
+        "kind": "cast",
+        "level": 30,
+        "name": "The Escape Protocol",
+        "objective": "Brew a Free Action Potion at your own bench",
+        "spell": "Free Action Potion",
+        "text": "A dead doc files no reports. This is the brew that ignores the net, the snare, the stunning blow — thirty seconds in which the world may not hold you. Brew it yourself and keep one on the belt always. On Hardcore, the escape protocol is not optional equipment."
+      },
+      {
+        "chapter": 2,
+        "id": "pd_cleanzone",
+        "kind": "visit",
+        "level": 29,
+        "name": "The Clean Zone",
+        "objective": "Stand in the Clean Zone of Gnomeregan",
+        "subzone": "The Clean Zone",
+        "text": "Inside the fallen city one chamber still scrubs its own air — the Clean Zone, where the survivors huddle and the radiation meters finally quiet. Stand in it. Breathe. This is what the whole city smelled like once, and will again.",
+        "zone": "Gnomeregan"
+      },
+      {
+        "chapter": 2,
+        "id": "pd_grubbis",
+        "kind": "kill",
+        "level": 30,
+        "name": "The Breach",
+        "objective": "Slay Grubbis in Gnomeregan",
+        "targets": [
+          "Grubbis"
+        ],
+        "text": "Follow the old service tunnels to where the first wall fell. The trogg Grubbis holds the breach with a pet basilisk and the confidence of something too dense to poison. The infection began at this wound; begin the cure there too."
+      },
+      {
+        "chapter": 2,
+        "id": "pd_revenger",
+        "items": [
+          "Toxic Revenger"
+        ],
+        "kind": "equip",
+        "level": 31,
+        "name": "What the Bomb Left",
+        "objective": "Claim the Toxic Revenger from Viscous Fallout in Gnomeregan",
+        "text": "In the flooded sumps below the city, the radiation itself has pulled together a body and started walking. Boil Viscous Fallout down and take the blade it leaves: a dagger that sweats the city's own poison. Name it evidence. Carry the bomb's signature into every fight until the debt is paid."
+      },
+      {
+        "chapter": 2,
+        "cleanOnly": true,
+        "completionNote": "“Usurpers! Gnomeregan is mine!” he screamed. The data, as ever, disagreed with him.",
+        "id": "pd_thermaplugg",
+        "kind": "kill",
+        "level": 34,
+        "name": "The Mad King",
+        "objective": "Slay Mekgineer Thermaplugg on his throne, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Mekgineer Thermaplugg"
+        ],
+        "text": "At the bottom of everything sits Sicco Thermaplugg, who falsified one report and murdered a nation, and now plays king over the leprous and the dead. He expected thirty percent. Walk into his throne room with your vows clean and show him a margin of error."
+      },
+      {
+        "chapter": 3,
+        "id": "pd_stone",
+        "kind": "cast",
+        "level": 43,
+        "name": "Transmutation",
+        "objective": "Craft a Philosopher's Stone",
+        "spell": "Philosophers' Stone",
+        "text": "In Gadgetzan, the goblin Pestlezugg sells the old transmuter's secret to anyone with the skill to survive it. Iron into gold, one element into another — the stone in your pack says chemistry has no fixed walls, only unfunded experiments. Every master of the craft has made one. Make yours."
+      },
+      {
+        "chapter": 3,
+        "count": 10,
+        "id": "pd_ghostcap",
+        "item": "Ghost Mushroom",
+        "kind": "loot",
+        "level": 46,
+        "name": "The Pale Harvest",
+        "objective": "Gather 10 Ghost Mushrooms from the dark places of the world",
+        "text": "Ghost Mushrooms grow only where the sun has given up — cave mouths in the Hinterlands, the poisoned deeps of Maraudon. They glow faintly, like an apology. Ten caps, gathered by lamplight. The best reagents are the ones that almost kill you to collect."
+      },
+      {
+        "chapter": 3,
+        "id": "pd_noxxion",
+        "kind": "kill",
+        "level": 48,
+        "name": "A Study in Pure Poison",
+        "objective": "Slay Noxxion in Maraudon",
+        "targets": [
+          "Noxxion"
+        ],
+        "text": "Deep in Maraudon something has happened that should interest you professionally: corruption so concentrated it no longer needs a body to poison. Noxxion is venom with ambition. Take it apart and see how it works — and bottle the heart; the antidote literature is thin."
+      },
+      {
+        "chapter": 3,
+        "count": 25,
+        "id": "pd_oozes",
+        "kind": "kill",
+        "level": 50,
+        "name": "Bad Alchemy",
+        "objective": "Dissolve 25 Cursed and Tainted Oozes in Felwood",
+        "pattern": [
+          "Cursed Ooze",
+          "Tainted Ooze"
+        ],
+        "text": "Felwood is what a laboratory looks like when nobody cleans up: the Legion's runoff pooled, curdled, and learned to crawl. Twenty-five oozes rendered down to harmless slime. Consider it professional embarrassment — someone's experiment escaped, and chemists bury their own mistakes."
+      },
+      {
+        "chapter": 3,
+        "emote": "THANK",
+        "id": "pd_thank",
+        "kind": "emote",
+        "level": 52,
+        "name": "The Colleague",
+        "objective": "/thank Alchemist Arbington at Chillwind Camp",
+        "subzone": "Chillwind Camp",
+        "text": "At Chillwind Camp a human named Arbington holds the line against the Scourge's plague with a mortar, a pestle and no sleep. He will hand you wards and counteragents and ask nothing back. Thank him properly. The fraternity of the bench is small, and older than any Alliance.",
+        "zone": "Western Plaguelands"
+      },
+      {
+        "chapter": 3,
+        "count": 4,
+        "id": "pd_cauldrons",
+        "kind": "kill",
+        "level": 53,
+        "name": "The Cauldron War",
+        "objective": "Destroy 4 Cauldron Lords at the plague cauldrons of the Western Plaguelands",
+        "targets": [
+          "Cauldron Lord Bilemaw",
+          "Cauldron Lord Malvinious",
+          "Cauldron Lord Razarch",
+          "Cauldron Lord Soulwrath"
+        ],
+        "text": "Across the Western Plaguelands the Scourge brews its plague openly, in farm-field cauldrons each stirred by a bound geist of the vapors. This is chemistry as atrocity — your discipline, weaponized against the living. Take the field stations one by one. Leave the cauldrons fit for honest work."
+      },
+      {
+        "chapter": 3,
+        "id": "pd_dose",
+        "kind": "kill",
+        "level": 54,
+        "name": "Rite of the Perfect Dose",
+        "objective": "Slay an elite enemy while your own Elixir of the Mongoose runs in your veins",
+        "requireBuff": "Elixir of the Mongoose",
+        "requireElite": true,
+        "text": "The old goblin alchemists rode to war on a chemically induced rage. Yours is more refined: the Elixir of the Mongoose, brewed at your own bench, every reflex sharpened to a laboratory edge. Drink your finest work and fell an elite foe while it holds. You are the experiment, and the result."
+      },
+      {
+        "chapter": 3,
+        "cleanOnly": true,
+        "completionNote": "The Sarkhoffs, his victims, can rest now. The title 'Doctor' is yours to redeem.",
+        "id": "pd_krastinov",
+        "kind": "kill",
+        "level": 58,
+        "name": "The Other Doctor",
+        "objective": "Slay Doctor Theolen Krastinov in Scholomance, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Doctor Theolen Krastinov"
+        ],
+        "text": "In the Scholomance works a man who kept your title and burned everything it means: Doctor Theolen Krastinov, the Butcher, who renders his patients into teaching material. He is what you are one broken vow away from becoming. Go in with yours clean, and retire him from practice."
+      },
+      {
+        "chapter": 4,
+        "id": "pd_lotus",
+        "item": "Black Lotus",
+        "kind": "loot",
+        "level": 60,
+        "name": "The Black Lotus",
+        "objective": "Find and pick a Black Lotus",
+        "text": "Somewhere in the burnt and frozen corners of the world, the rarest herb in existence is blooming right now, and a hundred herbalists are racing you to it. The Black Lotus crowns every flask that matters. Pick one with your own hand. There is no other way to hold one honestly."
+      },
+      {
+        "chapter": 4,
+        "id": "pd_titans",
+        "kind": "cast",
+        "level": 60,
+        "name": "The Master's Draught",
+        "objective": "Brew a Flask of the Titans",
+        "spell": "Flask of the Titans",
+        "text": "Three hundred skill, a flask cut from crystal, the Black Lotus dissolved at last — and the result is a draught that makes a body briefly titanic, and does not even fade in death. This is the summit of the bench. Brew it once and you may call yourself master in any guildhall in the world."
+      },
+      {
+        "chapter": 4,
+        "id": "pd_legend",
+        "items": [
+          "Gutgore Ripper",
+          "Core Hound Tooth",
+          "Perdition's Blade"
+        ],
+        "kind": "equip",
+        "level": 60,
+        "name": "A Venom Out of Legend",
+        "objective": "Wield a fang out of legend — the Gutgore Ripper, a Core Hound Tooth, or Perdition's Blade",
+        "text": "Past the end of the war, the Molten Core keeps the reference collection: the Gutgore Ripper, whose wound unmakes the whole patient; the Core Hound Tooth, pulled from the jaw of the Firelord's own kennel; and Perdition's Blade from Ragnaros's hand, venom replaced with fire. Any one of them completes a poisoner's education. Be few."
+      },
+      {
+        "chapter": 4,
+        "honorific": "Panacea",
+        "id": "pd_hakkar",
+        "kind": "kill",
+        "level": 60,
+        "name": "The Last Epidemic",
+        "objective": "Slay Hakkar the Soulflayer in Zul'Gurub",
+        "targets": [
+          "Hakkar"
+        ],
+        "text": "In Zul'Gurub waits the Blood God, whose corrupted blood is the most virulent agent ever recorded — one drop walked out of that temple once and emptied whole cities. There is no grander rounds a doctor will ever make. Drain the source. End the last epidemic before it begins."
+      },
+      {
+        "chapter": 4,
+        "emote": "DRINK",
+        "id": "pd_lastround",
+        "kind": "emote",
+        "level": 60,
+        "name": "One for Gnomeregan",
+        "objective": "/drink at Brewnall Village, within sight of the gates",
+        "subzone": "Brewnall Village",
+        "text": "Go back to Brewnall, where the exiles drink with their backs to the lake and the sealed doors just up the hill. Raise something you brewed yourself — for the city, the dead, the walking, and the day the meters read zero. The cure is coming. You are the proof.",
+        "zone": "Dun Morogh"
+      }
+    ],
+    "weaponTypes": [
+      "Daggers"
+    ]
+  },
+  {
+    "breakCry": "The flame gutters! Fire and powder, nothing else — burn, or be snuffed out.",
+    "chapters": [
+      {
+        "index": 0,
+        "title": "The War on Winter"
+      },
+      {
+        "index": 1,
+        "title": "Chapter I — Kindling"
+      },
+      {
+        "index": 2,
+        "title": "Chapter II — Warranty Void"
+      },
+      {
+        "index": 3,
+        "title": "Chapter III — Fire Country"
+      },
+      {
+        "index": 4,
+        "title": "Chapter IV — The Heart of the Flame"
+      }
+    ],
+    "classes": [
+      "MAGE"
+    ],
+    "faction": "Alliance",
+    "fantasy": "A goggled mage who solved magic the way an engineer solves everything: pick the school that explodes and master nothing else. Every problem is a fire problem — some just need a bomb first.",
+    "forbidAuras": {
+      "label": "No rime on a pyromancer's skin",
+      "names": [
+        "Frost Armor",
+        "Ice Armor"
+      ],
+      "okDetail": "Warmed by the work alone"
+    },
+    "honorRules": [
+      "Let no killing spell leave your hands but fire — Frostbolt and Arcane Missiles stay untrained forever. The other schools may carry you; they may never kill for you.",
+      "Engineering is your second school: open every dangerous fight with a bomb from your own bench.",
+      "Join the goblins when the discipline splits — real demolition is signed for in Gadgetzan, warranty void."
+    ],
+    "icon": "spell_fire_fireball02",
+    "id": "pyromancer",
+    "itemIds": {
+      "Arcanite Dragonling": 16022,
+      "Essence of Fire": 7078,
+      "Fire Goggles": 10500,
+      "Goblin Dragon Gun": 10727,
+      "Goblin Rocket Boots": 7189,
+      "Goblin Sapper Charge": 10646,
+      "Rough Copper Bomb": 4360,
+      "Staff of the Shadow Flame": 19356
+    },
+    "name": "Pyromancer",
+    "profession": [
+      "Mining"
+    ],
+    "rangedTypes": [
+      "Wands"
+    ],
+    "requireProfession": [
+      "Engineering"
+    ],
+    "restoreCry": "Ignition. The experiment resumes.",
+    "source": "Kirin Tor pyromancy / Gnomeregan",
+    "suggested": [
+      {
+        "id": 7712,
+        "name": "Mantle of Doan",
+        "note": "Arcanist Doan, Scarlet Monastery — the book-burner's mantle, worn by a better reader"
+      },
+      {
+        "id": 12531,
+        "name": "Searing Needle",
+        "note": "The Anvilrage garrison, Blackrock Depths — a lancet that teaches the wound to welcome fire"
+      },
+      {
+        "id": 11832,
+        "name": "Burst of Knowledge",
+        "note": "Ambassador Flamelash, Blackrock Depths — ten seconds of free casting, taken at the bottom of the fire"
+      },
+      {
+        "id": 16309,
+        "name": "Drakefire Amulet",
+        "note": "General Drakkisath's blood, worn at the throat — the key that opens Onyxia's lair"
+      },
+      {
+        "id": 19136,
+        "name": "Mana Igniting Cord",
+        "note": "Molten Core — the belt every fire mage of the era tied on first"
+      },
+      {
+        "id": 18814,
+        "name": "Choker of the Fire Lord",
+        "note": "Molten Core — the Firelord's own circle of office"
+      },
+      {
+        "id": 18820,
+        "name": "Talisman of Ephemeral Power",
+        "note": "Molten Core — fifteen seconds in which the whole world is kindling"
+      }
+    ],
+    "talents": {
+      "keys": [
+        {
+          "level": 16,
+          "name": "Impact",
+          "rank": 5
+        },
+        {
+          "level": 20,
+          "name": "Pyroblast"
+        },
+        {
+          "level": 40,
+          "name": "Combustion"
+        }
+      ],
+      "tree": {
+        "name": "Fire",
+        "points": 31
+      }
+    },
+    "trials": [
+      {
+        "chapter": 0,
+        "epitaph": "The thaw was measured: %d creatures of frost and cold, given to the fire.",
+        "id": "py_thaw",
+        "kind": "counter",
+        "milestones": [
+          {
+            "count": 10,
+            "honorific": "Thawbringer"
+          },
+          {
+            "count": 50,
+            "honorific": "Winter's Bane"
+          },
+          {
+            "count": 200,
+            "honorific": "The End of Winter"
+          }
+        ],
+        "name": "The War on Winter",
+        "objective": "Burn down the creatures of frost and cold — wendigo, Frostmane, Chillwind and their frozen kin — wherever winter walks",
+        "pattern": [
+          "Frost",
+          "Chill",
+          "Wendigo",
+          "Ice Thistle"
+        ],
+        "text": "You were born in a snowfield and you have hated it ever since. Cold is the universe winning; fire is somebody doing something about it. Every frozen thing you put down is one degree taken back. The thaw is measured in bodies. Keep the tally."
+      },
+      {
+        "chapter": 1,
+        "count": 10,
+        "id": "py_wendigo",
+        "kind": "kill",
+        "level": 6,
+        "name": "First Kindling",
+        "objective": "Slay 10 wendigo in the Grizzled Den of Coldridge Valley",
+        "pattern": "Wendigo",
+        "text": "Your first spell was Fireball. It is the only first spell. In the den west of Anvilmar the wendigo sleep packed in their own frost — white fur, cold blood, ten of them. Light the stove and begin the war."
+      },
+      {
+        "chapter": 1,
+        "id": "py_firstbomb",
+        "kind": "cast",
+        "level": 8,
+        "name": "The First Device",
+        "objective": "Assemble a Rough Copper Bomb in Tinker Town, Ironforge",
+        "spell": "Rough Copper Bomb",
+        "subzone": "Tinker Town",
+        "text": "Magic is half your craft; the half that ticks is learned in Tinker Town. Beg a bench near Springspindle's, bolt your first bomb together, and understand what the trainers will never say aloud: a fireball you can hand to a friend is still a fireball.",
+        "zone": "Ironforge"
+      },
+      {
+        "chapter": 1,
+        "emote": "KNEEL",
+        "id": "py_oath",
+        "kind": "emote",
+        "level": 10,
+        "name": "The Oath at the Great Forge",
+        "objective": "/kneel before the Great Forge of Ironforge",
+        "subzone": "The Great Forge",
+        "text": "Other orders kneel to thrones. Yours kneels to the largest honest fire in the world — the Great Forge, which has not gone out since Ironforge was carved. Swear the only oath that matters there: no frost, no half-measures, and the work never cools.",
+        "zone": "Ironforge"
+      },
+      {
+        "chapter": 1,
+        "count": 15,
+        "id": "py_frostmane",
+        "kind": "kill",
+        "level": 12,
+        "name": "Melt the Hold",
+        "objective": "Slay 15 Frostmane trolls in Dun Morogh",
+        "pattern": "Frostmane",
+        "text": "The Frostmane named themselves after the enemy. That is either a confession or a dare, and you should treat it as both. Fifteen of them, anywhere the snow hides them — the hills above Coldridge, Frostmane Hold, the valley shrines. Winter recruits; so does the fire."
+      },
+      {
+        "chapter": 1,
+        "count": 25,
+        "id": "py_ignition",
+        "kind": "crit",
+        "level": 14,
+        "name": "Trial of the Ignition",
+        "objective": "Land 25 critical strikes",
+        "text": "Any apprentice can make fire touch a thing. The art is making it catch — the crit that ignites, the burn that outlives the bolt. Twenty-five perfect strikes. The difference between heat and fire is follow-through."
+      },
+      {
+        "chapter": 1,
+        "cleanOnly": true,
+        "completionNote": "The ejection seat worked. Nothing else did. Note both.",
+        "id": "py_sneed",
+        "kind": "kill",
+        "level": 20,
+        "name": "Bad Engineering",
+        "objective": "Slay Sneed in the Deadmines, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Sneed"
+        ],
+        "text": "In the Deadmines a goblin lumbermaster named Sneed drives a shredder through what used to be honest tunnels — Venture-grade engineering, leased to thieves, maintained by nobody. Walk in with your vows clean and put bad engineering out of its misery. Inspect the wreck after. There will be a lesson in it."
+      },
+      {
+        "chapter": 2,
+        "id": "py_pyroblast",
+        "kind": "cast",
+        "level": 20,
+        "name": "The Falling Star",
+        "objective": "Cast your first Pyroblast",
+        "spell": "Pyroblast",
+        "text": "Six seconds is a long time to stand still in a fight, and the trainers will tell you it is wasted. Let them. At the end of those six seconds an immense fiery boulder falls out of the sky onto a specific person, and from that day forward you are not a mage who uses fire. You are a Pyromancer."
+      },
+      {
+        "aura": "Impact",
+        "chapter": 2,
+        "count": 50,
+        "honorific": "Firebrand",
+        "id": "py_impact",
+        "kind": "proc",
+        "level": 24,
+        "name": "Trial of the Stagger",
+        "objective": "Stun 50 foes with the Impact of your fire",
+        "text": "Trained right, fire does not only burn — it staggers. The blast wave arrives before the pain does, and for two heartbeats the subject simply stops. Fifty foes halted mid-stride by their own ignition. The cold school freezes feet; yours convinces them."
+      },
+      {
+        "chapter": 2,
+        "count": 10,
+        "hits": 3,
+        "id": "py_firestorm",
+        "kind": "multihit",
+        "level": 26,
+        "name": "Trial of the Firestorm",
+        "objective": "Catch 3 or more foes in a single Flamestrike, 10 times",
+        "spell": "Flamestrike",
+        "text": "A pillar of fire is a terrible thing to waste on one person. Gather them first — let them commit, let them bunch — then bring the sky down on the appointment you made. Three at a time, ten times over. Crowd control is just crowd allocation."
+      },
+      {
+        "chapter": 2,
+        "id": "py_goblinschool",
+        "kind": "cast",
+        "level": 35,
+        "name": "Warranty Void",
+        "objective": "Sign with the goblins in Gadgetzan and assemble a Goblin Sapper Charge",
+        "spell": "Goblin Sapper Charge",
+        "text": "At two hundred skill the discipline splits, and the choice is no choice at all: the gnomes of your own blood build target dummies and shrink rays; Nixx Sprocketspring in Gadgetzan builds things that go off. Sign his pledge of secrecy, show your work, and bolt together the sapper charge — the only spell in your book that hurts you for casting it. Respect it accordingly."
+      },
+      {
+        "chapter": 2,
+        "id": "py_rocketboots",
+        "items": [
+          "Goblin Rocket Boots"
+        ],
+        "kind": "equip",
+        "level": 38,
+        "name": "Faster Than the Fuse",
+        "objective": "Build and wear Goblin Rocket Boots",
+        "text": "Sooner or later you will cut a fuse too short, and on that day you will want to be wearing the answer. Black mageweave, mithril tubing, goblin rocket fuel — boots that outrun your own arithmetic. They are prone to explode. So is everything you love."
+      },
+      {
+        "chapter": 2,
+        "cleanOnly": true,
+        "completionNote": "His Detonation was adequate. His filing system was not.",
+        "id": "py_doan",
+        "kind": "kill",
+        "level": 37,
+        "name": "The Book Burner",
+        "objective": "Slay Arcanist Doan in the Scarlet Monastery's library, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Arcanist Doan"
+        ],
+        "text": "In the Monastery's library sits Arcanist Doan, keeper of more learning than the Crusade deserves, who detonates the room when cornered and burns the books that frighten him. Fire in the hands of fear — there is no worse chemistry. Walk in with your vows clean and grade his thesis."
+      },
+      {
+        "chapter": 3,
+        "id": "py_firegoggles",
+        "items": [
+          "Fire Goggles"
+        ],
+        "kind": "equip",
+        "level": 45,
+        "name": "Eyes for the Work",
+        "objective": "Build and wear Fire Goggles",
+        "text": "You are going where the air itself glows, and you will want to watch it without blinking. Grind the lenses yourself — an engineer trusts no optics she didn't torque. Seventeen points of the world's heat, filed under acceptable."
+      },
+      {
+        "chapter": 3,
+        "id": "py_dragongun",
+        "kind": "cast",
+        "level": 48,
+        "name": "The Dragon's Sneeze",
+        "objective": "Assemble a Goblin Dragon Gun",
+        "spell": "Goblin Dragon Gun",
+        "text": "Mithril tubes, truesilver, four cans of rocket fuel, and the goblins' finest idea: a personal flamethrower. The schematic's own footnote says it all — it works, unless it explodes. Build it anyway. A Pyromancer who won't carry fire on her back is a tourist."
+      },
+      {
+        "chapter": 3,
+        "id": "py_fireplume",
+        "kind": "visit",
+        "level": 50,
+        "name": "The Living Volcano",
+        "objective": "Stand atop Fire Plume Ridge in Un'Goro Crater",
+        "subzone": "Fire Plume Ridge",
+        "text": "In the middle of the world's greenest crater there is a mountain that never stopped burning. Climb Fire Plume Ridge and stand where the rock runs liquid. This is what you are apprenticed to — not the candle, not the forge. This.",
+        "zone": "Un'Goro Crater"
+      },
+      {
+        "chapter": 3,
+        "id": "py_pyron",
+        "kind": "kill",
+        "level": 52,
+        "name": "The Gatekeeper",
+        "objective": "Slay Overmaster Pyron at the quarry gate of Blackrock Mountain",
+        "targets": [
+          "Overmaster Pyron"
+        ],
+        "text": "At the quarry door into Blackrock Mountain stands Overmaster Pyron, a pillar of flame that drives slaves for the Dark Irons. Fire that bullies is fire wasted — and Jalinda Sprig at Morgan's Vigil is paying gnomes to say so. Snuff him and walk in over the embers."
+      },
+      {
+        "chapter": 3,
+        "count": 5,
+        "id": "py_essence",
+        "item": "Essence of Fire",
+        "kind": "loot",
+        "level": 53,
+        "name": "Bottled Fire",
+        "objective": "Take 5 Essences of Fire from the burning things of the world",
+        "text": "When something made of fire dies, a little of the fire refuses to. The greater elementals of the Gorge and the Crater carry it; cut it free and bottle it. Five essences, warm through the glass. Reagents for the work ahead — and proof that fire, handled right, keeps."
+      },
+      {
+        "chapter": 3,
+        "id": "py_combustion",
+        "kind": "kill",
+        "level": 53,
+        "name": "Rite of the Living Flame",
+        "objective": "Slay an elite enemy while your Combustion burns",
+        "requireBuff": "Combustion",
+        "requireElite": true,
+        "text": "There is a state past casting fire, where every spell that leaves you arrives critical — the fire feeding the fire feeding the fire. The old hands call it combustion and spend it carefully. Kindle it, pick something elite, and finish the argument before the state fades."
+      },
+      {
+        "chapter": 3,
+        "id": "py_loregrain",
+        "kind": "kill",
+        "level": 56,
+        "name": "The Title Dispute",
+        "objective": "Slay Pyromancer Loregrain in Blackrock Depths",
+        "targets": [
+          "Pyromancer Loregrain"
+        ],
+        "text": "Somewhere in the Depths a Dark Iron keeps the title Pyromancer, tending Ragnaros's altars with borrowed fire and a stolen word. He shows himself rarely — wait at his cold shrine as long as it takes. There is one Pyromancer under this mountain, and you are going down there to make it true."
+      },
+      {
+        "chapter": 3,
+        "count": 25,
+        "id": "py_chillwind",
+        "kind": "kill",
+        "level": 56,
+        "name": "Winter's Teeth",
+        "objective": "Slay 25 Chillwind beasts in Winterspring",
+        "pattern": "Chillwind",
+        "text": "Winterspring is the war on winter's home front: a land that froze and called it peace, patrolled by chimaera whose very breath is the enemy. Twenty-five of the Chillwind put down in their own snow. Fight where the cold is strongest, or admit you only ever burned the easy things."
+      },
+      {
+        "chapter": 3,
+        "cleanOnly": true,
+        "completionNote": "Negotiations concluded. Fire is not for sale.",
+        "id": "py_flamelash",
+        "kind": "kill",
+        "level": 58,
+        "name": "The Ambassador",
+        "objective": "Slay Ambassador Flamelash in Blackrock Depths, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Ambassador Flamelash"
+        ],
+        "text": "Deep in Shadowforge City burns the envoy of the Firelands himself — Ambassador Flamelash, who brokers the Dark Irons' servitude and calls it diplomacy. Fire signs no treaties and keeps no slaves. Walk into the embassy with your vows clean and recall him, permanently."
+      },
+      {
+        "chapter": 4,
+        "id": "py_arcanite",
+        "kind": "cast",
+        "level": 60,
+        "name": "The Master's Familiar",
+        "objective": "Build an Arcanite Dragonling",
+        "spell": "Arcanite Dragonling",
+        "text": "Three hundred skill, a mechanical dragonling rebuilt in arcanite, and a furnace where its heart should be. Wizards summon familiars; engineers build better ones. When it leaves your hands breathing fire, you have nothing left to prove at the bench."
+      },
+      {
+        "chapter": 4,
+        "id": "py_geddon",
+        "kind": "kill",
+        "level": 60,
+        "name": "The Living Bomb",
+        "objective": "Slay Baron Geddon in the Molten Core",
+        "targets": [
+          "Baron Geddon"
+        ],
+        "text": "Baron Geddon's signature is a thing of terrible beauty: he makes a person the bomb and lets the timer do the cruelty. It is your own doctrine, written by something with no bench and no restraint. Study it from inside the blast radius — then retire the author."
+      },
+      {
+        "chapter": 4,
+        "id": "py_shadowflame",
+        "items": [
+          "Staff of the Shadow Flame"
+        ],
+        "kind": "equip",
+        "level": 60,
+        "name": "A Fire Gone Wrong",
+        "objective": "Claim the Staff of the Shadow Flame from Nefarian",
+        "text": "Atop Blackwing Lair, Nefarian breeds fire crossed with shadow — flame taught to hate, the one experiment your school forbids. His staff is the proof and the prize. Take it, carry it, and let it remind you daily what the work becomes in the wrong hands."
+      },
+      {
+        "chapter": 4,
+        "honorific": "Firelord",
+        "id": "py_firelord",
+        "kind": "kill",
+        "level": 60,
+        "name": "The Crown of Fire",
+        "objective": "Slay Ragnaros in the Molten Core",
+        "targets": [
+          "Ragnaros"
+        ],
+        "text": "There is one title above Pyromancer, and it is occupied. Ragnaros sits at the bottom of the world wearing all the fire there is, and he uses it the way winter uses ice — to make everything still. Go down with your bombs and your one school and file the universe's boldest claim. The crown of fire fits a gnome."
+      },
+      {
+        "chapter": 4,
+        "emote": "DANCE",
+        "id": "py_lastspark",
+        "kind": "emote",
+        "level": 60,
+        "name": "Winter, Conceded",
+        "objective": "/dance in the Frostfire Hot Springs of Winterspring",
+        "subzone": "Frostfire Hot Springs",
+        "text": "In the coldest land on the continent there is water that never freezes, because the fire under the world keeps it warm. Go to the Frostfire Hot Springs, wade in, and dance — for the war, the tally, and every spark that caught. Winter sends its regards. Decline them.",
+        "zone": "Winterspring"
+      }
+    ],
+    "weaponTypes": [
+      "Staves",
       "Daggers"
     ]
   },
