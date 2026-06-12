@@ -87,6 +87,33 @@ export const trialIcons: Record<string, string> = {
   bst_ancients: "inv_weapon_bow_01", // Rhok'delar's own icon
   bst_roar: "ability_physical_taunt", // a roar shared with your beast
 
+  // ---- Necromancer ---------------------------------------------------------
+  nc_pyres: "spell_fire_immolation", // the Crusade's pyres, repaid
+  nc_grave: "inv_misc_shovel_01", // the open grave in Deathknell
+  nc_firstservant: "spell_shadow_summonimp", // Summon Imp's own icon
+  nc_feast: "ability_racial_cannibalize", // Cannibalize's own icon
+  nc_oath: "ability_theblackarrow", // the Banshee Queen's black arrow
+  nc_funnel: "spell_shadow_lifedrain", // Health Funnel's own icon
+  nc_melrache: "spell_holy_holysmite", // a zealot captain's creed
+  nc_arugal: "ability_hunter_pet_wolf", // the wolves he raised
+  nc_siphon: "spell_shadow_lifedrain02", // Drain Life's own icon
+  nc_ashrain: "spell_shadow_rainoffire", // Rain of Fire's own icon
+  nc_robes: "inv_chest_cloth_31", // Robes of Arugal's own icon
+  nc_felhunter: "spell_shadow_summonfelhunter", // Summon Felhunter's own icon
+  nc_thule: "inv_misc_head_gnoll_01", // his rot hide gnolls
+  nc_dalaran: "spell_arcane_teleportdalaran", // the violet dome
+  nc_whitemane: "spell_holy_resurrection", // the false resurrection
+  nc_sorrowhill: "inv_misc_bone_humanskull_01", // Lordaeron's dead
+  nc_essence: "spell_shadow_shadetruesight", // Essence of Undeath's own icon
+  nc_araj: "spell_shadow_raisedead", // the lich and his summoned bones
+  nc_ras: "spell_frost_frostarmor02", // the frozen pupil
+  nc_edge: "inv_weapon_shortblade_25", // the Witchblade's own icon
+  nc_gandling: "inv_misc_book_07", // the headmaster's gradebook
+  nc_charge: "inv_jewelry_talisman_12", // Headmaster's Charge's own icon
+  nc_kelthuzad: "inv_misc_bone_skull_02", // the archlich
+  nc_atiesh: "inv_staff_medivh", // Atiesh's own icon
+  nc_lastlaugh: "spell_misc_emotionhappy", // the last laugh
+
   // ---- Spirit Walker -------------------------------------------------------
   sw_ledger: "inv_misc_bone_taurenskull_01", // a tauren skull for the Grimtotem ledger
   sw_firsttotem: "spell_nature_stoneskintotem", // the totem the trial asks for

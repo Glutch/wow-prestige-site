@@ -93,4 +93,25 @@ export const identityLoreByClass: Record<string, IdentityLore> = {
         "The Storm Bolt. “Only the mountain kings of Ironforge can hurl a hammer so hard that it stuns their enemies senseless.” Every stun your hammer lands is counted a Storm Bolt thrown — five points sworn by 36, and fifty storms make the Trial.",
     },
   },
+
+  necromancer: {
+    races: {
+      Scourge:
+        "The path's two great vows are written into Forsaken flesh: only the risen dead can feast on the fallen — Cannibalize works on no table but the battlefield's — and only one who has already died can honestly swear that the dead do not eat. A living warlock plays at deathcraft; a Forsaken one is the subject matter.",
+    },
+    professions: {
+      Tailoring:
+        "A warlock wears cloth and nothing else, so the needle is the only armorer a deathweaver will ever need. The craft runs all the way up: at three hundred skill the felcloth Robe of the Void comes off your own loom — black as the grave, and it mends your servant on command.",
+    },
+    trees: {
+      "WARLOCK:Demonology":
+        "Thirty-one points sworn to the servant, not the spell. Demonology is the discipline of never being alone — faster summons, harder minions, and at its depth a soul shared between master and bound demon. The other trees throw shadow; this one keeps the grave staffed.",
+    },
+    talents: {
+      "Master Summoner":
+        "The dead must be raised quickly, and the rite demanded from 27 makes it so: a servant comes to the call faster and cheaper, until a minion lost mid-fight is an inconvenience rather than an epitaph. The vow says never fight alone — this talent is how you keep it.",
+      "Soul Link":
+        "The 31-point oath of the tree, sworn by 42: a share of every wound you take is borne by your servant instead, for as long as the demon stands. Master and minion become one body with two graves — the Necromancer's bond, written in talent form.",
+    },
+  },
 };

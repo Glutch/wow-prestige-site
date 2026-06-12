@@ -43,6 +43,15 @@ export const npcIds: Record<string, number> = {
   Lethon: 14888,
   Emeriss: 14889,
   Taerar: 14890,
+  // Necromancer
+  "Captain Melrache": 1665,
+  "Archmage Arugal": 4275,
+  "Thule Ravenclaw": 1947,
+  "High Inquisitor Whitemane": 3977,
+  "Araj the Summoner": 1852,
+  "Ras Frostwhisper": 10508,
+  "Darkmaster Gandling": 1853,
+  "Kel'Thuzad": 15990,
 };
 
 export const spellIds: Record<string, number> = {
@@ -62,6 +71,14 @@ export const spellIds: Record<string, number> = {
   "Chain Heal": 1064,
   "Mana Tide Totem": 16190,
   "Ancestral Fortitude": 16177,
+  // Necromancer
+  "Summon Imp": 688,
+  "Summon Felhunter": 691,
+  Cannibalize: 20577,
+  "Health Funnel": 755,
+  "Drain Life": 689,
+  "Rain of Fire": 5740,
+  "Soul Link": 19028,
 };
 
 export const zoneIds: Record<string, number> = {
@@ -85,6 +102,11 @@ export const zoneIds: Record<string, number> = {
   // Spirit Walker
   Mulgore: 215,
   "Thunder Bluff": 1638,
+  // Necromancer
+  "Tirisfal Glades": 85,
+  "Silverpine Forest": 130,
+  Undercity: 1497,
+  "Western Plaguelands": 28,
 };
 
 /** Extra per-deed quest links (verified IDs only). */
@@ -117,6 +139,11 @@ export const questsByTrial: Record<string, { name: string; id: number }[]> = {
     { name: "Seed of Life", id: 7066 },
   ],
   sw_darkreaver: [{ name: "The Darkreaver Menace", id: 7668 }],
+  // Necromancer
+  nc_melrache: [{ name: "At War With The Scarlet Crusade", id: 372 }],
+  nc_arugal: [{ name: "Arugal Must Die", id: 1014 }],
+  nc_araj: [{ name: "Araj's Scarab", id: 5804 }],
+  nc_kelthuzad: [{ name: "The Fall of Kel'Thuzad", id: 9120 }],
 };
 
 export type WowheadLink = { label: string; url: string; kind: string };

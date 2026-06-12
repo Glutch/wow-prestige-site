@@ -2367,30 +2367,126 @@
     ]
   },
   {
-    "breakCry": "The grave grows silent! Raise your servant, deathweaver.",
+    "breakCry": "You forget what you are! The dead neither hunger nor fight alone.",
+    "chapters": [
+      {
+        "index": 0,
+        "title": "The Black Ledger"
+      },
+      {
+        "index": 1,
+        "title": "Chapter I — Risen"
+      },
+      {
+        "index": 2,
+        "title": "Chapter II — The Rival Schools"
+      },
+      {
+        "index": 3,
+        "title": "Chapter III — The Scholomance"
+      },
+      {
+        "index": 4,
+        "title": "Chapter IV — Death Unchained"
+      }
+    ],
     "classes": [
       "WARLOCK"
     ],
     "faction": "Horde",
     "fantasy": "A Forsaken death-mage who is never truly alone — a servant from beyond the grave always stands at their side, fed on stolen life.",
+    "forbidAuras": {
+      "label": "The dead do not eat",
+      "names": [
+        "Food",
+        "First Aid"
+      ],
+      "okDetail": "Sustained by stolen life alone"
+    },
     "honorRules": [
-      "Always keep a summoned minion at your side — the dead never rest.",
-      "Drain the life from your enemies to sustain yourself.",
-      "Wear only the robes of a deathweaver."
+      "Never enter battle without a servant of the grave at your side.",
+      "The dead do not eat: no food, no bandages — drain life, or feast as the Forsaken do.",
+      "Carry a scholar's implements — dagger or staff, never a soldier's sword."
     ],
     "icon": "spell_shadow_animatedead",
     "id": "necromancer",
-    "maxArmor": "Cloth",
+    "itemIds": {
+      "Atiesh, Greatstaff of the Guardian": 22630,
+      "Bonecreeper Stylus": 13938,
+      "Enchanted Gold Bloodrobe": 6900,
+      "Essence of Undeath": 12808,
+      "Headmaster's Charge": 13937,
+      "Robes of Arugal": 6324,
+      "Witchblade": 13964
+    },
     "name": "Necromancer",
+    "petGraceAuras": [
+      "Burning Wish",
+      "Fel Stamina",
+      "Touch of Shadow",
+      "Fel Energy"
+    ],
     "profession": [
       "Tailoring"
     ],
     "races": [
       "Scourge"
     ],
-    "requirePet": true,
+    "requirePet": "combat",
     "restoreCry": "The dead march with you once more.",
     "source": "Alliance & Horde Compendium",
+    "suggested": [
+      {
+        "id": 7001,
+        "name": "Gravestone Scepter",
+        "note": "Quest \"Blackfathom Villainy\" — Twilight Lord Kelris's head, traded for a dead man's scepter"
+      },
+      {
+        "id": 4984,
+        "name": "Skull of Impending Doom",
+        "note": "Quest \"Forbidden Knowledge\" — run faster by burning your own life; sustain always has a price"
+      },
+      {
+        "id": 7711,
+        "name": "Robe of Doan",
+        "note": "Arcanist Doan, the Scarlet Monastery library — he read the wrong books too"
+      },
+      {
+        "id": 10581,
+        "name": "Death's Head Vestment",
+        "note": "Stripped from the Death's Head necromancers of Razorfen Downs — they dressed the part, at least"
+      },
+      {
+        "id": 13544,
+        "name": "Spectral Essence",
+        "note": "The Sarkhoff ghosts' reward for Kirtonos the Herald — wear it and Caer Darrow's dead will speak"
+      },
+      {
+        "id": 14153,
+        "name": "Robe of the Void",
+        "note": "Tailored from felcloth at 300 skill — black as the grave, and it mends your servant"
+      },
+      {
+        "id": 14626,
+        "name": "Necropile Robe",
+        "note": "Lady Illucia Barov, Scholomance — the school's vestments, gently used"
+      },
+      {
+        "id": 22075,
+        "name": "Deathmist Robe",
+        "note": "Darkmaster Gandling — the heart of the Deathmist Raiment"
+      },
+      {
+        "id": 16809,
+        "name": "Felheart Robes",
+        "note": "Golemagg the Incinerator, Molten Core — a deathweaver risen high"
+      },
+      {
+        "id": 1607,
+        "name": "Soulkeeper",
+        "note": "Shadowsworn cultists of the Blasted Lands — a staff that keeps what you harvest"
+      }
+    ],
     "talents": {
       "keys": [
         {
@@ -2406,7 +2502,327 @@
         "name": "Demonology",
         "points": 31
       }
-    }
+    },
+    "trials": [
+      {
+        "chapter": 0,
+        "epitaph": "The black ledger counted %d crusaders repaid.",
+        "id": "nc_pyres",
+        "kind": "counter",
+        "milestones": [
+          {
+            "count": 10,
+            "honorific": "Heretic"
+          },
+          {
+            "count": 50,
+            "honorific": "Witchfinder"
+          },
+          {
+            "count": 200,
+            "honorific": "Doom of the Crusade"
+          }
+        ],
+        "name": "The Debt of the Pyres",
+        "objective": "Cut down the Scarlet Crusade — the zealots who burn the risen — wherever their banners fly",
+        "pattern": [
+          "Scarlet"
+        ],
+        "text": "The Crusade calls you abomination and lights pyres for your kind. Every crusader returned to the soil is a line in the black ledger. The ledger is patient. So are you."
+      },
+      {
+        "chapter": 1,
+        "emote": "MOURN",
+        "id": "nc_grave",
+        "kind": "emote",
+        "level": 2,
+        "name": "The Open Grave",
+        "objective": "/mourn in Deathknell, over the grave you climbed out of",
+        "subzone": "Deathknell",
+        "text": "You woke in the dirt with a stranger's name in your mouth. Whoever you were stayed down in the hole. Stand over it, mourn them properly — and never look back.",
+        "zone": "Tirisfal Glades"
+      },
+      {
+        "chapter": 1,
+        "id": "nc_firstservant",
+        "kind": "cast",
+        "level": 2,
+        "name": "The First Servant",
+        "objective": "Bind your first servant — summon an imp from beyond",
+        "spell": "Summon Imp",
+        "text": "Alone is a condition of the living. Strike the first bargain, speak the first summons, and never again walk into a fight without something walking beside you."
+      },
+      {
+        "aura": "Cannibalize",
+        "chapter": 1,
+        "count": 10,
+        "id": "nc_feast",
+        "kind": "proc",
+        "level": 6,
+        "name": "Waste Not",
+        "objective": "Feast on the fallen 10 times (Cannibalize)",
+        "text": "Bread is for the living; it would turn to ash on your tongue. The dead do not eat — they take. The Crusade is kind enough to leave meals all along the road."
+      },
+      {
+        "chapter": 1,
+        "emote": "KNEEL",
+        "id": "nc_oath",
+        "kind": "emote",
+        "level": 8,
+        "name": "The Oath Below",
+        "objective": "/kneel before the Banshee Queen in the Royal Quarter of the Undercity",
+        "subzone": "Royal Quarter",
+        "text": "Descend past the ruins into the city the living abandoned, and kneel before Lady Sylvanas Windrunner. She freed you from one master. Choose her as you were never allowed to choose him.",
+        "zone": "Undercity"
+      },
+      {
+        "aura": "Health Funnel",
+        "chapter": 1,
+        "count": 25,
+        "id": "nc_funnel",
+        "kind": "proc",
+        "level": 12,
+        "name": "Feed the Servant",
+        "objective": "Pour your own life into your servant 25 times (Health Funnel)",
+        "text": "You drain the living and your servant drinks from you — that is the whole economy of death. A necromancer who lets a good minion drop is a spendthrift."
+      },
+      {
+        "chapter": 1,
+        "id": "nc_melrache",
+        "kind": "kill",
+        "level": 14,
+        "name": "The Captain of the Pyres",
+        "objective": "Slay Captain Melrache at the Scarlet camp outside Brill",
+        "targets": [
+          "Captain Melrache"
+        ],
+        "text": "The Crusade pitches its tents within sight of Brill and calls it reclamation. Captain Melrache commands the camp. Introduce him to the people he came to burn."
+      },
+      {
+        "chapter": 1,
+        "cleanOnly": true,
+        "completionNote": "His robes would fit a true student of death far better — take them, if the Keep allows.",
+        "id": "nc_arugal",
+        "kind": "kill",
+        "level": 25,
+        "name": "Sylvanas' Bounty",
+        "objective": "Slay Archmage Arugal in Shadowfang Keep, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Archmage Arugal"
+        ],
+        "text": "Arugal raises wolves in a borrowed keep and calls it genius. The Dark Lady wants him dead. Go with your vows clean and show the difference between a dabbler and a Disciple."
+      },
+      {
+        "aura": "Drain Life",
+        "chapter": 2,
+        "count": 50,
+        "id": "nc_siphon",
+        "kind": "proc",
+        "level": 22,
+        "name": "Stolen Life",
+        "objective": "Drain the life from 50 foes",
+        "text": "Every meal you refused, the world owes you back with interest. Open the vein fifty times. Let them watch their own strength walk away wearing your robes."
+      },
+      {
+        "chapter": 2,
+        "count": 10,
+        "hits": 3,
+        "id": "nc_ashrain",
+        "kind": "multihit",
+        "level": 24,
+        "name": "A Dead Sky",
+        "objective": "Strike 3 or more foes with a single Rain of Fire, 10 times",
+        "spell": "Rain of Fire",
+        "text": "When the dead quarrel with the living, the sky takes a side. Call fire down on three at once, ten times, until the ground forgets what rain was."
+      },
+      {
+        "chapter": 2,
+        "id": "nc_robes",
+        "items": [
+          "Robes of Arugal"
+        ],
+        "kind": "equip",
+        "level": 26,
+        "name": "Spoils of the Mad Master",
+        "objective": "Wear the Robes of Arugal, taken from Shadowfang Keep",
+        "text": "The wizard is dead; the tailoring was never the problem. Wear his robes through Silverpine so the wolves can smell exactly what happened to him."
+      },
+      {
+        "chapter": 2,
+        "id": "nc_felhunter",
+        "kind": "cast",
+        "level": 30,
+        "name": "The Hound of the Grave",
+        "objective": "Master the rite of the felhunter and call the hound to heel",
+        "spell": "Summon Felhunter",
+        "text": "The mages of this world keep their counterspells like guard dogs. Bind the hound that eats guard dogs. Your trainer holds the rite; the components are the hard part."
+      },
+      {
+        "chapter": 2,
+        "id": "nc_thule",
+        "kind": "kill",
+        "level": 33,
+        "name": "The Dabbler of Fenris",
+        "objective": "Slay Thule Ravenclaw in Fenris Keep",
+        "targets": [
+          "Thule Ravenclaw"
+        ],
+        "text": "Thule raises rotting gnolls in a flooded keep and imagines himself your peer. Necromancy is a discipline, not a hobby. Correct his posture permanently."
+      },
+      {
+        "chapter": 2,
+        "id": "nc_dalaran",
+        "kind": "visit",
+        "level": 34,
+        "name": "The Jealous School",
+        "objective": "Stand before the violet dome of Dalaran in the Alterac crater",
+        "subzone": "Dalaran",
+        "text": "The Kirin Tor named your art forbidden, burned its books, exiled its students — then lost their entire city to it. Stand before the dome they hide under now, and savor the arithmetic.",
+        "zone": "Alterac Mountains"
+      },
+      {
+        "chapter": 2,
+        "cleanOnly": true,
+        "id": "nc_whitemane",
+        "kind": "kill",
+        "level": 42,
+        "name": "The False Resurrection",
+        "objective": "Slay High Inquisitor Whitemane in the Monastery, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "High Inquisitor Whitemane"
+        ],
+        "text": "Whitemane pulls her champion back from death and calls it a miracle; you do the same and she calls it heresy. Walk into her cathedral with your vows clean and snuff the twice-lit candle."
+      },
+      {
+        "chapter": 3,
+        "emote": "MOURN",
+        "id": "nc_sorrowhill",
+        "kind": "emote",
+        "level": 51,
+        "name": "The Fields of Sorrow",
+        "objective": "/mourn among the graves of Sorrow Hill",
+        "subzone": "Sorrow Hill",
+        "text": "Lordaeron's dead lie in ranks under Sorrow Hill, more orderly than they ever marched in life. Mourn them honestly. Then notice how many of the graves are already open.",
+        "zone": "Western Plaguelands"
+      },
+      {
+        "chapter": 3,
+        "count": 5,
+        "id": "nc_essence",
+        "item": "Essence of Undeath",
+        "kind": "loot",
+        "level": 54,
+        "name": "The Stuff of Unlife",
+        "objective": "Claim 5 Essence of Undeath from the walking dead",
+        "text": "What animates the Scourge's puppets can be bottled, weighed and spent. Take five measures of it. Call it tuition recovered."
+      },
+      {
+        "chapter": 3,
+        "id": "nc_araj",
+        "kind": "kill",
+        "level": 58,
+        "name": "The Lich of Andorhal",
+        "objective": "Slay Araj the Summoner atop the ruins of Andorhal",
+        "targets": [
+          "Araj the Summoner"
+        ],
+        "text": "Araj squats in Andorhal's heart, a lich with a summoner's title and a jailer's job. He guards the door to the school. Shatter him and take the introduction."
+      },
+      {
+        "chapter": 3,
+        "id": "nc_ras",
+        "kind": "kill",
+        "level": 58,
+        "name": "The Frozen Pupil",
+        "objective": "Slay Ras Frostwhisper in the Scholomance",
+        "targets": [
+          "Ras Frostwhisper"
+        ],
+        "text": "Ras traded his heartbeat for a lich's crown and kneels to Kel'Thuzad for the privilege. You kept your freedom and lost nothing else. Show the faculty which student got it right."
+      },
+      {
+        "chapter": 3,
+        "id": "nc_edge",
+        "items": [
+          "Witchblade",
+          "Bonecreeper Stylus"
+        ],
+        "kind": "equip",
+        "level": 58,
+        "name": "Implements of the School",
+        "objective": "Carry the school's implements — the Witchblade, or a Bonecreeper Stylus",
+        "text": "Every discipline has its instruments. The Scholomance issues a blade for the opening of bodies and a stylus for the writing that follows. Graduate with either in hand."
+      },
+      {
+        "chapter": 3,
+        "cleanOnly": true,
+        "completionNote": "The Headmaster's Charge passes to a worthier hand.",
+        "id": "nc_gandling",
+        "kind": "kill",
+        "level": 60,
+        "name": "The Headmaster's Chair",
+        "objective": "Slay Darkmaster Gandling in the Scholomance, vows clean",
+        "rankTrial": true,
+        "targets": [
+          "Darkmaster Gandling"
+        ],
+        "text": "Gandling teaches necromancy on a leash, every lesson approved by Naxxramas. Walk into his school with your vows clean and grade the Darkmaster. The chair should go to someone unowned."
+      },
+      {
+        "chapter": 4,
+        "id": "nc_charge",
+        "items": [
+          "Headmaster's Charge"
+        ],
+        "kind": "equip",
+        "level": 60,
+        "name": "The Headmaster's Charge",
+        "objective": "Wield the Headmaster's Charge, taken from Darkmaster Gandling",
+        "text": "A staff that spent years rapping the knuckles of lesser students. In your hands it can finally teach something true: that the art owes nothing to the Frozen Throne."
+      },
+      {
+        "chapter": 4,
+        "honorific": "Death Unchained",
+        "id": "nc_kelthuzad",
+        "kind": "kill",
+        "level": 60,
+        "name": "The Archlich",
+        "objective": "Slay Kel'Thuzad in the heart of Naxxramas",
+        "targets": [
+          "Kel'Thuzad"
+        ],
+        "text": "Necromancy's greatest student sold the art to a frozen throne and calls his slavery ascension. Climb Naxxramas, walk into his sanctum, and show the archlich what the craft looks like with no master at all."
+      },
+      {
+        "chapter": 4,
+        "id": "nc_atiesh",
+        "items": [
+          "Atiesh, Greatstaff of the Guardian"
+        ],
+        "kind": "equip",
+        "level": 60,
+        "name": "The Guardian's Greatstaff",
+        "objective": "Reforge and wield Atiesh, Greatstaff of the Guardian",
+        "text": "Medivh's staff lies in forty splinters on the floors of Naxxramas, and its frame in worse company. Gather every piece, cleanse the corruption, and carry the Guardian's burden in a dead hand that cannot be tempted twice."
+      },
+      {
+        "chapter": 4,
+        "emote": "LAUGH",
+        "id": "nc_lastlaugh",
+        "kind": "emote",
+        "level": 60,
+        "name": "The Last Laugh",
+        "objective": "/laugh in the Ruins of Lordaeron, above the Undercity",
+        "subzone": "Ruins of Lordaeron",
+        "text": "In that throne room a prince kissed his father's crown with a cursed sword and doomed the living world. You are what grew back. Stand in the ruins and laugh — long, loud, and last."
+      }
+    ],
+    "weaponTypes": [
+      "Daggers",
+      "Staves"
+    ]
   },
   {
     "breakCry": "The Kirin Tor disavows you! Staff and robes, archmage — nothing less.",

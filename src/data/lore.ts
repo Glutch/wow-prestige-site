@@ -210,4 +210,43 @@ export const loreByClass: Record<string, LoreSection[]> = {
       ],
     },
   ],
+
+  necromancer: [
+    {
+      heading: "The forbidden art",
+      quote: {
+        text: "The dead shall serve!",
+        source: "Necromancer, Warcraft III",
+      },
+      paragraphs: [
+        "Necromancy is the one school the Kirin Tor would not teach. Kel'Thuzad — an archmage of Dalaran's ruling council — studied it anyway, and when his peers condemned the work he left the city, swore himself to the Lich King, and founded the Cult of the Damned. The plague he seeded through Lordaeron's grain made the Scourge's first army out of the kingdom's own people. Every necromancer raising skeletons in Warcraft III learned the art in his shadow.",
+        "The art outlived the kingdom it killed. It is taught today in the crypts beneath Caer Darrow, where the Scholomance trains the Scourge's deathweavers under Darkmaster Gandling — necromancy on a leash, every lesson approved by Naxxramas. This path's premise is simpler and prouder: the craft owes nothing to the Frozen Throne. Every lich on the journey — Araj in Andorhal, Ras Frostwhisper in the school, Kel'Thuzad above the Plaguelands — kneels to a master. You are what the art looks like free.",
+      ],
+    },
+    {
+      heading: "Free among the dead",
+      paragraphs: [
+        "The Forsaken are the Scourge's great escape: when the Lich King's grip weakened, a portion of his risen dead woke to their own wills. Sylvanas Windrunner — the elven Ranger-General Arthas killed and raised as a banshee — gathered the freed and built her nation in the crypts beneath Lordaeron's ruined capital. The path begins where every Forsaken does: climbing out of a grave in Deathknell with a stranger's name in your mouth.",
+        "That is why the path demands an undead warlock and no other. A living necromancer is a scholar of something foreign; a Forsaken one practices their own condition. The journey's oath is sworn to the Banshee Queen in the Royal Quarter — to the one master who was chosen, not imposed — and its lifelong counter is kept against the Scarlet Crusade, the zealots who light pyres for everything that climbed out of a grave.",
+      ],
+    },
+    {
+      heading: "The dead do not eat",
+      quote: {
+        text: "Only works on Humanoid or Undead corpses.",
+        source: "Cannibalize, the Forsaken racial",
+      },
+      paragraphs: [
+        "The signature vow is the addon's harshest: no food, no bandages, ever. Bread is for the living. The necromancer is sustained by stolen life alone — Drain Life opened like a vein, Death Coil in extremity, and the Forsaken's own answer to an empty stomach, Cannibalize, which sets a table on every battlefield. The addon watches your auras: the moment a meal or a bandage touches you, the vow breaks aloud.",
+        "The second vow is its mirror: never fight alone. A servant of the grave stands at your side in every battle — and the rule is written the way a necromancer would write it. Between fights the dead may rest; a minion lost to a wipe or a disconnect is raised again without shame, and a Demonic Sacrifice is service of another kind. Only entering battle with no servant at all forgets what you are. Thirty-one points of Demonology — Master Summoner to raise the dead quickly, Soul Link to share your wounds with them — keep both vows livable.",
+      ],
+    },
+    {
+      heading: "The school and the throne",
+      paragraphs: [
+        "The journey's last road runs through the Plaguelands to the Scholomance, and the school's whole history is an indictment of chained necromancy. The Barov family deeded Caer Darrow to Kel'Thuzad's cult and were paid in undeath; Ras Frostwhisper took a lich's crown in exchange for his heartbeat; Araj the Summoner holds Andorhal for a master who will never reward him. Kill the faculty, take the Darkmaster's chair, and carry his staff out as the one piece of curriculum worth keeping.",
+        "Above it all floats Naxxramas, and inside sits the art's greatest student. Kel'Thuzad died for the craft — Arthas killed him — and was raised at the Sunwell into an archlich whose slavery he calls ascension. The final deed of the path is to climb into his sanctum and end him; the final relic is Atiesh, Medivh's greatstaff, gathered splinter by splinter from the necropolis floor and reforged in a dead hand the Legion cannot tempt twice. The honorific the deed grants says the rest: Death Unchained.",
+      ],
+    },
+  ],
 };

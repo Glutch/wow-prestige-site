@@ -12,7 +12,8 @@
 // must return 200, not 404.
 //
 // Viewer slots: 1 head, 3 shoulders, 5 chest, 6 waist, 7 legs, 8 feet,
-// 9 wrists, 10 hands, 16 back, 21 main hand, 22 off hand.
+// 9 wrists, 10 hands, 16 back, 20 robe (full-length chest — its meta lives
+// under armor/20, not armor/5), 21 main hand, 22 off hand.
 
 export type CharacterModelConfig = {
   /** Wowhead race id (3 = Dwarf) */
@@ -99,6 +100,27 @@ export const heroModels: Record<string, CharacterModelConfig> = {
       [9, 31411], // Bindings of Elements (16671)
       [10, 31414], // Gauntlets of Elements (16672)
       [21, 32612], // Will of Arlokk (19909)
+    ],
+    animation: "Ready2H",
+  },
+  // Forsaken necromancer: gaunt and bare-headed in the felcloth Robe of the
+  // Void off his own loom, the Scholomance students' Necropile Mantle at the
+  // shoulders, Deathmist wraps on the hands, and Darkmaster Gandling's
+  // Headmaster's Charge held ready — the skull staff of the school he
+  // graduated by killing.
+  necromancer: {
+    race: 5,
+    gender: 0,
+    skin: 2,
+    face: 1,
+    hairStyle: 3,
+    hairColor: 2,
+    facialStyle: 1,
+    items: [
+      [3, 16428], // Necropile Mantle (14633)
+      [10, 34627], // Deathmist Wraps (22077)
+      [20, 18834], // Robe of the Void (14153) — robes ride slot 20
+      [21, 23539], // Headmaster's Charge (13937)
     ],
     animation: "Ready2H",
   },

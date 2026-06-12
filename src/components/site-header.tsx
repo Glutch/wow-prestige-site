@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { prestigeClasses } from "@/lib/wow";
 
 export function SiteHeader() {
   return (
@@ -9,19 +10,7 @@ export function SiteHeader() {
         </Link>
         <nav className="flex items-center gap-3 text-sm sm:gap-6">
           <Link href="/classes" className="whitespace-nowrap text-muted-foreground transition-colors hover:text-gold">
-            The 25 Paths
-          </Link>
-          <Link
-            href="/classes/mountain-king"
-            className="hidden whitespace-nowrap text-muted-foreground transition-colors hover:text-gold sm:inline"
-          >
-            Mountain King
-          </Link>
-          <Link
-            href="/classes/blademaster"
-            className="hidden whitespace-nowrap text-muted-foreground transition-colors hover:text-gold sm:inline"
-          >
-            Blademaster
+            The {prestigeClasses.length} Paths
           </Link>
           <a
             href="https://github.com/Glutch/wow-prestige-classes"

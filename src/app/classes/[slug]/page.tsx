@@ -36,6 +36,8 @@ const HERO_BG: Record<string, string> = {
   beastmaster: "https://wow.zamimg.com/uploads/screenshots/normal/70250.jpg",
   // Sunset in Mulgore — the hour between An'she and Mu'sha.
   spiritwalker: "https://wow.zamimg.com/uploads/screenshots/normal/9349.jpg",
+  // The Scholomance library, green candles and old bones.
+  necromancer: "https://wow.zamimg.com/uploads/screenshots/normal/67442.jpg",
 };
 const DEFAULT_BG = "https://wow.zamimg.com/uploads/screenshots/normal/84153.jpg";
 

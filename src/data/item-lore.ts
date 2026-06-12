@@ -216,4 +216,56 @@ export const itemLore: Record<string, string> = {
 
   "High Warlord's Battle Mace":
     "Sold only in the Hall of Legends, and only to a High Warlord of the Horde. No drop, no luck — a healer's mace paid for in every battlefield the Horde has bled on.",
+
+  // ---- Necromancer ---------------------------------------------------------
+  "Enchanted Gold Bloodrobe":
+    "The reward of the warlock rite \"The Completed Robe\" — no tailor sells the first vestment of a deathweaver. It is earned, and the name says what it cost.",
+
+  "Robes of Arugal":
+    "Worn by the mad Archmage of Shadowfang until Sylvanas' bounty came due. The wizard raised wolves and called it genius; his robes serve a real student of death now.",
+
+  Witchblade:
+    "Darkmaster Gandling's instrument for the opening of bodies, surrendered with his school. The edge has done more dissection than any blade in Lordaeron.",
+
+  "Bonecreeper Stylus":
+    "The headmaster's pen, taken from Gandling's own desk — a wand of graven bone for the writing that follows the opening of bodies.",
+
+  "Essence of Undeath":
+    "What animates the Scourge's puppets, bottled and weighed. The walking dead of the Plaguelands carry it without knowing what it's worth.",
+
+  "Headmaster's Charge":
+    "Darkmaster Gandling's staff of office. It sharpens every mind around it — the one part of the Scholomance curriculum worth keeping.",
+
+  "Atiesh, Greatstaff of the Guardian":
+    "Medivh's own greatstaff, shattered into forty splinters and strewn across the floors of Naxxramas. Reforged and cleansed, it passes to a dead hand the Legion cannot tempt twice.",
+
+  "Gravestone Scepter":
+    "The head of Twilight Lord Kelris, traded in Thunder Bluff for a dead man's scepter — Blackfathom's cult leader bought you a wand of shadow.",
+
+  "Skull of Impending Doom":
+    "A quest called \"Forbidden Knowledge\" pays in exactly that: run faster by burning your own life and mana. Every necromancer learns the lesson — power is a loan.",
+
+  "Robe of Doan":
+    "Arcanist Doan keeps the Scarlet Monastery's library and burns the books he fears. His robe fits the kind of reader he hunted.",
+
+  "Death's Head Vestment":
+    "Stripped from the Death's Head necromancers of Razorfen Downs — quilboar deathcallers in Amnennar's service. They dressed the part, at least.",
+
+  "Spectral Essence":
+    "Eva and Lucien Sarkhoff's reward for Kirtonos the Herald. Wear it at Caer Darrow and the dead speak — and every one of them names the Scholomance.",
+
+  "Robe of the Void":
+    "Felcloth, black dye, and three hundred skill at the needle. It mends your servant on command — a robe that understands the household it serves.",
+
+  "Necropile Robe":
+    "Lady Illucia Barov hands out the school's vestments to students who survive. Hers are gently used.",
+
+  "Deathmist Robe":
+    "The heart of the Deathmist Raiment, held by Darkmaster Gandling. The headmaster grades harshly; collect your gown at graduation.",
+
+  "Felheart Robes":
+    "Cut from Golemagg's hoard in the Molten Core — the Felheart of a deathweaver risen as high as the craft goes.",
+
+  Soulkeeper:
+    "Carried by the Shadowsworn cultists of the Blasted Lands, who never understood what they held. A staff that keeps what you harvest.",
 };

@@ -64,7 +64,12 @@ export type PrestigeClass = {
   requireDualWield?: boolean;
   forbidShield?: boolean;
   rangedTypes?: string[];
-  requirePet?: boolean;
+  /** true = always; "combat" = only while fighting (resummon windows are free). */
+  requirePet?: boolean | "combat";
+  /** With requirePet "combat": player buffs that stand in for the pet (Demonic Sacrifice). */
+  petGraceAuras?: string[];
+  /** Auras that must never touch the player — the vow breaks while one is active. */
+  forbidAuras?: { label?: string; names: string[]; okDetail?: string };
   forbidPet?: boolean;
   requireProfession?: string[];
   profession?: string[];
@@ -146,7 +151,15 @@ export function ruleLines(c: PrestigeClass): string[] {
   if (c.requireDualWield) lines.push("A weapon in each hand, always");
   if (c.forbidShield) lines.push("Never raise a shield");
   if (c.rangedTypes) lines.push(`Ranged slot: ${c.rangedTypes.join(" or ")}`);
-  if (c.requirePet) lines.push("A companion at your side, always");
+  if (c.requirePet === "combat")
+    lines.push("Never fight without your servant — between fights it may be raised anew");
+  else if (c.requirePet) lines.push("A companion at your side, always");
+  if (c.forbidAuras)
+    lines.push(
+      `${c.forbidAuras.label ?? "Forbidden"}: ${c.forbidAuras.names
+        .map((n) => (n === "Food" ? "no food" : n === "First Aid" ? "no bandages" : `no ${n}`))
+        .join(", ")}`,
+    );
   if (c.forbidPet) lines.push("No pet — you fight alone");
   if (c.requireProfession)
     lines.push(`Must train ${c.requireProfession.join(" or ")}`);

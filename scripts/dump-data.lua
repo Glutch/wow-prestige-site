@@ -100,6 +100,8 @@ for _, def in ipairs(PC.Classes) do
         forbidShield = def.forbidShield,
         rangedTypes = def.rangedTypes,
         requirePet = def.requirePet,
+        petGraceAuras = def.petGraceAuras,
+        forbidAuras = def.forbidAuras,
         forbidPet = def.forbidPet,
         requireProfession = def.requireProfession,
         profession = def.profession,
